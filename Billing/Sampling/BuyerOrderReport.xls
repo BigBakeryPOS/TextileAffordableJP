@@ -1,0 +1,13 @@
+<div id="Excel">
+                                            <div>
+	<table class="myGridStyle" cellspacing="0" rules="all" border="1" id="gridempdetails" style="width:90%;border-collapse:collapse;margin-left: 140px;">
+		<caption>
+			Employee Details
+		</caption><tr>
+			<th scope="col">Emp Code</th><th scope="col">Emp.Name</th><th scope="col">Father Name</th><th scope="col">Emp.DOB</th><th scope="col">Mobile 1</th><th scope="col">Mobile 2</th><th scope="col">Address</th><th scope="col">Email Id</th><th scope="col">DOJ</th><th scope="col">Salary Type</th><th scope="col">Unit</th><th scope="col">Desgination Name</th><th scope="col">Dept.Name</th><th scope="col">Image</th>
+		</tr><tr>
+			<td>04098</td><td>RAVI KANT</td><td>MR. DINESH SINGH</td><td>25/12/1986</td><td>9716877315</td><td>&nbsp;</td><td>D 6, JEETRAM ENCLAVE, SECTOR-106, NOIDA, U.P.</td><td>satyatomar86@gmail.com</td><td>13/01/2020</td><td>Monthly</td><td>Afforadble Export Noida</td><td>ADMIN</td><td>HR &amp; ADMIN</td><td style="width:15px;"><img src="http://49.206.201.75:120" style="border-width:0px;" /></td>
+		</tr>
+	</table>
+</div>
+                                        </div>

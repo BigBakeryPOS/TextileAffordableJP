@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ApplicationServices" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ApplicationServices (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ApplicationServices.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="suxusliveConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="suxusliveConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.suxusliveConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ss1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ss1ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ss1ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ss1ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select f.fit,lc.ledgername as cut,c.cutid,c.lotno,c.deliverydate,w.width,tc.cutid,tc.invrefno,tc.designno,sum([36fs]) as tsfs,sum([36hs]) as tshs, sum([38fs]) as tefs,sum([38hs]) as tehs, sum([39fs]) as tnfs,sum([39hs]) as tnhs,sum([40fs]) as fzfs,sum([40hs]) as fzhs,sum([42fs]) as ftfs,sum([42hs]) as fths, 
+                      sum([44fs]) as fffs,sum([44hs]) as ffhs,sum([36fs] +[38fs]+[39fs]+[40fs]+[42fs]+[44fs]) as totfs 
+                      ,sum([36hs]+[38hs]+[39hs]+[40hs]+[42hs]+[44hs])  as toths ,sum([36fs]+[38fs]+[39fs]+[40fs]+[42fs]+[44fs]) as TotFS,sum([36hs]+[38hs]+[39hs]+[40hs]+[42hs]+[44hs]) as TotHS from tblcut as c inner join tblwidth as w on w.widthid=c.width inner join tbltranscut as tc on tc.cutid=c.cutid inner join tblledger as l on l.ledgerid=tc.partyname inner join tblledger as lc on lc.ledgerid=c.cuttingmaster  inner join tblfit as f on f.fitid=tc.fitid inner join tblmainlabel as ml on ml.Labelid=tc.mainlabel  group by lc.ledgername,c.margin,c.mrp,c.cutid,c.lotno,c.deliverydate,w.width,tc.cutid,tc.invrefno,tc.designno,tc.rate,f.fit
+                      
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fit" DataSetColumn="fit" />
+              <Mapping SourceColumn="cut" DataSetColumn="cut" />
+              <Mapping SourceColumn="cutid" DataSetColumn="cutid" />
+              <Mapping SourceColumn="lotno" DataSetColumn="lotno" />
+              <Mapping SourceColumn="deliverydate" DataSetColumn="deliverydate" />
+              <Mapping SourceColumn="width" DataSetColumn="width" />
+              <Mapping SourceColumn="cutid1" DataSetColumn="cutid1" />
+              <Mapping SourceColumn="invrefno" DataSetColumn="invrefno" />
+              <Mapping SourceColumn="designno" DataSetColumn="designno" />
+              <Mapping SourceColumn="tsfs" DataSetColumn="tsfs" />
+              <Mapping SourceColumn="tshs" DataSetColumn="tshs" />
+              <Mapping SourceColumn="tefs" DataSetColumn="tefs" />
+              <Mapping SourceColumn="tehs" DataSetColumn="tehs" />
+              <Mapping SourceColumn="tnfs" DataSetColumn="tnfs" />
+              <Mapping SourceColumn="tnhs" DataSetColumn="tnhs" />
+              <Mapping SourceColumn="fzfs" DataSetColumn="fzfs" />
+              <Mapping SourceColumn="fzhs" DataSetColumn="fzhs" />
+              <Mapping SourceColumn="ftfs" DataSetColumn="ftfs" />
+              <Mapping SourceColumn="fths" DataSetColumn="fths" />
+              <Mapping SourceColumn="fffs" DataSetColumn="fffs" />
+              <Mapping SourceColumn="ffhs" DataSetColumn="ffhs" />
+              <Mapping SourceColumn="totfs" DataSetColumn="totfs" />
+              <Mapping SourceColumn="toths" DataSetColumn="toths" />
+              <Mapping SourceColumn="TotFS1" DataSetColumn="TotFS1" />
+              <Mapping SourceColumn="TotHS1" DataSetColumn="TotHS1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fit" msprop:Generator_ColumnVarNameInTable="columnfit" msprop:Generator_ColumnPropNameInRow="fit" msprop:Generator_ColumnPropNameInTable="fitColumn" msprop:Generator_UserColumnName="fit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cut" msprop:Generator_ColumnVarNameInTable="columncut" msprop:Generator_ColumnPropNameInRow="cut" msprop:Generator_ColumnPropNameInTable="cutColumn" msprop:Generator_UserColumnName="cut" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cutid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncutid" msprop:Generator_ColumnPropNameInRow="cutid" msprop:Generator_ColumnPropNameInTable="cutidColumn" msprop:Generator_UserColumnName="cutid" type="xs:int" />
+              <xs:element name="lotno" msprop:Generator_ColumnVarNameInTable="columnlotno" msprop:Generator_ColumnPropNameInRow="lotno" msprop:Generator_ColumnPropNameInTable="lotnoColumn" msprop:Generator_UserColumnName="lotno" type="xs:int" minOccurs="0" />
+              <xs:element name="deliverydate" msprop:Generator_ColumnVarNameInTable="columndeliverydate" msprop:Generator_ColumnPropNameInRow="deliverydate" msprop:Generator_ColumnPropNameInTable="deliverydateColumn" msprop:Generator_UserColumnName="deliverydate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="width" msprop:Generator_ColumnVarNameInTable="columnwidth" msprop:Generator_ColumnPropNameInRow="width" msprop:Generator_ColumnPropNameInTable="widthColumn" msprop:Generator_UserColumnName="width" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cutid1" msprop:Generator_ColumnVarNameInTable="columncutid1" msprop:Generator_ColumnPropNameInRow="cutid1" msprop:Generator_ColumnPropNameInTable="cutid1Column" msprop:Generator_UserColumnName="cutid1" type="xs:int" minOccurs="0" />
+              <xs:element name="invrefno" msprop:Generator_ColumnVarNameInTable="columninvrefno" msprop:Generator_ColumnPropNameInRow="invrefno" msprop:Generator_ColumnPropNameInTable="invrefnoColumn" msprop:Generator_UserColumnName="invrefno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="designno" msprop:Generator_ColumnVarNameInTable="columndesignno" msprop:Generator_ColumnPropNameInRow="designno" msprop:Generator_ColumnPropNameInTable="designnoColumn" msprop:Generator_UserColumnName="designno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tsfs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntsfs" msprop:Generator_ColumnPropNameInRow="tsfs" msprop:Generator_ColumnPropNameInTable="tsfsColumn" msprop:Generator_UserColumnName="tsfs" type="xs:int" minOccurs="0" />
+              <xs:element name="tshs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntshs" msprop:Generator_ColumnPropNameInRow="tshs" msprop:Generator_ColumnPropNameInTable="tshsColumn" msprop:Generator_UserColumnName="tshs" type="xs:int" minOccurs="0" />
+              <xs:element name="tefs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntefs" msprop:Generator_ColumnPropNameInRow="tefs" msprop:Generator_ColumnPropNameInTable="tefsColumn" msprop:Generator_UserColumnName="tefs" type="xs:int" minOccurs="0" />
+              <xs:element name="tehs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntehs" msprop:Generator_ColumnPropNameInRow="tehs" msprop:Generator_ColumnPropNameInTable="tehsColumn" msprop:Generator_UserColumnName="tehs" type="xs:int" minOccurs="0" />
+              <xs:element name="tnfs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntnfs" msprop:Generator_ColumnPropNameInRow="tnfs" msprop:Generator_ColumnPropNameInTable="tnfsColumn" msprop:Generator_UserColumnName="tnfs" type="xs:int" minOccurs="0" />
+              <xs:element name="tnhs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntnhs" msprop:Generator_ColumnPropNameInRow="tnhs" msprop:Generator_ColumnPropNameInTable="tnhsColumn" msprop:Generator_UserColumnName="tnhs" type="xs:int" minOccurs="0" />
+              <xs:element name="fzfs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnfzfs" msprop:Generator_ColumnPropNameInRow="fzfs" msprop:Generator_ColumnPropNameInTable="fzfsColumn" msprop:Generator_UserColumnName="fzfs" type="xs:int" minOccurs="0" />
+              <xs:element name="fzhs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnfzhs" msprop:Generator_ColumnPropNameInRow="fzhs" msprop:Generator_ColumnPropNameInTable="fzhsColumn" msprop:Generator_UserColumnName="fzhs" type="xs:int" minOccurs="0" />
+              <xs:element name="ftfs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnftfs" msprop:Generator_ColumnPropNameInRow="ftfs" msprop:Generator_ColumnPropNameInTable="ftfsColumn" msprop:Generator_UserColumnName="ftfs" type="xs:int" minOccurs="0" />
+              <xs:element name="fths" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnfths" msprop:Generator_ColumnPropNameInRow="fths" msprop:Generator_ColumnPropNameInTable="fthsColumn" msprop:Generator_UserColumnName="fths" type="xs:int" minOccurs="0" />
+              <xs:element name="fffs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnfffs" msprop:Generator_ColumnPropNameInRow="fffs" msprop:Generator_ColumnPropNameInTable="fffsColumn" msprop:Generator_UserColumnName="fffs" type="xs:int" minOccurs="0" />
+              <xs:element name="ffhs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnffhs" msprop:Generator_ColumnPropNameInRow="ffhs" msprop:Generator_ColumnPropNameInTable="ffhsColumn" msprop:Generator_UserColumnName="ffhs" type="xs:int" minOccurs="0" />
+              <xs:element name="totfs" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntotfs" msprop:Generator_ColumnPropNameInRow="totfs" msprop:Generator_ColumnPropNameInTable="totfsColumn" msprop:Generator_UserColumnName="totfs" type="xs:int" minOccurs="0" />
+              <xs:element name="toths" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntoths" msprop:Generator_ColumnPropNameInRow="toths" msprop:Generator_ColumnPropNameInTable="tothsColumn" msprop:Generator_UserColumnName="toths" type="xs:int" minOccurs="0" />
+              <xs:element name="TotFS1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotFS1" msprop:Generator_ColumnPropNameInRow="TotFS1" msprop:Generator_ColumnPropNameInTable="TotFS1Column" msprop:Generator_UserColumnName="TotFS1" type="xs:int" minOccurs="0" />
+              <xs:element name="TotHS1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotHS1" msprop:Generator_ColumnPropNameInRow="TotHS1" msprop:Generator_ColumnPropNameInTable="TotHS1Column" msprop:Generator_UserColumnName="TotHS1" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

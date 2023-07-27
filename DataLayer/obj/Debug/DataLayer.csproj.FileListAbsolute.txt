@@ -1,0 +1,462 @@
+C:\Users\pratheepkumar\Documents\Visual Studio 2008\Projects\WebSite5\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\pratheepkumar\Documents\Visual Studio 2008\Projects\WebSite5\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\pratheepkumar\Documents\Visual Studio 2008\Projects\WebSite5\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\pratheepkumar\Documents\Visual Studio 2008\Projects\WebSite5\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\pratheepkumar\Documents\Visual Studio 2008\Projects\WebSite5\DataLayer\obj\Debug\DataLayer.pdb
+C:\Documents and Settings\spradeep\Desktop\DocApp\DataLayer\bin\Debug\DataLayer.dll
+C:\Documents and Settings\spradeep\Desktop\DocApp\DataLayer\bin\Debug\DataLayer.pdb
+C:\Documents and Settings\spradeep\Desktop\DocApp\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\spradeep\Desktop\DocApp\DataLayer\obj\Debug\DataLayer.dll
+C:\Documents and Settings\spradeep\Desktop\DocApp\DataLayer\obj\Debug\DataLayer.pdb
+F:\DocApp\DataLayer\bin\Debug\DataLayer.pdb
+F:\DocApp\DataLayer\obj\Debug\DataLayer.dll
+F:\DocApp\DataLayer\obj\Debug\DataLayer.pdb
+F:\DocApp\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\DocApp\DataLayer\bin\Debug\BusinessLayer.dll
+F:\DocApp\DataLayer\bin\Debug\CommonLayer.dll
+F:\DocApp\DataLayer\bin\Debug\BusinessLayer.pdb
+F:\DocApp\DataLayer\bin\Debug\CommonLayer.pdb
+G:\Pharma\DataLayer\bin\Debug\DataLayer.pdb
+G:\Pharma\DataLayer\bin\Debug\BusinessLayer.dll
+G:\Pharma\DataLayer\bin\Debug\CommonLayer.dll
+G:\Pharma\DataLayer\bin\Debug\BusinessLayer.pdb
+G:\Pharma\DataLayer\bin\Debug\CommonLayer.pdb
+G:\Pharma\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+G:\Pharma\DataLayer\obj\Debug\DataLayer.dll
+G:\Pharma\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\DataLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\DataLayer\bin\Debug\CommonLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\DataLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\DataLayer\bin\Debug\CommonLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\Billing\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\Billing\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\Billing\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\Billing\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\Billing\DataLayer\bin\Debug\DataLayer.dll
+I:\Billing\DataLayer\bin\Debug\DataLayer.dll
+I:\Billing\DataLayer\bin\Debug\DataLayer.pdb
+I:\Billing\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+I:\Billing\DataLayer\obj\Debug\DataLayer.dll
+I:\Billing\DataLayer\obj\Debug\DataLayer.pdb
+I:\Billing\DataLayer\bin\Debug\MySql.Data.DLL
+I:\Billing\DataLayer\bin\Debug\MySql.Web.dll
+C:\Users\intel\Documents\Visual Studio 2010\Projects\BillingSingle\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\intel\Documents\Visual Studio 2010\Projects\BillingSingle\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\intel\Documents\Visual Studio 2010\Projects\BillingSingle\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\intel\Documents\Visual Studio 2010\Projects\BillingSingle\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\intel\Documents\Visual Studio 2010\Projects\BillingSingle\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\BillingSingle\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\BillingSingle\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\BillingSingle\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\BillingSingle\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\BillingSingle\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+D:\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+D:\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+D:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+D:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+G:\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+G:\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+G:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+G:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+G:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+G:\Working projects\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+G:\Working projects\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+G:\Working projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+G:\Working projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+G:\Working projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+\\Server\e\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+\\Server\e\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+\\Server\e\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+\\Server\e\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+\\Server\e\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+D:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\Projects\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\New folder (4)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\New folder (4)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\New folder (4)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\MySql.Data.dll
+F:\New folder (4)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\MySql.Web.dll
+F:\New folder (4)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\New folder (4)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\New folder (4)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\intel\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\intel\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\intel\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\intel\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\intel\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Account latest\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Account latest\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Account latest\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Account latest\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Account latest\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\latesst code\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\latesst code\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\latesst code\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\latesst code\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\latesst code\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\MySql.Data.dll
+E:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\MySql.Web.dll
+E:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\latesst code\New folder\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\latesst code\New folder\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\latesst code\New folder\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\latesst code\New folder\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\latesst code\New folder\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Textile Onora Textile\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Textile Onora Textile\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Textile Onora Textile\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Textile Onora Textile\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Textile Onora Textile\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Onora Textile\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Onora Textile\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Onora Textile\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Onora Textile\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Onora Textile\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+D:\Suxus\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+D:\Suxus\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+D:\Suxus\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+D:\Suxus\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+D:\Suxus\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\suxus\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\suxus\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\suxus\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\suxus\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\suxus\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Suxus\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Suxus\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Suxus\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Suxus\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Suxus\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\kishore Projects\Dillo\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\kishore Projects\Dillo\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\kishore Projects\Dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\kishore Projects\Dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Dillo\new one multiple process\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Dillo\new one multiple process\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Dillo\new one multiple process\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Dillo\new one multiple process\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Dillo\new one multiple process\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Projects\DILLO UPDATE\Dillo\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Projects\DILLO UPDATE\Dillo\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Projects\DILLO UPDATE\Dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Projects\DILLO UPDATE\Dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Projects\Dillo\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Projects\Dillo\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Projects\Dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Projects\Dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+D:\Dot net\dillo\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+D:\Dot net\dillo\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+D:\Dot net\dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Dot net\dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+D:\Dot net\dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Projects\Dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Dillo\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Dillo\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Dillo\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\PROJECTS\Working\DILLO\03-02-2017\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\PROJECTS\Working\DILLO\03-02-2017\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\PROJECTS\Working\DILLO\03-02-2017\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\PROJECTS\Working\DILLO\03-02-2017\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\PROJECTS\Working\DILLO\08-02-2017\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\PROJECTS\Working\DILLO\08-02-2017\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\PROJECTS\Working\DILLO\08-02-2017\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\PROJECTS\Working\DILLO\08-02-2017\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\PROJECTS\Working\DILLO\08-02-2017\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\PROJECTS\Working\DILLO\10-02-2017\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\PROJECTS\Working\DILLO\10-02-2017\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\PROJECTS\Working\DILLO\10-02-2017\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\PROJECTS\Working\DILLO\10-02-2017\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\PROJECTS\Working\DILLO\10-02-2017\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Dillo New\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Dillo New\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Dillo New\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Dillo New\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Dillo New\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\vinoth\Dillo New\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\vinoth\Dillo New\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\vinoth\Dillo New\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\vinoth\Dillo New\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\vinoth\Dillo New\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\OM Fabrics\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\OM Fabrics\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\OM Fabrics\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\OM Fabrics\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\OM Fabrics\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\RAJI\Working\Saravana fabrics\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\RAJI\Working\Saravana fabrics\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\RAJI\Working\Saravana fabrics\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\RAJI\Working\Saravana fabrics\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\RAJI\Working\Saravana fabrics\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\RAJI\Working\Saravana(13-07-2017)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\RAJI\Working\Saravana(13-07-2017)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\RAJI\Working\Saravana(13-07-2017)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\RAJI\Working\Saravana(13-07-2017)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\RAJI\Working\Saravana(13-07-2017)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\RAJI\Working\Saravana(18-07-2017)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\RAJI\Working\Saravana(18-07-2017)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\RAJI\Working\Saravana(18-07-2017)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\RAJI\Working\Saravana(18-07-2017)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\RAJI\Working\Saravana(18-07-2017)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\RAJI\Working\Saravana Fabric(27-07-2017)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\RAJI\Working\Saravana Fabric(27-07-2017)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\RAJI\Working\Saravana Fabric(27-07-2017)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\RAJI\Working\Saravana Fabric(27-07-2017)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\RAJI\Working\Saravana Fabric(27-07-2017)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+D:\Applications\JB Exports\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+D:\Applications\JB Exports\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+D:\Applications\JB Exports\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Applications\JB Exports\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+D:\Applications\JB Exports\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\BIGDBIZ CODE\JP CODE\jp code and ref project\jp code\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\BIGDBIZ CODE\JP CODE\jp code and ref project\jp code\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\BIGDBIZ CODE\JP CODE\jp code and ref project\jp code\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\BIGDBIZ CODE\JP CODE\jp code and ref project\jp code\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\BIGDBIZ CODE\JB PROJECT\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\BIGDBIZ CODE\JB PROJECT\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\BIGDBIZ CODE\JB PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\BIGDBIZ CODE\JB PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\JP GARMENTS\JB PROJECT\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\JP GARMENTS\JB PROJECT\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\JP GARMENTS\JB PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\JP GARMENTS\JB PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\JP GARMENTS\JB PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\JP GARMENTS\JP PROJECT\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\JP GARMENTS\JP PROJECT\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\JP GARMENTS\JP PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\JP GARMENTS\JP PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\JP GARMENTS\JP PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+D:\Applications\JP\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+D:\Applications\JP\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+D:\Applications\JP\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Applications\JP\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+D:\Applications\JP\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\BIGDBIZ CODE\JP PROJECT\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\BIGDBIZ CODE\JP PROJECT\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\BIGDBIZ CODE\JP PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\BIGDBIZ CODE\JP PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\BIGDBIZ CODE\JP PROJECT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\JP GARMENTS\JPLATEESSTT\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\JP GARMENTS\JPLATEESSTT\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\JP GARMENTS\JPLATEESSTT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\JP GARMENTS\JPLATEESSTT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\JP GARMENTS\JPLATEESSTT\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Priya_Working\JP LATEST CODE\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Priya_Working\JP LATEST CODE\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Priya_Working\JP LATEST CODE\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Priya_Working\JP LATEST CODE\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Priya_Working\JP LATEST CODE\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Priyaworking\JP LATEST CODE\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Priyaworking\JP LATEST CODE\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Priyaworking\JP LATEST CODE\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\Priyaworking\JP LATEST CODE\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Priyaworking\JP LATEST CODE\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\JP GARMENTS\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\JP GARMENTS\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\JP GARMENTS\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\JP GARMENTS\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\JP GARMENTS\RAJA LATEST 10012018\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\JP GARMENTS\RAJA LATEST 10012018\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\JP GARMENTS\RAJA LATEST 10012018\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\JP GARMENTS\RAJA LATEST 10012018\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\JP GARMENTS\RAJA LATEST 10012018\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\BIGDBIZ CODE\backup and reference project\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\BIGDBIZ CODE\backup and reference project\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\BIGDBIZ CODE\backup and reference project\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\BIGDBIZ CODE\backup and reference project\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\BIGDBIZ CODE\backup and reference project\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\BackUp\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\BackUp\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\BackUp\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\BackUp\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\BackUp\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\New folder (2)\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\Raja\JP\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\Raja\JP\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\Raja\JP\DEMO_BillingSingle _stock\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Raja\JP\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\Raja\JP\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\JP GARMENTS\JP\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\JP GARMENTS\JP\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\JP GARMENTS\JP\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\JP GARMENTS\JP\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\JP GARMENTS\JP\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Flexible Garments\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Flexible Garments\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Flexible Garments\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Flexible Garments\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Flexible Garments\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+F:\Flexible Garments\FLEXI\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+F:\Flexible Garments\FLEXI\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+F:\Flexible Garments\FLEXI\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Flexible Garments\FLEXI\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+F:\Flexible Garments\FLEXI\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\Applications\Flxible\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.dll
+E:\Applications\Flxible\DEMO_BillingSingle _stock\DataLayer\bin\Debug\DataLayer.pdb
+E:\Applications\Flxible\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.dll
+E:\Applications\Flxible\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.pdb
+E:\Applications\Flxible\DEMO_BillingSingle _stock\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\Applications\Affordable\Affordable\DataLayer\bin\Debug\DataLayer.dll
+E:\Applications\Affordable\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+E:\Applications\Affordable\Affordable\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Applications\Affordable\Affordable\DataLayer\obj\Debug\DataLayer.dll
+E:\Applications\Affordable\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+E:\Applications\Affordable1\Affordable\DataLayer\bin\Debug\DataLayer.dll
+E:\Applications\Affordable1\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+E:\Applications\Affordable1\Affordable\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Applications\Affordable1\Affordable\DataLayer\obj\Debug\DataLayer.dll
+E:\Applications\Affordable1\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\intel\Downloads\Affortable\Affordable\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\intel\Downloads\Affortable\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\intel\Downloads\Affortable\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\intel\Downloads\Affortable\Affordable\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\intel\Downloads\Affortable\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+F:\AFFORABLE_TEXTILE\Affordable\DataLayer\bin\Debug\DataLayer.dll
+F:\AFFORABLE_TEXTILE\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+F:\AFFORABLE_TEXTILE\Affordable\DataLayer\obj\Debug\DataLayer.dll
+F:\AFFORABLE_TEXTILE\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+F:\AFFORABLE_TEXTILE\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\Affordable\Affordable\DataLayer\bin\Debug\DataLayer.dll
+E:\Affordable\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+E:\Affordable\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\Affordable\Affordable\DataLayer\obj\Debug\DataLayer.dll
+E:\Affordable\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Bigdbiz\Desktop\Affordable\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Bigdbiz\Desktop\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Bigdbiz\Desktop\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Bigdbiz\Desktop\Affordable\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Bigdbiz\Desktop\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+E:\Applications\AFFO\Affordable\DataLayer\bin\Debug\DataLayer.dll
+E:\Applications\AFFO\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+E:\Applications\AFFO\Affordable\DataLayer\obj\Debug\DataLayer.dll
+E:\Applications\AFFO\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Bigdbiz\Desktop\AF\Affordable\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Bigdbiz\Desktop\AF\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Bigdbiz\Desktop\AF\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Bigdbiz\Desktop\AF\Affordable\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Bigdbiz\Desktop\AF\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Bigdbiz\Desktop\AEE\Affordable\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Bigdbiz\Desktop\AEE\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Bigdbiz\Desktop\AEE\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Bigdbiz\Desktop\AEE\Affordable\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Bigdbiz\Desktop\AEE\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+F:\AFFORABLE_TEXTILE\AE_2003\Affordable\DataLayer\bin\Debug\DataLayer.dll
+F:\AFFORABLE_TEXTILE\AE_2003\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+F:\AFFORABLE_TEXTILE\AE_2003\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\AFFORABLE_TEXTILE\AE_2003\Affordable\DataLayer\obj\Debug\DataLayer.dll
+F:\AFFORABLE_TEXTILE\AE_2003\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+F:\AFFORABLE_TEXTILE\AE_31032021\Affordable\DataLayer\bin\Debug\DataLayer.dll
+F:\AFFORABLE_TEXTILE\AE_31032021\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+F:\AFFORABLE_TEXTILE\AE_31032021\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\AFFORABLE_TEXTILE\AE_31032021\Affordable\DataLayer\obj\Debug\DataLayer.dll
+F:\AFFORABLE_TEXTILE\AE_31032021\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+E:\Applications\Affordable\AE1\Affordable\DataLayer\bin\Debug\DataLayer.dll
+E:\Applications\Affordable\AE1\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+E:\Applications\Affordable\AE1\Affordable\DataLayer\obj\Debug\DataLayer.dll
+E:\Applications\Affordable\AE1\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+E:\Applications\Affordable\AE1\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Priya_Working\Janarthanan\AE Code_0907 (1)\AE Code_0907\Affordable\DataLayer\bin\Debug\DataLayer.dll
+F:\Priya_Working\Janarthanan\AE Code_0907 (1)\AE Code_0907\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+F:\Priya_Working\Janarthanan\AE Code_0907 (1)\AE Code_0907\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Priya_Working\Janarthanan\AE Code_0907 (1)\AE Code_0907\Affordable\DataLayer\obj\Debug\DataLayer.dll
+F:\Priya_Working\Janarthanan\AE Code_0907 (1)\AE Code_0907\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+F:\Priya_Working\Janarthanan\AE_Code with Accounts\Affordable\DataLayer\bin\Debug\DataLayer.dll
+F:\Priya_Working\Janarthanan\AE_Code with Accounts\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+F:\Priya_Working\Janarthanan\AE_Code with Accounts\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Priya_Working\Janarthanan\AE_Code with Accounts\Affordable\DataLayer\obj\Debug\DataLayer.dll
+F:\Priya_Working\Janarthanan\AE_Code with Accounts\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+F:\Priya_Working\Janarthanan\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\bin\Debug\DataLayer.dll
+F:\Priya_Working\Janarthanan\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+F:\Priya_Working\Janarthanan\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Priya_Working\Janarthanan\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\obj\Debug\DataLayer.dll
+F:\Priya_Working\Janarthanan\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\bin\Debug\DataLayer.dll.config
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\bin\Debug\DataLayer.dll
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\obj\Debug\DataLayer.dll
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\DataLayer\bin\Debug\DataLayer.dll.config
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\DataLayer\bin\Debug\DataLayer.dll
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\DataLayer\bin\Debug\DataLayer.pdb
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\DataLayer\bin\Debug\DocumentFormat.OpenXml.dll
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\DataLayer\bin\Debug\Newtonsoft.Json.dll
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\DataLayer\bin\Debug\DocumentFormat.OpenXml.xml
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\DataLayer\bin\Debug\Newtonsoft.Json.xml
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\DataLayer\obj\Debug\DataLayer.dll
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.pdb

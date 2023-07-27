@@ -1,0 +1,218 @@
+﻿ .master
+ {
+     background-color:#E5E4E2;
+     width:60%;
+     border:1px solid #000000;
+ }
+ .title
+ {
+     background-color:#1E90FF;
+     width:100%;
+     text-align:center;
+     border:1px solid #000000;
+ }
+ .item
+ {
+     background-color:#E5E4E2;
+     margin-top: 10px;
+     width:60%;
+ }
+ .rightarea
+ {
+    width:40%; 
+     
+     margin-top: 10px;
+ }
+ .body
+ {
+   background-color:#A0CFEC;
+   background-image:url('../Image/erp1.jpg'); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   
+   
+     }
+ .tbl_bg
+ {
+     background-color:#E5E4E2;
+     }
+     
+  .LabelText
+  {
+	font-family:Arial;
+font-size:14px;
+color:Navy;
+font-weight:bold;
+white-space:nowrap;
+
+}
+ 
+  .TextBox
+  {
+	   
+	border: 1px #c7daf7 solid;
+top:5px;
+padding-left:5px;
+font-family:Arial;
+font-size:11px;
+width:160px;
+/*background-color:#f1f0ef;*/
+color: #3251aa;
+}
+.Textbox:hover
+{
+border: 1px #ffc000 solid;
+top:5px;
+padding-left:5px;
+font-family:Arial;
+font-size:11px;
+width:160px;
+/*background-color:#f1f0ef;*/
+color: #3251aa;
+}
+  .myButton 
+  {
+      
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.myButton:hover {
+		background-color:#6c7c7c;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.cal_Theme1 .ajax__calendar_container   {
+background-color: #DEF1F4;
+border:solid 1px #77D5F7;
+}
+
+.cal_Theme1 .ajax__calendar_header  {
+background-color: #ffffff;
+margin-bottom: 4px;
+}
+
+.cal_Theme1 .ajax__calendar_title,
+.cal_Theme1 .ajax__calendar_next,
+.cal_Theme1 .ajax__calendar_prev    {
+color: #004080;
+padding-top: 3px;
+}
+
+.cal_Theme1 .ajax__calendar_body    {
+background-color: #ffffff;
+border: solid 1px #77D5F7;
+}
+
+.cal_Theme1 .ajax__calendar_dayname {
+text-align:center;
+font-weight:bold;
+margin-bottom: 4px;
+margin-top: 2px;
+color: #004080;
+}
+
+.cal_Theme1 .ajax__calendar_day {
+color: #004080;
+text-align:center;
+}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_month,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_year,
+.cal_Theme1 .ajax__calendar_active  {
+color: #004080;
+font-weight: bold;
+background-color: #DEF1F4;
+}
+
+.cal_Theme1 .ajax__calendar_today   {
+font-weight:bold;
+}
+
+.cal_Theme1 .ajax__calendar_other,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_today,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_title {
+color: #bbbbbb;
+}
+
+
+         
+
+        .myGridStyle
+    {
+
+            border-collapse:collapse;
+             
+
+        }
+
+         
+
+        .myGridStyle tr th
+
+        {
+
+            padding: 8px;
+
+            color: white;
+
+            border: 1px solid black;
+
+        }
+
+         
+
+         
+
+        .myGridStyle tr:nth-child(even)
+
+        {
+
+            background-color: #E1FFEF;
+
+        }
+
+         
+
+        .myGridStyle tr:nth-child(odd)
+
+        {
+
+            background-color:Teal;
+
+        }
+
+         
+
+        .myGridStyle td
+
+        {
+
+            border:1px solid black;
+
+            padding: 8px;
+
+        }
+
+         
+
+        .myGridStyle tr:last-child td
+
+        {
+
+        }

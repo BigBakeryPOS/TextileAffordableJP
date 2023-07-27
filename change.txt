@@ -1,0 +1,8 @@
+Bsclass
+ 
+BuyerOrderSalesStylesRate
+
+
+function
+
+rate<>0

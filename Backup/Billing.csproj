@@ -1,0 +1,3660 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB47BEAD-2656-44BE-9293-202724C4068D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Billing</RootNamespace>
+    <AssemblyName>Billing</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DesktopBuildPackageLocation>E:\Publish\Billing.zip</DesktopBuildPackageLocation>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>fav.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\7dinam\DEMO_BillingSingle _stock\Billing\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ASPSnippets.SmsAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dillo\DEMO_BillingSingle _stock\Billing\bin\ASPSnippets.SmsAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.76.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bigdbiz TradingPOS - Aathira boutique\Billing\bin\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>G:\\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web">
+      <HintPath>G:\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.DataVisualization.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization">
+      <HintPath>bin\System.Windows.Forms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization.Design">
+      <HintPath>bin\System.Windows.Forms.DataVisualization.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Accountsbootstrap\Abu_Manufacture.aspx" />
+    <Content Include="Accountsbootstrap\Agentmaster.aspx" />
+    <Content Include="Accountsbootstrap\AlterProcess.aspx" />
+    <Content Include="Accountsbootstrap\autocomplete.aspx" />
+    <Content Include="Accountsbootstrap\BarT.aspx" />
+    <Content Include="Accountsbootstrap\BarTag.aspx" />
+    <Content Include="Accountsbootstrap\BarTagG.aspx" />
+    <Content Include="Accountsbootstrap\BarTagGrid.aspx" />
+    <Content Include="Accountsbootstrap\BCPreviewLot.aspx" />
+    <Content Include="Accountsbootstrap\BillSeries.aspx" />
+    <Content Include="Accountsbootstrap\Branch.aspx" />
+    <Content Include="Accountsbootstrap\BrandMaster.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderBookingStyles.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderBookingSummary.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderCutting.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderCuttingGrid.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderCuttingPrint.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderDetails.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderMaster.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderMasterCutting.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderMasterCuttingGrid.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderMasterGrid.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderPendingReport.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderReport.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderSales.aspx" />
+    <Content Include="Accountsbootstrap\BuyerOrderSalesGrid.aspx" />
+    <Content Include="Accountsbootstrap\CAD_Entry.aspx" />
+    <Content Include="Accountsbootstrap\CAD_Entry_Grid.aspx" />
+    <Content Include="Accountsbootstrap\CashAccount.aspx" />
+    <Content Include="Accountsbootstrap\cashsales.aspx" />
+    <Content Include="Accountsbootstrap\Category.aspx" />
+    <Content Include="Accountsbootstrap\categorygrid.aspx" />
+    <Content Include="Accountsbootstrap\ChallanIn.aspx" />
+    <Content Include="Accountsbootstrap\ChallanInNew.aspx" />
+    <Content Include="Accountsbootstrap\ChallanOut.aspx" />
+    <Content Include="Accountsbootstrap\CheckingProcess.aspx" />
+    <Content Include="Accountsbootstrap\CheckingProcessGrid.aspx" />
+    <Content Include="Accountsbootstrap\Cheque.aspx" />
+    <Content Include="Accountsbootstrap\Cni.aspx" />
+    <Content Include="Accountsbootstrap\Color.aspx" />
+    <Content Include="Accountsbootstrap\CompanyGrid.aspx" />
+    <Content Include="Accountsbootstrap\Company_Details.aspx" />
+    <Content Include="Accountsbootstrap\Consai.aspx" />
+    <Content Include="Accountsbootstrap\ConsaiG.aspx" />
+    <Content Include="Accountsbootstrap\ConsaiGrid.aspx" />
+    <Content Include="Accountsbootstrap\CostingDetails.aspx" />
+    <Content Include="Accountsbootstrap\CostingDetailsNew.aspx" />
+    <Content Include="Accountsbootstrap\CurrencyMaster.aspx" />
+    <Content Include="Accountsbootstrap\Customerlabelprint.aspx" />
+    <Content Include="Accountsbootstrap\customermaster.aspx" />
+    <Content Include="Accountsbootstrap\cutlotreport.aspx" />
+    <Content Include="Accountsbootstrap\Cutprocess.aspx" />
+    <Content Include="Accountsbootstrap\CuttingAndMasterCuttingDetails.aspx" />
+    <Content Include="Accountsbootstrap\CuttingDetails.aspx" />
+    <Content Include="Accountsbootstrap\CuttingDetailsNew.aspx" />
+    <Content Include="Accountsbootstrap\CuttingInfoGrid.aspx" />
+    <Content Include="Accountsbootstrap\Cuttingmaster.aspx" />
+    <Content Include="Accountsbootstrap\CuttingPreprocess.aspx" />
+    <Content Include="Accountsbootstrap\Cuttingprocess.aspx" />
+    <Content Include="Accountsbootstrap\CuttingProcessEntry.aspx" />
+    <Content Include="Accountsbootstrap\CuttingProcessEntryGrid.aspx" />
+    <Content Include="Accountsbootstrap\CuttingProcessEntryOrder.aspx" />
+    <Content Include="Accountsbootstrap\CuttingProcessEntryPrint.aspx" />
+    <Content Include="Accountsbootstrap\Cuttingprocessnew.aspx" />
+    <Content Include="Accountsbootstrap\CuttingProcessReceivePrint.aspx" />
+    <Content Include="Accountsbootstrap\CuttingProcessReport.aspx" />
+    <Content Include="Accountsbootstrap\CuttingQtyDetails.aspx" />
+    <Content Include="Accountsbootstrap\cuttingreport.aspx" />
+    <Content Include="Accountsbootstrap\Damageprint.aspx" />
+    <Content Include="Accountsbootstrap\dash.aspx" />
+    <Content Include="Accountsbootstrap\DateWiseReport.aspx" />
+    <Content Include="Accountsbootstrap\DayBook.aspx" />
+    <Content Include="Accountsbootstrap\Default.aspx" />
+    <Content Include="Accountsbootstrap\Dept_Master.aspx" />
+    <Content Include="Accountsbootstrap\DescriptionGrid.aspx" />
+    <Content Include="Accountsbootstrap\DespatchGrid.aspx" />
+    <Content Include="Accountsbootstrap\DespatchPrint.aspx" />
+    <Content Include="Accountsbootstrap\DespatchReturn.aspx" />
+    <Content Include="Accountsbootstrap\DespatchReturnGrid.aspx" />
+    <Content Include="Accountsbootstrap\DespatchStock.aspx" />
+    <Content Include="Accountsbootstrap\DilloMultiLotGrid.aspx" />
+    <Content Include="Accountsbootstrap\DilloMultiLotPrint.aspx" />
+    <Content Include="Accountsbootstrap\DilloMultipleLot.aspx" />
+    <Content Include="Accountsbootstrap\DilloStitchingDetails.aspx" />
+    <Content Include="Accountsbootstrap\DilloStitchingInfoGrid.aspx" />
+    <Content Include="Accountsbootstrap\DilloWashingGrid.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_DateReport.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_Designation.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_EmbJobWork.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_EmbJobWorkPrint.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_Embrodarygrid.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_Embroidering.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_EmbWorks.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_EmbWorkGrid.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_Employeewisereport.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_Irongrid.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_IronPacking.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_KajaGrid.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_KajaJobPrint.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_KajaJobwork.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_KajaProcess.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_KajaWork.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_KajaworkGrid.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_LotProcess.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_LotProcessGrid.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_OrderProcessPrint.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_OrderProcessPrintNew.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_StitchingInfo.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_StitchingInfoGrid.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_UnitWiseReport.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_Washing.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_WashjobWork.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_WashJobWorkPrint.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_WashWorkGrid.aspx" />
+    <Content Include="Accountsbootstrap\Dillo_WashWorks.aspx" />
+    <Content Include="Accountsbootstrap\EditFirstGrid.aspx" />
+    <Content Include="Accountsbootstrap\EditProcess.aspx" />
+    <Content Include="Accountsbootstrap\eGrid.aspx" />
+    <Content Include="Accountsbootstrap\Emb.aspx" />
+    <Content Include="Accountsbootstrap\Embroid.aspx" />
+    <Content Include="Accountsbootstrap\Embroiding.aspx" />
+    <Content Include="Accountsbootstrap\EmbroidingG.aspx" />
+    <Content Include="Accountsbootstrap\EmbroidingGrid1.aspx" />
+    <Content Include="Accountsbootstrap\EmployeeDatewise.aspx" />
+    <Content Include="Accountsbootstrap\Employee_details.aspx" />
+    <Content Include="Accountsbootstrap\Emp_gird.aspx" />
+    <Content Include="Accountsbootstrap\Error_Page.aspx" />
+    <Content Include="Accountsbootstrap\ExcOpeningStock.aspx" />
+    <Content Include="Accountsbootstrap\ExcOpeningStockGrid.aspx" />
+    <Content Include="Accountsbootstrap\Fabprocess.aspx" />
+    <Content Include="Accountsbootstrap\FabProcessNew.aspx" />
+    <Content Include="Accountsbootstrap\fabreport.aspx" />
+    <Content Include="Accountsbootstrap\FabricDetailsReport.aspx" />
+    <Content Include="Accountsbootstrap\Fabricprocess.aspx" />
+    <Content Include="Accountsbootstrap\fabricreport.aspx" />
+    <Content Include="Accountsbootstrap\FabricType.aspx" />
+    <Content Include="Accountsbootstrap\Fabric_Grid.aspx" />
+    <Content Include="Accountsbootstrap\FinishedStockReport.aspx" />
+    <Content Include="Accountsbootstrap\FirstStageGrid.aspx" />
+    <Content Include="Accountsbootstrap\FirstStageProcess.aspx" />
+    <Content Include="Accountsbootstrap\Fit.aspx" />
+    <Content Include="Accountsbootstrap\FullFormReport.aspx" />
+    <Content Include="Accountsbootstrap\FullLotDetails.aspx" />
+    <Content Include="Accountsbootstrap\GodownMaster.aspx" />
+    <Content Include="Accountsbootstrap\GodownOpeningStock.aspx" />
+    <Content Include="Accountsbootstrap\Grid.aspx" />
+    <Content Include="Accountsbootstrap\GSTPortalReport.aspx" />
+    <Content Include="Accountsbootstrap\GSTReport.aspx" />
+    <Content Include="Accountsbootstrap\GSTReportGroup.aspx" />
+    <Content Include="Accountsbootstrap\Home_Page.aspx" />
+    <Content Include="Accountsbootstrap\Iron.aspx" />
+    <Content Include="Accountsbootstrap\Ironing.aspx" />
+    <Content Include="Accountsbootstrap\IroningG.aspx" />
+    <Content Include="Accountsbootstrap\IroningGrid.aspx" />
+    <Content Include="Accountsbootstrap\ItemGroup.aspx" />
+    <Content Include="Accountsbootstrap\ItemMaster.aspx" />
+    <Content Include="Accountsbootstrap\ItemMasterGrop.aspx" />
+    <Content Include="Accountsbootstrap\ItemMasterGroup.aspx" />
+    <Content Include="Accountsbootstrap\ItemMasterGroupGrid.aspx" />
+    <Content Include="Accountsbootstrap\itempage.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessOrder.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessOrderEntry.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessOrderEntryGrid.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessOrderEntryPrint.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessOrderEntryReport.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessOrderGrid.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessOrderPrint.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessOrderReport.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessReceive.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessReceiveGrid.aspx" />
+    <Content Include="Accountsbootstrap\ItemProcessReceiveReport.aspx" />
+    <Content Include="Accountsbootstrap\ItemRateChecking.aspx" />
+    <Content Include="Accountsbootstrap\ItemType.aspx" />
+    <Content Include="Accountsbootstrap\JobWorkerFabDetails.aspx" />
+    <Content Include="Accountsbootstrap\JobWorkMaster.aspx" />
+    <Content Include="Accountsbootstrap\JournalScreen.aspx" />
+    <Content Include="Accountsbootstrap\JournalsReport.aspx" />
+    <Content Include="Accountsbootstrap\Kaja.aspx" />
+    <Content Include="Accountsbootstrap\KajaButton.aspx" />
+    <Content Include="Accountsbootstrap\KajaButton1.aspx" />
+    <Content Include="Accountsbootstrap\KajaButtonG.aspx" />
+    <Content Include="Accountsbootstrap\KajaButtonGrid.aspx" />
+    <Content Include="Accountsbootstrap\KajaG.aspx" />
+    <Content Include="Accountsbootstrap\KajaProcessGrid.aspx" />
+    <Content Include="Accountsbootstrap\Kaja_Process.aspx" />
+    <Content Include="Accountsbootstrap\LeadGrid.aspx" />
+    <Content Include="Accountsbootstrap\LeadMaster.aspx" />
+    <Content Include="Accountsbootstrap\LedgerReport.aspx" />
+    <Content Include="Accountsbootstrap\login.aspx" />
+    <Content Include="Accountsbootstrap\Login1.aspx" />
+    <Content Include="Accountsbootstrap\LotCompleteDetailReport.aspx" />
+    <Content Include="Accountsbootstrap\Lotprocess.aspx" />
+    <Content Include="Accountsbootstrap\LotRaw.aspx" />
+    <Content Include="Accountsbootstrap\LotRawGrid.aspx" />
+    <Content Include="Accountsbootstrap\MastercutGrid.aspx" />
+    <Content Include="Accountsbootstrap\MasterCutting.aspx" />
+    <Content Include="Accountsbootstrap\MasterCuttingDetailReport.aspx" />
+    <Content Include="Accountsbootstrap\MasterprintCutting.aspx" />
+    <Content Include="Accountsbootstrap\MaterialOpeningStock.aspx" />
+    <Content Include="Accountsbootstrap\MaterialOpeningStockGrid.aspx" />
+    <Content Include="Accountsbootstrap\MaterialProcessEntryPrint.aspx" />
+    <Content Include="Accountsbootstrap\MaterialsIssue.aspx" />
+    <Content Include="Accountsbootstrap\MaterialsIssueGrid.aspx" />
+    <Content Include="Accountsbootstrap\MaterialStockReport.aspx" />
+    <Content Include="Accountsbootstrap\MultipleChecking.aspx" />
+    <Content Include="Accountsbootstrap\NDilloEmbGrid.aspx" />
+    <Content Include="Accountsbootstrap\NDilloEmbroideringGrid.aspx" />
+    <Content Include="Accountsbootstrap\NDilloEmbroideringProcess.aspx" />
+    <Content Include="Accountsbootstrap\NDilloIroning_Grid.aspx" />
+    <Content Include="Accountsbootstrap\NDilloKajaGrid.aspx" />
+    <Content Include="Accountsbootstrap\NDilloKajaProcess.aspx" />
+    <Content Include="Accountsbootstrap\NDilloStiching_Grid.aspx" />
+    <Content Include="Accountsbootstrap\NDilloWashingGrid.aspx" />
+    <Content Include="Accountsbootstrap\NDilloWashingProcess.aspx" />
+    <Content Include="Accountsbootstrap\NDillo_Ironing.aspx" />
+    <Content Include="Accountsbootstrap\NDillo_Stiching.aspx" />
+    <Content Include="Accountsbootstrap\NewCutProcess.aspx" />
+    <Content Include="Accountsbootstrap\NewCutProcessEdit.aspx" />
+    <Content Include="Accountsbootstrap\NewPrecutprocessBC.aspx" />
+    <Content Include="Accountsbootstrap\Opening.aspx" />
+    <Content Include="Accountsbootstrap\OpeningBalanceReport.aspx" />
+    <Content Include="Accountsbootstrap\OpeningStock.aspx" />
+    <Content Include="Accountsbootstrap\OpeningStockMaster.aspx" />
+    <Content Include="Accountsbootstrap\OpeningStockReport.aspx" />
+    <Content Include="Accountsbootstrap\OrderGrid.aspx" />
+    <Content Include="Accountsbootstrap\OrderProcess.aspx" />
+    <Content Include="Accountsbootstrap\OverAllCostingReport.aspx" />
+    <Content Include="Accountsbootstrap\OverallProcess.aspx" />
+    <Content Include="Accountsbootstrap\PartyApproval_Status.aspx" />
+    <Content Include="Accountsbootstrap\PartyMaster.aspx" />
+    <Content Include="Accountsbootstrap\PartyMasterGrid.aspx" />
+    <Content Include="Accountsbootstrap\PArtyMaster_Approval.aspx" />
+    <Content Include="Accountsbootstrap\PartyType.aspx" />
+    <Content Include="Accountsbootstrap\PartyWiseProductionStatus.aspx" />
+    <Content Include="Accountsbootstrap\PatternMaster.aspx" />
+    <Content Include="Accountsbootstrap\PattonEntry.aspx" />
+    <Content Include="Accountsbootstrap\Payment.aspx" />
+    <Content Include="Accountsbootstrap\PaymentGridView.aspx" />
+    <Content Include="Accountsbootstrap\PaymentGrit.aspx" />
+    <Content Include="Accountsbootstrap\PaymentNew.aspx" />
+    <Content Include="Accountsbootstrap\PaymentPrint.aspx" />
+    <Content Include="Accountsbootstrap\PaymentReport.aspx" />
+    <Content Include="Accountsbootstrap\PaymentScreen.aspx" />
+    <Content Include="Accountsbootstrap\Payment_Report.aspx" />
+    <Content Include="Accountsbootstrap\Pendingcuttingreport.aspx" />
+    <Content Include="Accountsbootstrap\PendingLotReport.aspx" />
+    <Content Include="Accountsbootstrap\NewPrecutprocess.aspx" />
+    <Content Include="Accountsbootstrap\PendingReport.aspx" />
+    <Content Include="Accountsbootstrap\PerfectMoney.aspx" />
+    <Content Include="Accountsbootstrap\PreAndMasterCutting.aspx" />
+    <Content Include="Accountsbootstrap\Print.aspx" />
+    <Content Include="Accountsbootstrap\PrintCutting.aspx" />
+    <Content Include="Accountsbootstrap\PrintCuttingnew.aspx" />
+    <Content Include="Accountsbootstrap\Printcuttingnewmaster.aspx" />
+    <Content Include="Accountsbootstrap\Printing.aspx" />
+    <Content Include="Accountsbootstrap\PrintingG.aspx" />
+    <Content Include="Accountsbootstrap\PrintingGrid1.aspx" />
+    <Content Include="Accountsbootstrap\PrintView.aspx" />
+    <Content Include="Accountsbootstrap\Print_Cutting.aspx" />
+    <Content Include="Accountsbootstrap\Print_Cutting1.aspx" />
+    <Content Include="Accountsbootstrap\Print_EmployeeJobCard.aspx" />
+    <Content Include="Accountsbootstrap\Print_EmployeeMonthlyJobCard.aspx" />
+    <Content Include="Accountsbootstrap\Print_Fabric.aspx" />
+    <Content Include="Accountsbootstrap\Print_FabricCR.aspx" />
+    <Content Include="Accountsbootstrap\Print_Sales_Invoice_Packing.aspx" />
+    <Content Include="Accountsbootstrap\Process.aspx" />
+    <Content Include="Accountsbootstrap\ProcessDetailedReport.aspx" />
+    <Content Include="Accountsbootstrap\ProcessHeading.aspx" />
+    <Content Include="Accountsbootstrap\ProcessMaster.aspx" />
+    <Content Include="Accountsbootstrap\ProcessOrderPrint.aspx" />
+    <Content Include="Accountsbootstrap\ProcessStatus.aspx" />
+    <Content Include="Accountsbootstrap\ProductionDetailReport.aspx" />
+    <Content Include="Accountsbootstrap\ProductionReport.aspx" />
+    <Content Include="Accountsbootstrap\ProductionStatus.aspx" />
+    <Content Include="Accountsbootstrap\ProductionStatusNew.aspx" />
+    <Content Include="Accountsbootstrap\PROORDER.aspx" />
+    <Content Include="Accountsbootstrap\PROORder_Grid.aspx" />
+    <Content Include="Accountsbootstrap\Pro_lossNEW.aspx" />
+    <Content Include="Accountsbootstrap\Pro_lossNEWDatewise.aspx" />
+    <Content Include="Accountsbootstrap\Purchase.aspx" />
+    <Content Include="Accountsbootstrap\PurchaseEntryGrid.aspx" />
+    <Content Include="Accountsbootstrap\PurchaseGRN.aspx" />
+    <Content Include="Accountsbootstrap\PurchaseGRNGrid.aspx" />
+    <Content Include="Accountsbootstrap\PurchaseGRNReport.aspx" />
+    <Content Include="Accountsbootstrap\PurchaseOrder.aspx" />
+    <Content Include="Accountsbootstrap\PurchaseOrderGrid.aspx" />
+    <Content Include="Accountsbootstrap\PurchaseOrderPendingReport.aspx" />
+    <Content Include="Accountsbootstrap\PurchaseOrderPrint.aspx" />
+    <Content Include="Accountsbootstrap\PurchaseOrderReport.aspx" />
+    <Content Include="Accountsbootstrap\PurchaseOrderReportNew.aspx" />
+    <Content Include="Accountsbootstrap\RateMaster.aspx" />
+    <Content Include="Accountsbootstrap\RatiowisePreCut.aspx" />
+    <Content Include="Accountsbootstrap\Receipt.aspx" />
+    <Content Include="Accountsbootstrap\Receipt_Report.aspx" />
+    <Content Include="Accountsbootstrap\RemoveLot.aspx" />
+    <Content Include="Accountsbootstrap\RequirementSheet.aspx" />
+    <Content Include="Accountsbootstrap\RequirementSheetDetails.aspx" />
+    <Content Include="Accountsbootstrap\RequirementSheetDetailsNew.aspx" />
+    <Content Include="Accountsbootstrap\RequirementSheetGrid.aspx" />
+    <Content Include="Accountsbootstrap\SalesGrid.aspx" />
+    <Content Include="Accountsbootstrap\Setting.aspx" />
+    <Content Include="Accountsbootstrap\Sheet.aspx" />
+    <Content Include="Accountsbootstrap\SheetDatewise.aspx" />
+    <Content Include="Accountsbootstrap\Statement.aspx" />
+    <Content Include="Accountsbootstrap\SupplierOrderMaster.aspx" />
+    <Content Include="Accountsbootstrap\SampleReport.aspx" />
+    <Content Include="Accountsbootstrap\SamplingandCosting.aspx" />
+    <Content Include="Accountsbootstrap\SamplingandCostingGrid.aspx" />
+    <Content Include="Accountsbootstrap\SamplingandCostingReport.aspx" />
+    <Content Include="Accountsbootstrap\SamplingCosting_Approval.aspx" />
+    <Content Include="Accountsbootstrap\secondStageGrid.aspx" />
+    <Content Include="Accountsbootstrap\SecondStageProcess.aspx" />
+    <Content Include="Accountsbootstrap\ShirtwisePreCut.aspx" />
+    <Content Include="Accountsbootstrap\Size.aspx" />
+    <Content Include="Accountsbootstrap\SizeRange.aspx" />
+    <Content Include="Accountsbootstrap\SizeSetting.aspx" />
+    <Content Include="Accountsbootstrap\Stc.aspx" />
+    <Content Include="Accountsbootstrap\Stitching.aspx" />
+    <Content Include="Accountsbootstrap\StitchingDetails.aspx" />
+    <Content Include="Accountsbootstrap\StitchingDetails_Print.aspx" />
+    <Content Include="Accountsbootstrap\StitchingG.aspx" />
+    <Content Include="Accountsbootstrap\StitchingGr.aspx" />
+    <Content Include="Accountsbootstrap\StitchingGrid.aspx" />
+    <Content Include="Accountsbootstrap\StockLedger.aspx" />
+    <Content Include="Accountsbootstrap\StockReport.aspx" />
+    <Content Include="Accountsbootstrap\StockStatement.aspx" />
+    <Content Include="Accountsbootstrap\StockTransfer.aspx" />
+    <Content Include="Accountsbootstrap\StockTransferGrid.aspx" />
+    <Content Include="Accountsbootstrap\Style.aspx" />
+    <Content Include="Accountsbootstrap\SupplierMaster.aspx" />
+    <Content Include="Accountsbootstrap\SupplierOrderMasterGrid.aspx" />
+    <Content Include="Accountsbootstrap\SwatchSheet.aspx" />
+    <Content Include="Accountsbootstrap\testpage.aspx" />
+    <Content Include="Accountsbootstrap\Ticket.aspx" />
+    <Content Include="Accountsbootstrap\TicketGrid.aspx" />
+    <Content Include="Accountsbootstrap\TicketRaise.aspx" />
+    <Content Include="Accountsbootstrap\TotalFabReport.aspx" />
+    <Content Include="Accountsbootstrap\TotalSamplingRequirement.aspx" />
+    <Content Include="Accountsbootstrap\Trail.aspx" />
+    <Content Include="Accountsbootstrap\TrailDatewise.aspx" />
+    <Content Include="Accountsbootstrap\Trim.aspx" />
+    <Content Include="Accountsbootstrap\Trimming.aspx" />
+    <Content Include="Accountsbootstrap\TrimmingG.aspx" />
+    <Content Include="Accountsbootstrap\TrimmingGrid.aspx" />
+    <Content Include="Accountsbootstrap\TrimmingProcess.aspx" />
+    <Content Include="Accountsbootstrap\TrimmingProcessGrid.aspx" />
+    <Content Include="Accountsbootstrap\UnitMaster.aspx" />
+    <Content Include="Accountsbootstrap\Unpacked.aspx" />
+    <Content Include="Accountsbootstrap\UnpackedGrid.aspx" />
+    <Content Include="Accountsbootstrap\UnUsedFab.aspx" />
+    <Content Include="Accountsbootstrap\Uom.aspx" />
+    <Content Include="Accountsbootstrap\usercreate.aspx" />
+    <Content Include="Accountsbootstrap\usercreategrid.aspx" />
+    <Content Include="Accountsbootstrap\Viewagent.aspx" />
+    <Content Include="Accountsbootstrap\viewbrands.aspx" />
+    <Content Include="Accountsbootstrap\viewcheques.aspx" />
+    <Content Include="Accountsbootstrap\ViewCustomer.aspx" />
+    <Content Include="Accountsbootstrap\viewcutting.aspx" />
+    <Content Include="Accountsbootstrap\viewcuttingBC.aspx" />
+    <Content Include="Accountsbootstrap\ViewCuttingMaster.aspx" />
+    <Content Include="Accountsbootstrap\ViewJobWork.aspx" />
+    <Content Include="Accountsbootstrap\viewjournals.aspx" />
+    <Content Include="Accountsbootstrap\viewprocess.aspx" />
+    <Content Include="Accountsbootstrap\viewreceipts.aspx" />
+    <Content Include="Accountsbootstrap\ViewSupplier.aspx" />
+    <Content Include="Accountsbootstrap\ViewTicket.aspx" />
+    <Content Include="Accountsbootstrap\Wash.aspx" />
+    <Content Include="Accountsbootstrap\Washing.aspx" />
+    <Content Include="Accountsbootstrap\WashingG.aspx" />
+    <Content Include="Accountsbootstrap\WashingGrid.aspx" />
+    <Content Include="Accountsbootstrap\Width.aspx" />
+    <Content Include="assets\app\js\dashboard.js" />
+    <Content Include="assets\app\js\layout-builder.js" />
+    <Content Include="assets\app\media\img\bg\bg-1.jpg" />
+    <Content Include="assets\app\media\img\bg\bg-2.jpg" />
+    <Content Include="assets\app\media\img\bg\bg-3.jpg" />
+    <Content Include="assets\app\media\img\bg\bg-4.jpg" />
+    <Content Include="assets\app\media\img\blog\blog1.jpg" />
+    <Content Include="assets\app\media\img\blog\blog2.jpg" />
+    <Content Include="assets\app\media\img\blog\blog3.jpg" />
+    <Content Include="assets\app\media\img\blog\blog4.jpg" />
+    <Content Include="assets\app\media\img\blog\blog5.jpg" />
+    <Content Include="assets\app\media\img\client-logos\logo1.png" />
+    <Content Include="assets\app\media\img\client-logos\logo2.png" />
+    <Content Include="assets\app\media\img\client-logos\logo3.png" />
+    <Content Include="assets\app\media\img\client-logos\logo4.png" />
+    <Content Include="assets\app\media\img\client-logos\logo5.png" />
+    <Content Include="assets\app\media\img\logos\logo-1.png" />
+    <Content Include="assets\app\media\img\logos\logo-2.png" />
+    <Content Include="assets\app\media\img\logos\logo-3.png" />
+    <Content Include="assets\app\media\img\misc\notification_bg.jpg" />
+    <Content Include="assets\app\media\img\misc\quick_actions_bg.jpg" />
+    <Content Include="assets\app\media\img\misc\user_profile_bg.jpg" />
+    <Content Include="assets\app\media\img\products\product1.jpg" />
+    <Content Include="assets\app\media\img\products\product10.jpg" />
+    <Content Include="assets\app\media\img\products\product11.jpg" />
+    <Content Include="assets\app\media\img\products\product2.jpg" />
+    <Content Include="assets\app\media\img\products\product3.jpg" />
+    <Content Include="assets\app\media\img\products\product4.jpg" />
+    <Content Include="assets\app\media\img\products\product5.jpg" />
+    <Content Include="assets\app\media\img\products\product6.jpg" />
+    <Content Include="assets\app\media\img\products\product7.jpg" />
+    <Content Include="assets\app\media\img\products\product8.jpg" />
+    <Content Include="assets\app\media\img\products\product9.jpg" />
+    <Content Include="assets\app\media\img\users\100_1.jpg" />
+    <Content Include="assets\app\media\img\users\100_10.jpg" />
+    <Content Include="assets\app\media\img\users\100_11.jpg" />
+    <Content Include="assets\app\media\img\users\100_12.jpg" />
+    <Content Include="assets\app\media\img\users\100_13.jpg" />
+    <Content Include="assets\app\media\img\users\100_14.jpg" />
+    <Content Include="assets\app\media\img\users\100_2.jpg" />
+    <Content Include="assets\app\media\img\users\100_3.jpg" />
+    <Content Include="assets\app\media\img\users\100_4.jpg" />
+    <Content Include="assets\app\media\img\users\100_5.jpg" />
+    <Content Include="assets\app\media\img\users\100_6.jpg" />
+    <Content Include="assets\app\media\img\users\100_7.jpg" />
+    <Content Include="assets\app\media\img\users\100_8.jpg" />
+    <Content Include="assets\app\media\img\users\100_9.jpg" />
+    <Content Include="assets\app\media\img\users\300_1.jpg" />
+    <Content Include="assets\app\media\img\users\300_10.jpg" />
+    <Content Include="assets\app\media\img\users\300_11.jpg" />
+    <Content Include="assets\app\media\img\users\300_12.jpg" />
+    <Content Include="assets\app\media\img\users\300_13.jpg" />
+    <Content Include="assets\app\media\img\users\300_14.jpg" />
+    <Content Include="assets\app\media\img\users\300_2.jpg" />
+    <Content Include="assets\app\media\img\users\300_3.jpg" />
+    <Content Include="assets\app\media\img\users\300_4.jpg" />
+    <Content Include="assets\app\media\img\users\300_5.jpg" />
+    <Content Include="assets\app\media\img\users\300_6.jpg" />
+    <Content Include="assets\app\media\img\users\300_7.jpg" />
+    <Content Include="assets\app\media\img\users\300_8.jpg" />
+    <Content Include="assets\app\media\img\users\300_9.jpg" />
+    <Content Include="assets\app\media\img\users\user1.jpg" />
+    <Content Include="assets\app\media\img\users\user2.jpg" />
+    <Content Include="assets\app\media\img\users\user3.jpg" />
+    <Content Include="assets\app\media\img\users\user4.jpg" />
+    <Content Include="assets\app\media\img\users\user5.jpg" />
+    <Content Include="assets\demo\default\base\scripts.bundle.js" />
+    <Content Include="assets\demo\default\base\style.bundle.css" />
+    <Content Include="assets\demo\default\custom\components\base\blockui.js" />
+    <Content Include="assets\demo\default\custom\components\base\bootstrap-notify.js" />
+    <Content Include="assets\demo\default\custom\components\base\dropdown.js" />
+    <Content Include="assets\demo\default\custom\components\base\scrollable.js" />
+    <Content Include="assets\demo\default\custom\components\base\toastr.js" />
+    <Content Include="assets\demo\default\custom\components\base\treeview.js" />
+    <Content Include="assets\demo\default\custom\components\charts\amcharts\charts.js" />
+    <Content Include="assets\demo\default\custom\components\charts\amcharts\maps.js" />
+    <Content Include="assets\demo\default\custom\components\charts\amcharts\stock-charts.js" />
+    <Content Include="assets\demo\default\custom\components\charts\flotcharts.js" />
+    <Content Include="assets\demo\default\custom\components\charts\google-charts.js" />
+    <Content Include="assets\demo\default\custom\components\charts\morris-charts.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\api\events.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\api\methods.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\base\column-rendering.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\base\column-width.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\base\data-ajax.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\base\data-json.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\base\data-local.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\base\record-selection.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\base\responsive-columns.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\base\translation.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\child\data-ajax.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\child\data-local.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\locked\both.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\locked\left.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\locked\right.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\scrolling\both.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\scrolling\horizontal.js" />
+    <Content Include="assets\demo\default\custom\components\datatables\scrolling\vertical.js" />
+    <Content Include="assets\demo\default\custom\components\forms\validation\form-controls.js" />
+    <Content Include="assets\demo\default\custom\components\forms\validation\form-widgets.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\autosize.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\bootstrap-datepicker.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\bootstrap-daterangepicker.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\bootstrap-datetimepicker.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\bootstrap-markdown.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\bootstrap-maxlength.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\bootstrap-select.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\bootstrap-selectsplitter.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\bootstrap-switch.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\bootstrap-timepicker.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\bootstrap-touchspin.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\clipboard.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\dropzone.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\google-recaptcha.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\input-mask.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\input-rangeslider.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\ion-range-slider.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\select2.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\summernote.js" />
+    <Content Include="assets\demo\default\custom\components\forms\widgets\typeahead.js" />
+    <Content Include="assets\demo\default\custom\components\maps\google-maps.js" />
+    <Content Include="assets\demo\default\custom\components\maps\jqvmap.js" />
+    <Content Include="assets\demo\default\custom\components\maps\jvectormap.js" />
+    <Content Include="assets\demo\default\custom\components\portlets\draggable.js" />
+    <Content Include="assets\demo\default\custom\components\utils\idle-timer.js" />
+    <Content Include="assets\demo\default\custom\components\utils\session-timeout.js" />
+    <Content Include="assets\demo\default\custom\header\actions.js" />
+    <Content Include="assets\demo\default\media\img\logo\favicon.ico" />
+    <Content Include="assets\demo\default\media\img\logo\favicon1.ico" />
+    <Content Include="assets\demo\default\media\img\logo\logo.png" />
+    <Content Include="assets\demo\default\media\img\logo\logo_compact.png" />
+    <Content Include="assets\demo\default\media\img\logo\logo_default_dark.png" />
+    <Content Include="assets\demo\default\media\img\logo\logo_default_light.png" />
+    <Content Include="assets\demo\default\media\img\misc\notification_bg.jpg" />
+    <Content Include="assets\demo\default\media\img\misc\quick_actions_bg.jpg" />
+    <Content Include="assets\demo\default\media\img\misc\user_profile_bg.jpg" />
+    <Content Include="assets\demo\demo2\base\scripts.bundle.js" />
+    <Content Include="assets\demo\demo2\base\style.bundle.css" />
+    <Content Include="assets\demo\demo2\media\img\logo\favicon.ico" />
+    <Content Include="assets\demo\demo2\media\img\logo\favicon1.ico" />
+    <Content Include="assets\demo\demo2\media\img\logo\logo.png" />
+    <Content Include="assets\demo\demo3\base\scripts.bundle.js" />
+    <Content Include="assets\demo\demo3\base\style.bundle.css" />
+    <Content Include="assets\demo\demo3\media\img\logo\favicon.ico" />
+    <Content Include="assets\demo\demo3\media\img\logo\favicon1.ico" />
+    <Content Include="assets\demo\demo3\media\img\logo\logo.png" />
+    <Content Include="assets\demo\demo4\base\scripts.bundle.js" />
+    <Content Include="assets\demo\demo4\base\style.bundle.css" />
+    <Content Include="assets\demo\demo4\media\img\logo\favicon.ico" />
+    <Content Include="assets\demo\demo4\media\img\logo\favicon1.ico" />
+    <Content Include="assets\demo\demo4\media\img\logo\logo.png" />
+    <Content Include="assets\snippets\pages\user\login.js" />
+    <Content Include="assets\vendors\base\images\ion.rangeSlider\sprite-skin-flat.png" />
+    <Content Include="assets\vendors\base\images\jstree\32px.png" />
+    <Content Include="assets\vendors\base\images\jstree\40px.png" />
+    <Content Include="assets\vendors\base\images\jstree\throbber.gif" />
+    <Content Include="assets\vendors\base\images\malihu-custom-scrollbar-plugin\mCSB_buttons.png" />
+    <Content Include="assets\vendors\base\vendors.bundle.css" />
+    <Content Include="assets\vendors\base\vendors.bundle.js" />
+    <Content Include="assets\vendors\custom\flot\flot.bundle.js" />
+    <Content Include="assets\vendors\custom\gmaps\gmaps.js" />
+    <Content Include="assets\vendors\custom\jqvmap\jqvmap.bundle.css" />
+    <Content Include="assets\vendors\custom\jqvmap\jqvmap.bundle.js" />
+    <Content Include="Billingsingle_Stock.sln" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\ASPSnippets.SmsAPI.dll" />
+    <Content Include="bin\Billing.dll" />
+    <Content Include="bin\Billing.pdb" />
+    <Content Include="bin\BusinessLayer.dll" />
+    <Content Include="bin\BusinessLayer.pdb" />
+    <Content Include="bin\CommonLayer.dll" />
+    <Content Include="bin\CommonLayer.pdb" />
+    <Content Include="bin\DataLayer.dll" />
+    <Content Include="bin\DataLayer.pdb" />
+    <Content Include="bin\Interop.CrystalActiveXReportViewerLib13.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\Microsoft.SqlServer.ConnectionInfo.dll" />
+    <Content Include="bin\Microsoft.SqlServer.Management.Sdk.Sfc.dll" />
+    <Content Include="bin\Microsoft.SqlServer.Smo.dll" />
+    <Content Include="bin\Microsoft.SqlServer.SmoExtended.dll" />
+    <Content Include="bin\Microsoft.SqlServer.SqlEnum.dll" />
+    <Content Include="bin\MySql.Data.DLL" />
+    <Content Include="bin\MySql.Web.dll" />
+    <Content Include="bin\System.Web.DataVisualization.Design.dll" />
+    <Content Include="bin\System.Web.DataVisualization.dll" />
+    <Content Include="bin\System.Windows.Forms.DataVisualization.Design.dll" />
+    <Content Include="bin\System.Windows.Forms.DataVisualization.dll" />
+    <Content Include="Camera.aspx" />
+    <Content Include="css1\font-awesome.min.css" />
+    <Content Include="css1\style.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap1.css" />
+    <Content Include="css\chosen-sprite%402x.png" />
+    <Content Include="css\chosen-sprite.png" />
+    <Content Include="css\chosen.css" />
+    <Content Include="css\chosen.js" />
+    <Content Include="css\chosen.min.css" />
+    <Content Include="css\date.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\GridviewScroll.css" />
+    <Content Include="css\plugins\dataTables.bootstrap.css" />
+    <Content Include="css\plugins\metisMenu\metisMenu.css" />
+    <Content Include="css\plugins\metisMenu\metisMenu.min.css" />
+    <Content Include="css\plugins\morris.css" />
+    <Content Include="css\plugins\social-buttons.css" />
+    <Content Include="css\plugins\timeline.css" />
+    <Content Include="css\responsive-tabs.css" />
+    <Content Include="css\sb-admin-2.css" />
+    <Content Include="css\toastr.css" />
+    <Content Include="fav.ico" />
+    <Content Include="font-awesome-4.1.0\css\font-awesome.css" />
+    <Content Include="font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="HeaderMaster\Header.ascx" />
+    <Content Include="images1\bg.jpg" />
+    <Content Include="images1\tick.png" />
+    <Content Include="images\01-progress.gif" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\blogo.png" />
+    <Content Include="images\body.png" />
+    <Content Include="images\body1.png" />
+    <Content Include="images\cancel-circle.png" />
+    <Content Include="images\Cer1.jpg" />
+    <Content Include="images\Cer2.jpg" />
+    <Content Include="images\Cer3.png" />
+    <Content Include="images\Client.png" />
+    <Content Include="images\cross_icon_normal.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\DeleteIcon_btn.png" />
+    <Content Include="images\dillo.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\edit_add.png" />
+    <Content Include="images\fav.ico" />
+    <Content Include="images\header.png" />
+    <Content Include="images\header1.png" />
+    <Content Include="images\history_icon.png" />
+    <Content Include="images\info_button.png" />
+    <Content Include="images\jp.png" />
+    <Content Include="images\jplogo 1.png" />
+    <Content Include="images\jplogo.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\lock.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo1.png" />
+    <Content Include="images\logo11.png" />
+    <Content Include="images\minus.gif" />
+    <Content Include="images\nextapp.png" />
+    <Content Include="images\omsaravanafab.jpg" />
+    <Content Include="images\P567.jpg" />
+    <Content Include="images\P588.jpg" />
+    <Content Include="images\P589.jpg" />
+    <Content Include="images\P604.jpg" />
+    <Content Include="images\P605.jpg" />
+    <Content Include="images\P607.jpg" />
+    <Content Include="images\plus.gif" />
+    <Content Include="images\Pranav_logo.jpg" />
+    <Content Include="images\Pranav_logo_small.png" />
+    <Content Include="images\Preloader_10.gif" />
+    <Content Include="images\print %281%29.png" />
+    <Content Include="images\print %282%29.png" />
+    <Content Include="images\print.png" />
+    <Content Include="images\progress.gif" />
+    <Content Include="images\QR.png" />
+    <Content Include="images\Red.png" />
+    <Content Include="images\rupee_symbol.png" />
+    <Content Include="images\SG.png" />
+    <Content Include="images\Spd.png" />
+    <Content Include="images\Stage_BG_btm.png" />
+    <Content Include="images\stock_task.png" />
+    <Content Include="images\tick.png" />
+    <Content Include="images\Time out.png" />
+    <Content Include="images\titlebar_bg.jpg" />
+    <Content Include="images\ViewHistory.png" />
+    <Content Include="images\yellow.png" />
+    <Content Include="InvoiceEmail.aspx" />
+    <Content Include="jqueryCalendar\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="jqueryCalendar\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="jqueryCalendar\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="jqueryCalendar\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="jqueryCalendar\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="jqueryCalendar\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="jqueryCalendar\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="jqueryCalendar\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="jqueryCalendar\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="jqueryCalendar\images\ui-icons_222222_256x240.png" />
+    <Content Include="jqueryCalendar\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="jqueryCalendar\images\ui-icons_a83300_256x240.png" />
+    <Content Include="jqueryCalendar\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="jqueryCalendar\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jqueryCalendar\jquery-1.6.2.min.js" />
+    <Content Include="jqueryCalendar\jquery-ui-1.8.15.custom.min.js" />
+    <Content Include="jqueryCalendar\jqueryCalendar.css" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\chosen.js" />
+    <Content Include="js\chosen.min.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\JQry.js" />
+    <Content Include="js\jquery-1.7.2.js" />
+    <Content Include="js\jquery-2.1.0.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.responsiveTabs.js" />
+    <Content Include="js\jquery.responsiveTabs.min.js" />
+    <Content Include="js\modernizr.js" />
+    <Content Include="js\plugins\dataTables\dataTables.bootstrap.js" />
+    <Content Include="js\plugins\dataTables\jquery.dataTables.js" />
+    <Content Include="js\plugins\flot\excanvas.min.js" />
+    <Content Include="js\plugins\flot\flot-data.js" />
+    <Content Include="js\plugins\flot\jquery.flot.js" />
+    <Content Include="js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="js\plugins\metisMenu\metisMenu.js" />
+    <Content Include="js\plugins\metisMenu\metisMenu.min.js" />
+    <Content Include="js\plugins\morris\morris-data.js" />
+    <Content Include="js\plugins\morris\morris.js" />
+    <Content Include="js\plugins\morris\morris.min.js" />
+    <Content Include="js\plugins\morris\raphael.min.js" />
+    <Content Include="js\sb-admin-2.js" />
+    <Content Include="js\Searchjs.js" />
+    <Content Include="js\stopExecutionOnTimeout-f961f59a28ef4fd551736b43f94620b5.js" />
+    <Content Include="js\toastr.js" />
+    <Content Include="js\toastrmin.js" />
+    <Content Include="js\Validation.js" />
+    <Content Include="NEW-BOOTS\css\bootstrap-theme.css" />
+    <Content Include="NEW-BOOTS\css\bootstrap-theme.min.css" />
+    <Content Include="NEW-BOOTS\css\bootstrap.css" />
+    <Content Include="NEW-BOOTS\css\bootstrap.min.css" />
+    <Content Include="NEW-BOOTS\js\bootstrap.js" />
+    <Content Include="NEW-BOOTS\js\bootstrap.min.js" />
+    <Content Include="NEW-BOOTS\js\npm.js" />
+    <Content Include="Accountsbootstrap\SampleReportNew.aspx" />
+    <Content Include="ProcessStatus.aspx" />
+    <Content Include="Sampling\noimage2.jpg" />
+    <Content Include="Scripts\chosen.jquery.js" />
+    <Content Include="Scripts\GridScrollJquery.js" />
+    <Content Include="Scripts\GridScrollJquery1.js" />
+    <Content Include="Scripts\gridviewscroll.js" />
+    <Content Include="Scripts\gridviewScroll.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquerynew-1.4.1.min.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\ScrollableGridPlugin.js" />
+    <Content Include="Scripts\ScrollableTablePlugin_1.0_min.js" />
+    <Content Include="Styles\AjaxPopUp.css" />
+    <Content Include="Styles\chosen-sprite%402x.png" />
+    <Content Include="Styles\chosen-sprite.png" />
+    <Content Include="Styles\chosen.css" />
+    <Content Include="Styles\ddmenu.css" />
+    <Content Include="Styles\ScrollableTablePlugin_1.0_min.js" />
+    <Content Include="Styles\style1.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\style123.css" />
+    <Content Include="Styles\styles.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Abu_Manufacture.aspx.cs">
+      <DependentUpon>Abu_Manufacture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Abu_Manufacture.aspx.designer.cs">
+      <DependentUpon>Abu_Manufacture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Agentmaster.aspx.cs">
+      <DependentUpon>Agentmaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Agentmaster.aspx.designer.cs">
+      <DependentUpon>Agentmaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\AlterProcess.aspx.cs">
+      <DependentUpon>AlterProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\AlterProcess.aspx.designer.cs">
+      <DependentUpon>AlterProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\autocomplete.aspx.cs">
+      <DependentUpon>autocomplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\autocomplete.aspx.designer.cs">
+      <DependentUpon>autocomplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BarT.aspx.cs">
+      <DependentUpon>BarT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BarT.aspx.designer.cs">
+      <DependentUpon>BarT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BarTag.aspx.cs">
+      <DependentUpon>BarTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BarTag.aspx.designer.cs">
+      <DependentUpon>BarTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BarTagG.aspx.cs">
+      <DependentUpon>BarTagG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BarTagG.aspx.designer.cs">
+      <DependentUpon>BarTagG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BarTagGrid.aspx.cs">
+      <DependentUpon>BarTagGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BarTagGrid.aspx.designer.cs">
+      <DependentUpon>BarTagGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BCPreviewLot.aspx.cs">
+      <DependentUpon>BCPreviewLot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BCPreviewLot.aspx.designer.cs">
+      <DependentUpon>BCPreviewLot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BillSeries.aspx.cs">
+      <DependentUpon>BillSeries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BillSeries.aspx.designer.cs">
+      <DependentUpon>BillSeries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Branch.aspx.cs">
+      <DependentUpon>Branch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Branch.aspx.designer.cs">
+      <DependentUpon>Branch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BrandMaster.aspx.cs">
+      <DependentUpon>BrandMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BrandMaster.aspx.designer.cs">
+      <DependentUpon>BrandMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderBookingStyles.aspx.cs">
+      <DependentUpon>BuyerOrderBookingStyles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderBookingStyles.aspx.designer.cs">
+      <DependentUpon>BuyerOrderBookingStyles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderBookingSummary.aspx.cs">
+      <DependentUpon>BuyerOrderBookingSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderBookingSummary.aspx.designer.cs">
+      <DependentUpon>BuyerOrderBookingSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderCutting.aspx.cs">
+      <DependentUpon>BuyerOrderCutting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderCutting.aspx.designer.cs">
+      <DependentUpon>BuyerOrderCutting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderCuttingGrid.aspx.cs">
+      <DependentUpon>BuyerOrderCuttingGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderCuttingGrid.aspx.designer.cs">
+      <DependentUpon>BuyerOrderCuttingGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderCuttingPrint.aspx.cs">
+      <DependentUpon>BuyerOrderCuttingPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderCuttingPrint.aspx.designer.cs">
+      <DependentUpon>BuyerOrderCuttingPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderDetails.aspx.cs">
+      <DependentUpon>BuyerOrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderDetails.aspx.designer.cs">
+      <DependentUpon>BuyerOrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderMaster.aspx.cs">
+      <DependentUpon>BuyerOrderMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderMaster.aspx.designer.cs">
+      <DependentUpon>BuyerOrderMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderMasterCutting.aspx.cs">
+      <DependentUpon>BuyerOrderMasterCutting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderMasterCutting.aspx.designer.cs">
+      <DependentUpon>BuyerOrderMasterCutting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderMasterCuttingGrid.aspx.cs">
+      <DependentUpon>BuyerOrderMasterCuttingGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderMasterCuttingGrid.aspx.designer.cs">
+      <DependentUpon>BuyerOrderMasterCuttingGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderMasterGrid.aspx.cs">
+      <DependentUpon>BuyerOrderMasterGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderMasterGrid.aspx.designer.cs">
+      <DependentUpon>BuyerOrderMasterGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderPendingReport.aspx.cs">
+      <DependentUpon>BuyerOrderPendingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderPendingReport.aspx.designer.cs">
+      <DependentUpon>BuyerOrderPendingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderReport.aspx.cs">
+      <DependentUpon>BuyerOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderReport.aspx.designer.cs">
+      <DependentUpon>BuyerOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderSales.aspx.cs">
+      <DependentUpon>BuyerOrderSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderSales.aspx.designer.cs">
+      <DependentUpon>BuyerOrderSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderSalesGrid.aspx.cs">
+      <DependentUpon>BuyerOrderSalesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\BuyerOrderSalesGrid.aspx.designer.cs">
+      <DependentUpon>BuyerOrderSalesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CAD_Entry.aspx.cs">
+      <DependentUpon>CAD_Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CAD_Entry.aspx.designer.cs">
+      <DependentUpon>CAD_Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CAD_Entry_Grid.aspx.cs">
+      <DependentUpon>CAD_Entry_Grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CAD_Entry_Grid.aspx.designer.cs">
+      <DependentUpon>CAD_Entry_Grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CashAccount.aspx.cs">
+      <DependentUpon>CashAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CashAccount.aspx.designer.cs">
+      <DependentUpon>CashAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\cashsales.aspx.cs">
+      <DependentUpon>cashsales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\cashsales.aspx.designer.cs">
+      <DependentUpon>cashsales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\categorygrid.aspx.cs">
+      <DependentUpon>categorygrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\categorygrid.aspx.designer.cs">
+      <DependentUpon>categorygrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ChallanIn.aspx.cs">
+      <DependentUpon>ChallanIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ChallanIn.aspx.designer.cs">
+      <DependentUpon>ChallanIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ChallanInNew.aspx.cs">
+      <DependentUpon>ChallanInNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ChallanInNew.aspx.designer.cs">
+      <DependentUpon>ChallanInNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ChallanOut.aspx.cs">
+      <DependentUpon>ChallanOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ChallanOut.aspx.designer.cs">
+      <DependentUpon>ChallanOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CheckingProcess.aspx.cs">
+      <DependentUpon>CheckingProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CheckingProcess.aspx.designer.cs">
+      <DependentUpon>CheckingProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CheckingProcessGrid.aspx.cs">
+      <DependentUpon>CheckingProcessGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CheckingProcessGrid.aspx.designer.cs">
+      <DependentUpon>CheckingProcessGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cheque.aspx.cs">
+      <DependentUpon>Cheque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cheque.aspx.designer.cs">
+      <DependentUpon>Cheque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cni.aspx.cs">
+      <DependentUpon>Cni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cni.aspx.designer.cs">
+      <DependentUpon>Cni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Color.aspx.cs">
+      <DependentUpon>Color.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Color.aspx.designer.cs">
+      <DependentUpon>Color.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CompanyGrid.aspx.cs">
+      <DependentUpon>CompanyGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CompanyGrid.aspx.designer.cs">
+      <DependentUpon>CompanyGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Company_Details.aspx.cs">
+      <DependentUpon>Company_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Company_Details.aspx.designer.cs">
+      <DependentUpon>Company_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Consai.aspx.cs">
+      <DependentUpon>Consai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Consai.aspx.designer.cs">
+      <DependentUpon>Consai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ConsaiG.aspx.cs">
+      <DependentUpon>ConsaiG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ConsaiG.aspx.designer.cs">
+      <DependentUpon>ConsaiG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ConsaiGrid.aspx.cs">
+      <DependentUpon>ConsaiGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ConsaiGrid.aspx.designer.cs">
+      <DependentUpon>ConsaiGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CostingDetails.aspx.cs">
+      <DependentUpon>CostingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CostingDetails.aspx.designer.cs">
+      <DependentUpon>CostingDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CostingDetailsNew.aspx.cs">
+      <DependentUpon>CostingDetailsNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CostingDetailsNew.aspx.designer.cs">
+      <DependentUpon>CostingDetailsNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CurrencyMaster.aspx.cs">
+      <DependentUpon>CurrencyMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CurrencyMaster.aspx.designer.cs">
+      <DependentUpon>CurrencyMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Customerlabelprint.aspx.cs">
+      <DependentUpon>Customerlabelprint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Customerlabelprint.aspx.designer.cs">
+      <DependentUpon>Customerlabelprint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\customermaster.aspx.cs">
+      <DependentUpon>customermaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\customermaster.aspx.designer.cs">
+      <DependentUpon>customermaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\cutlotreport.aspx.cs">
+      <DependentUpon>cutlotreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\cutlotreport.aspx.designer.cs">
+      <DependentUpon>cutlotreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cutprocess.aspx.cs">
+      <DependentUpon>Cutprocess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cutprocess.aspx.designer.cs">
+      <DependentUpon>Cutprocess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingAndMasterCuttingDetails.aspx.cs">
+      <DependentUpon>CuttingAndMasterCuttingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingAndMasterCuttingDetails.aspx.designer.cs">
+      <DependentUpon>CuttingAndMasterCuttingDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingDetails.aspx.cs">
+      <DependentUpon>CuttingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingDetails.aspx.designer.cs">
+      <DependentUpon>CuttingDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingDetailsNew.aspx.cs">
+      <DependentUpon>CuttingDetailsNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingDetailsNew.aspx.designer.cs">
+      <DependentUpon>CuttingDetailsNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingInfoGrid.aspx.cs">
+      <DependentUpon>CuttingInfoGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingInfoGrid.aspx.designer.cs">
+      <DependentUpon>CuttingInfoGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cuttingmaster.aspx.cs">
+      <DependentUpon>Cuttingmaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cuttingmaster.aspx.designer.cs">
+      <DependentUpon>Cuttingmaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingPreprocess.aspx.cs">
+      <DependentUpon>CuttingPreprocess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingPreprocess.aspx.designer.cs">
+      <DependentUpon>CuttingPreprocess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cuttingprocess.aspx.cs">
+      <DependentUpon>Cuttingprocess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cuttingprocess.aspx.designer.cs">
+      <DependentUpon>Cuttingprocess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessEntry.aspx.cs">
+      <DependentUpon>CuttingProcessEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessEntry.aspx.designer.cs">
+      <DependentUpon>CuttingProcessEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessEntryGrid.aspx.cs">
+      <DependentUpon>CuttingProcessEntryGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessEntryGrid.aspx.designer.cs">
+      <DependentUpon>CuttingProcessEntryGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessEntryOrder.aspx.cs">
+      <DependentUpon>CuttingProcessEntryOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessEntryOrder.aspx.designer.cs">
+      <DependentUpon>CuttingProcessEntryOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessEntryPrint.aspx.cs">
+      <DependentUpon>CuttingProcessEntryPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessEntryPrint.aspx.designer.cs">
+      <DependentUpon>CuttingProcessEntryPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cuttingprocessnew.aspx.cs">
+      <DependentUpon>Cuttingprocessnew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Cuttingprocessnew.aspx.designer.cs">
+      <DependentUpon>Cuttingprocessnew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessReceivePrint.aspx.cs">
+      <DependentUpon>CuttingProcessReceivePrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessReceivePrint.aspx.designer.cs">
+      <DependentUpon>CuttingProcessReceivePrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessReport.aspx.cs">
+      <DependentUpon>CuttingProcessReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingProcessReport.aspx.designer.cs">
+      <DependentUpon>CuttingProcessReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingQtyDetails.aspx.cs">
+      <DependentUpon>CuttingQtyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\CuttingQtyDetails.aspx.designer.cs">
+      <DependentUpon>CuttingQtyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\cuttingreport.aspx.cs">
+      <DependentUpon>cuttingreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\cuttingreport.aspx.designer.cs">
+      <DependentUpon>cuttingreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Damageprint.aspx.cs">
+      <DependentUpon>Damageprint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Damageprint.aspx.designer.cs">
+      <DependentUpon>Damageprint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\dash.aspx.cs">
+      <DependentUpon>dash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\dash.aspx.designer.cs">
+      <DependentUpon>dash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DataSet1.Designer.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DateWiseReport.aspx.cs">
+      <DependentUpon>DateWiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DateWiseReport.aspx.designer.cs">
+      <DependentUpon>DateWiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DayBook.aspx.cs">
+      <DependentUpon>DayBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DayBook.aspx.designer.cs">
+      <DependentUpon>DayBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dept_Master.aspx.cs">
+      <DependentUpon>Dept_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dept_Master.aspx.designer.cs">
+      <DependentUpon>Dept_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DescriptionGrid.aspx.cs">
+      <DependentUpon>DescriptionGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DescriptionGrid.aspx.designer.cs">
+      <DependentUpon>DescriptionGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DespatchGrid.aspx.cs">
+      <DependentUpon>DespatchGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DespatchGrid.aspx.designer.cs">
+      <DependentUpon>DespatchGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DespatchPrint.aspx.cs">
+      <DependentUpon>DespatchPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DespatchPrint.aspx.designer.cs">
+      <DependentUpon>DespatchPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DespatchReturn.aspx.cs">
+      <DependentUpon>DespatchReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DespatchReturn.aspx.designer.cs">
+      <DependentUpon>DespatchReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DespatchReturnGrid.aspx.cs">
+      <DependentUpon>DespatchReturnGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DespatchReturnGrid.aspx.designer.cs">
+      <DependentUpon>DespatchReturnGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DespatchStock.aspx.cs">
+      <DependentUpon>DespatchStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DespatchStock.aspx.designer.cs">
+      <DependentUpon>DespatchStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloMultiLotGrid.aspx.cs">
+      <DependentUpon>DilloMultiLotGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloMultiLotGrid.aspx.designer.cs">
+      <DependentUpon>DilloMultiLotGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloMultiLotPrint.aspx.cs">
+      <DependentUpon>DilloMultiLotPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloMultiLotPrint.aspx.designer.cs">
+      <DependentUpon>DilloMultiLotPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloMultipleLot.aspx.cs">
+      <DependentUpon>DilloMultipleLot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloMultipleLot.aspx.designer.cs">
+      <DependentUpon>DilloMultipleLot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloStitchingDetails.aspx.cs">
+      <DependentUpon>DilloStitchingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloStitchingDetails.aspx.designer.cs">
+      <DependentUpon>DilloStitchingDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloStitchingInfoGrid.aspx.cs">
+      <DependentUpon>DilloStitchingInfoGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloStitchingInfoGrid.aspx.designer.cs">
+      <DependentUpon>DilloStitchingInfoGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloWashingGrid.aspx.cs">
+      <DependentUpon>DilloWashingGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DilloWashingGrid.aspx.designer.cs">
+      <DependentUpon>DilloWashingGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_DateReport.aspx.cs">
+      <DependentUpon>Dillo_DateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_DateReport.aspx.designer.cs">
+      <DependentUpon>Dillo_DateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Designation.aspx.cs">
+      <DependentUpon>Dillo_Designation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Designation.aspx.designer.cs">
+      <DependentUpon>Dillo_Designation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_EmbJobWork.aspx.cs">
+      <DependentUpon>Dillo_EmbJobWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_EmbJobWork.aspx.designer.cs">
+      <DependentUpon>Dillo_EmbJobWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_EmbJobWorkPrint.aspx.cs">
+      <DependentUpon>Dillo_EmbJobWorkPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_EmbJobWorkPrint.aspx.designer.cs">
+      <DependentUpon>Dillo_EmbJobWorkPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Embrodarygrid.aspx.cs">
+      <DependentUpon>Dillo_Embrodarygrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Embrodarygrid.aspx.designer.cs">
+      <DependentUpon>Dillo_Embrodarygrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Embroidering.aspx.cs">
+      <DependentUpon>Dillo_Embroidering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Embroidering.aspx.designer.cs">
+      <DependentUpon>Dillo_Embroidering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_EmbWorks.aspx.cs">
+      <DependentUpon>Dillo_EmbWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_EmbWorks.aspx.designer.cs">
+      <DependentUpon>Dillo_EmbWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_EmbWorkGrid.aspx.cs">
+      <DependentUpon>Dillo_EmbWorkGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_EmbWorkGrid.aspx.designer.cs">
+      <DependentUpon>Dillo_EmbWorkGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Employeewisereport.aspx.cs">
+      <DependentUpon>Dillo_Employeewisereport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Employeewisereport.aspx.designer.cs">
+      <DependentUpon>Dillo_Employeewisereport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Irongrid.aspx.cs">
+      <DependentUpon>Dillo_Irongrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Irongrid.aspx.designer.cs">
+      <DependentUpon>Dillo_Irongrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_IronPacking.aspx.cs">
+      <DependentUpon>Dillo_IronPacking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_IronPacking.aspx.designer.cs">
+      <DependentUpon>Dillo_IronPacking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaGrid.aspx.cs">
+      <DependentUpon>Dillo_KajaGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaGrid.aspx.designer.cs">
+      <DependentUpon>Dillo_KajaGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaJobPrint.aspx.cs">
+      <DependentUpon>Dillo_KajaJobPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaJobPrint.aspx.designer.cs">
+      <DependentUpon>Dillo_KajaJobPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaJobwork.aspx.cs">
+      <DependentUpon>Dillo_KajaJobwork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaJobwork.aspx.designer.cs">
+      <DependentUpon>Dillo_KajaJobwork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaProcess.aspx.cs">
+      <DependentUpon>Dillo_KajaProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaProcess.aspx.designer.cs">
+      <DependentUpon>Dillo_KajaProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaWork.aspx.cs">
+      <DependentUpon>Dillo_KajaWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaWork.aspx.designer.cs">
+      <DependentUpon>Dillo_KajaWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaworkGrid.aspx.cs">
+      <DependentUpon>Dillo_KajaworkGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_KajaworkGrid.aspx.designer.cs">
+      <DependentUpon>Dillo_KajaworkGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_LotProcess.aspx.cs">
+      <DependentUpon>Dillo_LotProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_LotProcess.aspx.designer.cs">
+      <DependentUpon>Dillo_LotProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_LotProcessGrid.aspx.cs">
+      <DependentUpon>Dillo_LotProcessGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_LotProcessGrid.aspx.designer.cs">
+      <DependentUpon>Dillo_LotProcessGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_OrderProcessPrint.aspx.cs">
+      <DependentUpon>Dillo_OrderProcessPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_OrderProcessPrint.aspx.designer.cs">
+      <DependentUpon>Dillo_OrderProcessPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_OrderProcessPrintNew.aspx.cs">
+      <DependentUpon>Dillo_OrderProcessPrintNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_OrderProcessPrintNew.aspx.designer.cs">
+      <DependentUpon>Dillo_OrderProcessPrintNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_StitchingInfo.aspx.cs">
+      <DependentUpon>Dillo_StitchingInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_StitchingInfo.aspx.designer.cs">
+      <DependentUpon>Dillo_StitchingInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_StitchingInfoGrid.aspx.cs">
+      <DependentUpon>Dillo_StitchingInfoGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_StitchingInfoGrid.aspx.designer.cs">
+      <DependentUpon>Dillo_StitchingInfoGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_UnitWiseReport.aspx.cs">
+      <DependentUpon>Dillo_UnitWiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_UnitWiseReport.aspx.designer.cs">
+      <DependentUpon>Dillo_UnitWiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Washing.aspx.cs">
+      <DependentUpon>Dillo_Washing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_Washing.aspx.designer.cs">
+      <DependentUpon>Dillo_Washing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_WashjobWork.aspx.cs">
+      <DependentUpon>Dillo_WashjobWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_WashjobWork.aspx.designer.cs">
+      <DependentUpon>Dillo_WashjobWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_WashJobWorkPrint.aspx.cs">
+      <DependentUpon>Dillo_WashJobWorkPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_WashJobWorkPrint.aspx.designer.cs">
+      <DependentUpon>Dillo_WashJobWorkPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_WashWorkGrid.aspx.cs">
+      <DependentUpon>Dillo_WashWorkGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_WashWorkGrid.aspx.designer.cs">
+      <DependentUpon>Dillo_WashWorkGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_WashWorks.aspx.cs">
+      <DependentUpon>Dillo_WashWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Dillo_WashWorks.aspx.designer.cs">
+      <DependentUpon>Dillo_WashWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\DocumentCore.cs" />
+    <Compile Include="Accountsbootstrap\EditFirstGrid.aspx.cs">
+      <DependentUpon>EditFirstGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\EditFirstGrid.aspx.designer.cs">
+      <DependentUpon>EditFirstGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\EditProcess.aspx.cs">
+      <DependentUpon>EditProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\EditProcess.aspx.designer.cs">
+      <DependentUpon>EditProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Emb.aspx.cs">
+      <DependentUpon>Emb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Emb.aspx.designer.cs">
+      <DependentUpon>Emb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Embroid.aspx.cs">
+      <DependentUpon>Embroid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Embroid.aspx.designer.cs">
+      <DependentUpon>Embroid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\EmbroidingG.aspx.cs">
+      <DependentUpon>EmbroidingG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\EmbroidingG.aspx.designer.cs">
+      <DependentUpon>EmbroidingG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\EmbroidingGrid1.aspx.cs">
+      <DependentUpon>EmbroidingGrid1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\EmbroidingGrid1.aspx.designer.cs">
+      <DependentUpon>EmbroidingGrid1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\EmployeeDatewise.aspx.cs">
+      <DependentUpon>EmployeeDatewise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\EmployeeDatewise.aspx.designer.cs">
+      <DependentUpon>EmployeeDatewise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Employee_details.aspx.cs">
+      <DependentUpon>Employee_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Employee_details.aspx.designer.cs">
+      <DependentUpon>Employee_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Emp_gird.aspx.cs">
+      <DependentUpon>Emp_gird.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Emp_gird.aspx.designer.cs">
+      <DependentUpon>Emp_gird.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Error_Page.aspx.cs">
+      <DependentUpon>Error_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Error_Page.aspx.designer.cs">
+      <DependentUpon>Error_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ExcOpeningStock.aspx.cs">
+      <DependentUpon>ExcOpeningStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ExcOpeningStock.aspx.designer.cs">
+      <DependentUpon>ExcOpeningStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ExcOpeningStockGrid.aspx.cs">
+      <DependentUpon>ExcOpeningStockGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ExcOpeningStockGrid.aspx.designer.cs">
+      <DependentUpon>ExcOpeningStockGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Fabprocess.aspx.cs">
+      <DependentUpon>Fabprocess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Fabprocess.aspx.designer.cs">
+      <DependentUpon>Fabprocess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FabProcessNew.aspx.cs">
+      <DependentUpon>FabProcessNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FabProcessNew.aspx.designer.cs">
+      <DependentUpon>FabProcessNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\fabreport.aspx.cs">
+      <DependentUpon>fabreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\fabreport.aspx.designer.cs">
+      <DependentUpon>fabreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FabricDetailsReport.aspx.cs">
+      <DependentUpon>FabricDetailsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FabricDetailsReport.aspx.designer.cs">
+      <DependentUpon>FabricDetailsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Fabricprocess.aspx.cs">
+      <DependentUpon>Fabricprocess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Fabricprocess.aspx.designer.cs">
+      <DependentUpon>Fabricprocess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\fabricreport.aspx.cs">
+      <DependentUpon>fabricreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\fabricreport.aspx.designer.cs">
+      <DependentUpon>fabricreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FabricType.aspx.cs">
+      <DependentUpon>FabricType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FabricType.aspx.designer.cs">
+      <DependentUpon>FabricType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Fabric_Grid.aspx.cs">
+      <DependentUpon>Fabric_Grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Fabric_Grid.aspx.designer.cs">
+      <DependentUpon>Fabric_Grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FinishedStockReport.aspx.cs">
+      <DependentUpon>FinishedStockReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FinishedStockReport.aspx.designer.cs">
+      <DependentUpon>FinishedStockReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FirstStageGrid.aspx.cs">
+      <DependentUpon>FirstStageGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FirstStageGrid.aspx.designer.cs">
+      <DependentUpon>FirstStageGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FirstStageProcess.aspx.cs">
+      <DependentUpon>FirstStageProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FirstStageProcess.aspx.designer.cs">
+      <DependentUpon>FirstStageProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Fit.aspx.cs">
+      <DependentUpon>Fit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Fit.aspx.designer.cs">
+      <DependentUpon>Fit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FullFormReport.aspx.cs">
+      <DependentUpon>FullFormReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FullFormReport.aspx.designer.cs">
+      <DependentUpon>FullFormReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FullLotDetails.aspx.cs">
+      <DependentUpon>FullLotDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\FullLotDetails.aspx.designer.cs">
+      <DependentUpon>FullLotDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\GodownMaster.aspx.cs">
+      <DependentUpon>GodownMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\GodownMaster.aspx.designer.cs">
+      <DependentUpon>GodownMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\GodownOpeningStock.aspx.cs">
+      <DependentUpon>GodownOpeningStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\GodownOpeningStock.aspx.designer.cs">
+      <DependentUpon>GodownOpeningStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\GSTPortalReport.aspx.cs">
+      <DependentUpon>GSTPortalReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\GSTPortalReport.aspx.designer.cs">
+      <DependentUpon>GSTPortalReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\GSTReport.aspx.cs">
+      <DependentUpon>GSTReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\GSTReport.aspx.designer.cs">
+      <DependentUpon>GSTReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\GSTReportGroup.aspx.cs">
+      <DependentUpon>GSTReportGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\GSTReportGroup.aspx.designer.cs">
+      <DependentUpon>GSTReportGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Home_Page.aspx.cs">
+      <DependentUpon>Home_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Home_Page.aspx.designer.cs">
+      <DependentUpon>Home_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\HtmlToPdfConverter.cs" />
+    <Compile Include="Accountsbootstrap\ICachedReport.cs" />
+    <Compile Include="Accountsbootstrap\Iron.aspx.cs">
+      <DependentUpon>Iron.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Iron.aspx.designer.cs">
+      <DependentUpon>Iron.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Ironing.aspx.cs">
+      <DependentUpon>Ironing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Ironing.aspx.designer.cs">
+      <DependentUpon>Ironing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\IroningG.aspx.cs">
+      <DependentUpon>IroningG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\IroningG.aspx.designer.cs">
+      <DependentUpon>IroningG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\IroningGrid.aspx.cs">
+      <DependentUpon>IroningGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\IroningGrid.aspx.designer.cs">
+      <DependentUpon>IroningGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemGroup.aspx.cs">
+      <DependentUpon>ItemGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemGroup.aspx.designer.cs">
+      <DependentUpon>ItemGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemMaster.aspx.cs">
+      <DependentUpon>ItemMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemMaster.aspx.designer.cs">
+      <DependentUpon>ItemMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemMasterGrop.aspx.cs">
+      <DependentUpon>ItemMasterGrop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemMasterGrop.aspx.designer.cs">
+      <DependentUpon>ItemMasterGrop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemMasterGroup.aspx.cs">
+      <DependentUpon>ItemMasterGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemMasterGroup.aspx.designer.cs">
+      <DependentUpon>ItemMasterGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemMasterGroupGrid.aspx.cs">
+      <DependentUpon>ItemMasterGroupGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemMasterGroupGrid.aspx.designer.cs">
+      <DependentUpon>ItemMasterGroupGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\itempage.aspx.cs">
+      <DependentUpon>itempage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\itempage.aspx.designer.cs">
+      <DependentUpon>itempage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrder.aspx.cs">
+      <DependentUpon>ItemProcessOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrder.aspx.designer.cs">
+      <DependentUpon>ItemProcessOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderEntry.aspx.cs">
+      <DependentUpon>ItemProcessOrderEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderEntry.aspx.designer.cs">
+      <DependentUpon>ItemProcessOrderEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderEntryGrid.aspx.cs">
+      <DependentUpon>ItemProcessOrderEntryGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderEntryGrid.aspx.designer.cs">
+      <DependentUpon>ItemProcessOrderEntryGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderEntryPrint.aspx.cs">
+      <DependentUpon>ItemProcessOrderEntryPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderEntryPrint.aspx.designer.cs">
+      <DependentUpon>ItemProcessOrderEntryPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderEntryReport.aspx.cs">
+      <DependentUpon>ItemProcessOrderEntryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderEntryReport.aspx.designer.cs">
+      <DependentUpon>ItemProcessOrderEntryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderGrid.aspx.cs">
+      <DependentUpon>ItemProcessOrderGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderGrid.aspx.designer.cs">
+      <DependentUpon>ItemProcessOrderGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderPrint.aspx.cs">
+      <DependentUpon>ItemProcessOrderPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderPrint.aspx.designer.cs">
+      <DependentUpon>ItemProcessOrderPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderReport.aspx.cs">
+      <DependentUpon>ItemProcessOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessOrderReport.aspx.designer.cs">
+      <DependentUpon>ItemProcessOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessReceive.aspx.cs">
+      <DependentUpon>ItemProcessReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessReceive.aspx.designer.cs">
+      <DependentUpon>ItemProcessReceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessReceiveGrid.aspx.cs">
+      <DependentUpon>ItemProcessReceiveGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessReceiveGrid.aspx.designer.cs">
+      <DependentUpon>ItemProcessReceiveGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessReceiveReport.aspx.cs">
+      <DependentUpon>ItemProcessReceiveReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemProcessReceiveReport.aspx.designer.cs">
+      <DependentUpon>ItemProcessReceiveReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemRateChecking.aspx.cs">
+      <DependentUpon>ItemRateChecking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemRateChecking.aspx.designer.cs">
+      <DependentUpon>ItemRateChecking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemType.aspx.cs">
+      <DependentUpon>ItemType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ItemType.aspx.designer.cs">
+      <DependentUpon>ItemType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\JobWorkerFabDetails.aspx.cs">
+      <DependentUpon>JobWorkerFabDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\JobWorkerFabDetails.aspx.designer.cs">
+      <DependentUpon>JobWorkerFabDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\JobWorkMaster.aspx.cs">
+      <DependentUpon>JobWorkMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\JobWorkMaster.aspx.designer.cs">
+      <DependentUpon>JobWorkMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\JournalScreen.aspx.cs">
+      <DependentUpon>JournalScreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\JournalScreen.aspx.designer.cs">
+      <DependentUpon>JournalScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\JournalsReport.aspx.cs">
+      <DependentUpon>JournalsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\JournalsReport.aspx.designer.cs">
+      <DependentUpon>JournalsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Kaja.aspx.cs">
+      <DependentUpon>Kaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\KajaButton1.aspx.cs">
+      <DependentUpon>KajaButton1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\KajaButton1.aspx.designer.cs">
+      <DependentUpon>KajaButton1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\KajaButtonG.aspx.cs">
+      <DependentUpon>KajaButtonG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\KajaButtonG.aspx.designer.cs">
+      <DependentUpon>KajaButtonG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\KajaButtonGrid.aspx.cs">
+      <DependentUpon>KajaButtonGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\KajaButtonGrid.aspx.designer.cs">
+      <DependentUpon>KajaButtonGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\KajaG.aspx.cs">
+      <DependentUpon>KajaG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\KajaG.aspx.designer.cs">
+      <DependentUpon>KajaG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\KajaProcessGrid.aspx.cs">
+      <DependentUpon>KajaProcessGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\KajaProcessGrid.aspx.designer.cs">
+      <DependentUpon>KajaProcessGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Kaja_Process.aspx.cs">
+      <DependentUpon>Kaja_Process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Kaja_Process.aspx.designer.cs">
+      <DependentUpon>Kaja_Process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LeadGrid.aspx.cs">
+      <DependentUpon>LeadGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LeadGrid.aspx.designer.cs">
+      <DependentUpon>LeadGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LeadMaster.aspx.cs">
+      <DependentUpon>LeadMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LeadMaster.aspx.designer.cs">
+      <DependentUpon>LeadMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LedgerReport.aspx.cs">
+      <DependentUpon>LedgerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LedgerReport.aspx.designer.cs">
+      <DependentUpon>LedgerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Login1.aspx.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Login1.aspx.designer.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LotCompleteDetailReport.aspx.cs">
+      <DependentUpon>LotCompleteDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LotCompleteDetailReport.aspx.designer.cs">
+      <DependentUpon>LotCompleteDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Lotprocess.aspx.cs">
+      <DependentUpon>Lotprocess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Lotprocess.aspx.designer.cs">
+      <DependentUpon>Lotprocess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LotRaw.aspx.cs">
+      <DependentUpon>LotRaw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LotRaw.aspx.designer.cs">
+      <DependentUpon>LotRaw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LotRawGrid.aspx.cs">
+      <DependentUpon>LotRawGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\LotRawGrid.aspx.designer.cs">
+      <DependentUpon>LotRawGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MastercutGrid.aspx.cs">
+      <DependentUpon>MastercutGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MastercutGrid.aspx.designer.cs">
+      <DependentUpon>MastercutGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MasterCutting.aspx.cs">
+      <DependentUpon>MasterCutting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MasterCutting.aspx.designer.cs">
+      <DependentUpon>MasterCutting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MasterCuttingDetailReport.aspx.cs">
+      <DependentUpon>MasterCuttingDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MasterCuttingDetailReport.aspx.designer.cs">
+      <DependentUpon>MasterCuttingDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MasterprintCutting.aspx.cs">
+      <DependentUpon>MasterprintCutting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MasterprintCutting.aspx.designer.cs">
+      <DependentUpon>MasterprintCutting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialOpeningStock.aspx.cs">
+      <DependentUpon>MaterialOpeningStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialOpeningStock.aspx.designer.cs">
+      <DependentUpon>MaterialOpeningStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialOpeningStockGrid.aspx.cs">
+      <DependentUpon>MaterialOpeningStockGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialOpeningStockGrid.aspx.designer.cs">
+      <DependentUpon>MaterialOpeningStockGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialProcessEntryPrint.aspx.cs">
+      <DependentUpon>MaterialProcessEntryPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialProcessEntryPrint.aspx.designer.cs">
+      <DependentUpon>MaterialProcessEntryPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialsIssue.aspx.cs">
+      <DependentUpon>MaterialsIssue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialsIssue.aspx.designer.cs">
+      <DependentUpon>MaterialsIssue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialsIssueGrid.aspx.cs">
+      <DependentUpon>MaterialsIssueGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialsIssueGrid.aspx.designer.cs">
+      <DependentUpon>MaterialsIssueGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialStockReport.aspx.cs">
+      <DependentUpon>MaterialStockReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MaterialStockReport.aspx.designer.cs">
+      <DependentUpon>MaterialStockReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MultipleChecking.aspx.cs">
+      <DependentUpon>MultipleChecking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\MultipleChecking.aspx.designer.cs">
+      <DependentUpon>MultipleChecking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloEmbGrid.aspx.cs">
+      <DependentUpon>NDilloEmbGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloEmbGrid.aspx.designer.cs">
+      <DependentUpon>NDilloEmbGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloEmbroideringGrid.aspx.cs">
+      <DependentUpon>NDilloEmbroideringGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloEmbroideringGrid.aspx.designer.cs">
+      <DependentUpon>NDilloEmbroideringGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloEmbroideringProcess.aspx.cs">
+      <DependentUpon>NDilloEmbroideringProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloEmbroideringProcess.aspx.designer.cs">
+      <DependentUpon>NDilloEmbroideringProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloIroning_Grid.aspx.cs">
+      <DependentUpon>NDilloIroning_Grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloIroning_Grid.aspx.designer.cs">
+      <DependentUpon>NDilloIroning_Grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloKajaGrid.aspx.cs">
+      <DependentUpon>NDilloKajaGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloKajaGrid.aspx.designer.cs">
+      <DependentUpon>NDilloKajaGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloKajaProcess.aspx.cs">
+      <DependentUpon>NDilloKajaProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloKajaProcess.aspx.designer.cs">
+      <DependentUpon>NDilloKajaProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloStiching_Grid.aspx.cs">
+      <DependentUpon>NDilloStiching_Grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloStiching_Grid.aspx.designer.cs">
+      <DependentUpon>NDilloStiching_Grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloWashingGrid.aspx.cs">
+      <DependentUpon>NDilloWashingGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloWashingGrid.aspx.designer.cs">
+      <DependentUpon>NDilloWashingGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloWashingProcess.aspx.cs">
+      <DependentUpon>NDilloWashingProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDilloWashingProcess.aspx.designer.cs">
+      <DependentUpon>NDilloWashingProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDillo_Ironing.aspx.cs">
+      <DependentUpon>NDillo_Ironing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDillo_Ironing.aspx.designer.cs">
+      <DependentUpon>NDillo_Ironing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDillo_Stiching.aspx.cs">
+      <DependentUpon>NDillo_Stiching.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NDillo_Stiching.aspx.designer.cs">
+      <DependentUpon>NDillo_Stiching.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NewCutProcess.aspx.cs">
+      <DependentUpon>NewCutProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NewCutProcess.aspx.designer.cs">
+      <DependentUpon>NewCutProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NewCutProcessEdit.aspx.cs">
+      <DependentUpon>NewCutProcessEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NewCutProcessEdit.aspx.designer.cs">
+      <DependentUpon>NewCutProcessEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NewPrecutprocessBC.aspx.cs">
+      <DependentUpon>NewPrecutprocessBC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NewPrecutprocessBC.aspx.designer.cs">
+      <DependentUpon>NewPrecutprocessBC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Opening.aspx.cs">
+      <DependentUpon>Opening.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Opening.aspx.designer.cs">
+      <DependentUpon>Opening.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OpeningBalanceReport.aspx.cs">
+      <DependentUpon>OpeningBalanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OpeningBalanceReport.aspx.designer.cs">
+      <DependentUpon>OpeningBalanceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OpeningStock.aspx.cs">
+      <DependentUpon>OpeningStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OpeningStock.aspx.designer.cs">
+      <DependentUpon>OpeningStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OpeningStockMaster.aspx.cs">
+      <DependentUpon>OpeningStockMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OpeningStockMaster.aspx.designer.cs">
+      <DependentUpon>OpeningStockMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OpeningStockReport.aspx.cs">
+      <DependentUpon>OpeningStockReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OpeningStockReport.aspx.designer.cs">
+      <DependentUpon>OpeningStockReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OrderGrid.aspx.cs">
+      <DependentUpon>OrderGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OrderGrid.aspx.designer.cs">
+      <DependentUpon>OrderGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OrderProcess.aspx.cs">
+      <DependentUpon>OrderProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OrderProcess.aspx.designer.cs">
+      <DependentUpon>OrderProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OverAllCostingReport.aspx.cs">
+      <DependentUpon>OverAllCostingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OverAllCostingReport.aspx.designer.cs">
+      <DependentUpon>OverAllCostingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OverallProcess.aspx.cs">
+      <DependentUpon>OverallProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\OverallProcess.aspx.designer.cs">
+      <DependentUpon>OverallProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PartyApproval_Status.aspx.cs">
+      <DependentUpon>PartyApproval_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PartyApproval_Status.aspx.designer.cs">
+      <DependentUpon>PartyApproval_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PartyMaster.aspx.cs">
+      <DependentUpon>PartyMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PartyMaster.aspx.designer.cs">
+      <DependentUpon>PartyMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PartyMasterGrid.aspx.cs">
+      <DependentUpon>PartyMasterGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PartyMasterGrid.aspx.designer.cs">
+      <DependentUpon>PartyMasterGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PArtyMaster_Approval.aspx.cs">
+      <DependentUpon>PArtyMaster_Approval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PArtyMaster_Approval.aspx.designer.cs">
+      <DependentUpon>PArtyMaster_Approval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PartyType.aspx.cs">
+      <DependentUpon>PartyType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PartyType.aspx.designer.cs">
+      <DependentUpon>PartyType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PartyWiseProductionStatus.aspx.cs">
+      <DependentUpon>PartyWiseProductionStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PartyWiseProductionStatus.aspx.designer.cs">
+      <DependentUpon>PartyWiseProductionStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PatternMaster.aspx.cs">
+      <DependentUpon>PatternMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PatternMaster.aspx.designer.cs">
+      <DependentUpon>PatternMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PattonEntry.aspx.cs">
+      <DependentUpon>PattonEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PattonEntry.aspx.designer.cs">
+      <DependentUpon>PattonEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentGridView.aspx.cs">
+      <DependentUpon>PaymentGridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentGridView.aspx.designer.cs">
+      <DependentUpon>PaymentGridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentGrit.aspx.cs">
+      <DependentUpon>PaymentGrit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentGrit.aspx.designer.cs">
+      <DependentUpon>PaymentGrit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentNew.aspx.cs">
+      <DependentUpon>PaymentNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentNew.aspx.designer.cs">
+      <DependentUpon>PaymentNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentPrint.aspx.cs">
+      <DependentUpon>PaymentPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentPrint.aspx.designer.cs">
+      <DependentUpon>PaymentPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentReport.aspx.cs">
+      <DependentUpon>PaymentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentReport.aspx.designer.cs">
+      <DependentUpon>PaymentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentScreen.aspx.cs">
+      <DependentUpon>PaymentScreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PaymentScreen.aspx.designer.cs">
+      <DependentUpon>PaymentScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Payment_Report.aspx.cs">
+      <DependentUpon>Payment_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Payment_Report.aspx.designer.cs">
+      <DependentUpon>Payment_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Pendingcuttingreport.aspx.cs">
+      <DependentUpon>Pendingcuttingreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Pendingcuttingreport.aspx.designer.cs">
+      <DependentUpon>Pendingcuttingreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PendingLotReport.aspx.cs">
+      <DependentUpon>PendingLotReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PendingLotReport.aspx.designer.cs">
+      <DependentUpon>PendingLotReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NewPrecutprocess.aspx.cs">
+      <DependentUpon>NewPrecutprocess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\NewPrecutprocess.aspx.designer.cs">
+      <DependentUpon>NewPrecutprocess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PendingReport.aspx.cs">
+      <DependentUpon>PendingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PendingReport.aspx.designer.cs">
+      <DependentUpon>PendingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PerfectMoney.aspx.cs">
+      <DependentUpon>PerfectMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PerfectMoney.aspx.designer.cs">
+      <DependentUpon>PerfectMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PreAndMasterCutting.aspx.cs">
+      <DependentUpon>PreAndMasterCutting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PreAndMasterCutting.aspx.designer.cs">
+      <DependentUpon>PreAndMasterCutting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PrintCutting.aspx.cs">
+      <DependentUpon>PrintCutting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PrintCutting.aspx.designer.cs">
+      <DependentUpon>PrintCutting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PrintCuttingnew.aspx.cs">
+      <DependentUpon>PrintCuttingnew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PrintCuttingnew.aspx.designer.cs">
+      <DependentUpon>PrintCuttingnew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Printcuttingnewmaster.aspx.cs">
+      <DependentUpon>Printcuttingnewmaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Printcuttingnewmaster.aspx.designer.cs">
+      <DependentUpon>Printcuttingnewmaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Printing.aspx.cs">
+      <DependentUpon>Printing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Printing.aspx.designer.cs">
+      <DependentUpon>Printing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PrintingG.aspx.cs">
+      <DependentUpon>PrintingG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PrintingG.aspx.designer.cs">
+      <DependentUpon>PrintingG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PrintingGrid1.aspx.cs">
+      <DependentUpon>PrintingGrid1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PrintingGrid1.aspx.designer.cs">
+      <DependentUpon>PrintingGrid1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PrintView.aspx.cs">
+      <DependentUpon>PrintView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PrintView.aspx.designer.cs">
+      <DependentUpon>PrintView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_Cutting.aspx.cs">
+      <DependentUpon>Print_Cutting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_Cutting.aspx.designer.cs">
+      <DependentUpon>Print_Cutting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_Cutting1.aspx.cs">
+      <DependentUpon>Print_Cutting1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_Cutting1.aspx.designer.cs">
+      <DependentUpon>Print_Cutting1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_EmployeeJobCard.aspx.cs">
+      <DependentUpon>Print_EmployeeJobCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_EmployeeJobCard.aspx.designer.cs">
+      <DependentUpon>Print_EmployeeJobCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_EmployeeMonthlyJobCard.aspx.cs">
+      <DependentUpon>Print_EmployeeMonthlyJobCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_EmployeeMonthlyJobCard.aspx.designer.cs">
+      <DependentUpon>Print_EmployeeMonthlyJobCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_Fabric.aspx.cs">
+      <DependentUpon>Print_Fabric.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_Fabric.aspx.designer.cs">
+      <DependentUpon>Print_Fabric.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_FabricCR.aspx.cs">
+      <DependentUpon>Print_FabricCR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_FabricCR.aspx.designer.cs">
+      <DependentUpon>Print_FabricCR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_Sales_Invoice_Packing.aspx.cs">
+      <DependentUpon>Print_Sales_Invoice_Packing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Print_Sales_Invoice_Packing.aspx.designer.cs">
+      <DependentUpon>Print_Sales_Invoice_Packing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Process.aspx.cs">
+      <DependentUpon>Process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Process.aspx.designer.cs">
+      <DependentUpon>Process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProcessDetailedReport.aspx.cs">
+      <DependentUpon>ProcessDetailedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProcessDetailedReport.aspx.designer.cs">
+      <DependentUpon>ProcessDetailedReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProcessHeading.aspx.cs">
+      <DependentUpon>ProcessHeading.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProcessHeading.aspx.designer.cs">
+      <DependentUpon>ProcessHeading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProcessMaster.aspx.cs">
+      <DependentUpon>ProcessMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProcessMaster.aspx.designer.cs">
+      <DependentUpon>ProcessMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProcessOrderPrint.aspx.cs">
+      <DependentUpon>ProcessOrderPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProcessOrderPrint.aspx.designer.cs">
+      <DependentUpon>ProcessOrderPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProcessStatus.aspx.cs">
+      <DependentUpon>ProcessStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProcessStatus.aspx.designer.cs">
+      <DependentUpon>ProcessStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProductionDetailReport.aspx.cs">
+      <DependentUpon>ProductionDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProductionDetailReport.aspx.designer.cs">
+      <DependentUpon>ProductionDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProductionReport.aspx.cs">
+      <DependentUpon>ProductionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProductionReport.aspx.designer.cs">
+      <DependentUpon>ProductionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProductionStatus.aspx.cs">
+      <DependentUpon>ProductionStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProductionStatus.aspx.designer.cs">
+      <DependentUpon>ProductionStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProductionStatusNew.aspx.cs">
+      <DependentUpon>ProductionStatusNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ProductionStatusNew.aspx.designer.cs">
+      <DependentUpon>ProductionStatusNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PROORDER.aspx.cs">
+      <DependentUpon>PROORDER.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PROORDER.aspx.designer.cs">
+      <DependentUpon>PROORDER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PROORder_Grid.aspx.cs">
+      <DependentUpon>PROORder_Grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PROORder_Grid.aspx.designer.cs">
+      <DependentUpon>PROORder_Grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Pro_lossNEW.aspx.cs">
+      <DependentUpon>Pro_lossNEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Pro_lossNEW.aspx.designer.cs">
+      <DependentUpon>Pro_lossNEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Pro_lossNEWDatewise.aspx.cs">
+      <DependentUpon>Pro_lossNEWDatewise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Pro_lossNEWDatewise.aspx.designer.cs">
+      <DependentUpon>Pro_lossNEWDatewise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Purchase.aspx.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Purchase.aspx.designer.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseEntryGrid.aspx.cs">
+      <DependentUpon>PurchaseEntryGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseEntryGrid.aspx.designer.cs">
+      <DependentUpon>PurchaseEntryGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseGRN.aspx.cs">
+      <DependentUpon>PurchaseGRN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseGRN.aspx.designer.cs">
+      <DependentUpon>PurchaseGRN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseGRNGrid.aspx.cs">
+      <DependentUpon>PurchaseGRNGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseGRNGrid.aspx.designer.cs">
+      <DependentUpon>PurchaseGRNGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseGRNReport.aspx.cs">
+      <DependentUpon>PurchaseGRNReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseGRNReport.aspx.designer.cs">
+      <DependentUpon>PurchaseGRNReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrder.aspx.cs">
+      <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrder.aspx.designer.cs">
+      <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrderGrid.aspx.cs">
+      <DependentUpon>PurchaseOrderGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrderGrid.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrderPendingReport.aspx.cs">
+      <DependentUpon>PurchaseOrderPendingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrderPendingReport.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderPendingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrderPrint.aspx.cs">
+      <DependentUpon>PurchaseOrderPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrderPrint.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrderReport.aspx.cs">
+      <DependentUpon>PurchaseOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrderReport.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrderReportNew.aspx.cs">
+      <DependentUpon>PurchaseOrderReportNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\PurchaseOrderReportNew.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderReportNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RateMaster.aspx.cs">
+      <DependentUpon>RateMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RateMaster.aspx.designer.cs">
+      <DependentUpon>RateMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RatiowisePreCut.aspx.cs">
+      <DependentUpon>RatiowisePreCut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RatiowisePreCut.aspx.designer.cs">
+      <DependentUpon>RatiowisePreCut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Receipt_Report.aspx.cs">
+      <DependentUpon>Receipt_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Receipt_Report.aspx.designer.cs">
+      <DependentUpon>Receipt_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RemoveLot.aspx.cs">
+      <DependentUpon>RemoveLot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RemoveLot.aspx.designer.cs">
+      <DependentUpon>RemoveLot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RequirementSheet.aspx.cs">
+      <DependentUpon>RequirementSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RequirementSheet.aspx.designer.cs">
+      <DependentUpon>RequirementSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RequirementSheetDetails.aspx.cs">
+      <DependentUpon>RequirementSheetDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RequirementSheetDetails.aspx.designer.cs">
+      <DependentUpon>RequirementSheetDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RequirementSheetDetailsNew.aspx.cs">
+      <DependentUpon>RequirementSheetDetailsNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RequirementSheetDetailsNew.aspx.designer.cs">
+      <DependentUpon>RequirementSheetDetailsNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RequirementSheetGrid.aspx.cs">
+      <DependentUpon>RequirementSheetGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\RequirementSheetGrid.aspx.designer.cs">
+      <DependentUpon>RequirementSheetGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SalesGrid.aspx.cs">
+      <DependentUpon>SalesGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SalesGrid.aspx.designer.cs">
+      <DependentUpon>SalesGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Setting.aspx.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Setting.aspx.designer.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Sheet.aspx.cs">
+      <DependentUpon>Sheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Sheet.aspx.designer.cs">
+      <DependentUpon>Sheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SheetDatewise.aspx.cs">
+      <DependentUpon>SheetDatewise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SheetDatewise.aspx.designer.cs">
+      <DependentUpon>SheetDatewise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Statement.aspx.cs">
+      <DependentUpon>Statement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Statement.aspx.designer.cs">
+      <DependentUpon>Statement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SupplierOrderMaster.aspx.cs">
+      <DependentUpon>SupplierOrderMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SupplierOrderMaster.aspx.designer.cs">
+      <DependentUpon>SupplierOrderMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SampleReport.aspx.cs">
+      <DependentUpon>SampleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SampleReport.aspx.designer.cs">
+      <DependentUpon>SampleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SamplingandCosting.aspx.cs">
+      <DependentUpon>SamplingandCosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SamplingandCosting.aspx.designer.cs">
+      <DependentUpon>SamplingandCosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SamplingandCostingGrid.aspx.cs">
+      <DependentUpon>SamplingandCostingGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SamplingandCostingGrid.aspx.designer.cs">
+      <DependentUpon>SamplingandCostingGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SamplingandCostingReport.aspx.cs">
+      <DependentUpon>SamplingandCostingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SamplingandCostingReport.aspx.designer.cs">
+      <DependentUpon>SamplingandCostingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SamplingCosting_Approval.aspx.cs">
+      <DependentUpon>SamplingCosting_Approval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SamplingCosting_Approval.aspx.designer.cs">
+      <DependentUpon>SamplingCosting_Approval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\secondStageGrid.aspx.cs">
+      <DependentUpon>secondStageGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\secondStageGrid.aspx.designer.cs">
+      <DependentUpon>secondStageGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SecondStageProcess.aspx.cs">
+      <DependentUpon>SecondStageProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SecondStageProcess.aspx.designer.cs">
+      <DependentUpon>SecondStageProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ShirtwisePreCut.aspx.cs">
+      <DependentUpon>ShirtwisePreCut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ShirtwisePreCut.aspx.designer.cs">
+      <DependentUpon>ShirtwisePreCut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Size.aspx.cs">
+      <DependentUpon>Size.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Size.aspx.designer.cs">
+      <DependentUpon>Size.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SizeRange.aspx.cs">
+      <DependentUpon>SizeRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SizeRange.aspx.designer.cs">
+      <DependentUpon>SizeRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SizeSetting.aspx.cs">
+      <DependentUpon>SizeSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SizeSetting.aspx.designer.cs">
+      <DependentUpon>SizeSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Stc.aspx.cs">
+      <DependentUpon>Stc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Stc.aspx.designer.cs">
+      <DependentUpon>Stc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Stitching.aspx.cs">
+      <DependentUpon>Stitching.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Stitching.aspx.designer.cs">
+      <DependentUpon>Stitching.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StitchingDetails.aspx.cs">
+      <DependentUpon>StitchingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StitchingDetails.aspx.designer.cs">
+      <DependentUpon>StitchingDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StitchingDetails_Print.aspx.cs">
+      <DependentUpon>StitchingDetails_Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StitchingDetails_Print.aspx.designer.cs">
+      <DependentUpon>StitchingDetails_Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StitchingG.aspx.cs">
+      <DependentUpon>StitchingG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StitchingG.aspx.designer.cs">
+      <DependentUpon>StitchingG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StitchingGr.aspx.cs">
+      <DependentUpon>StitchingGr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StitchingGrid.aspx.cs">
+      <DependentUpon>StitchingGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StitchingGrid.aspx.designer.cs">
+      <DependentUpon>StitchingGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StockLedger.aspx.cs">
+      <DependentUpon>StockLedger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StockLedger.aspx.designer.cs">
+      <DependentUpon>StockLedger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StockReport.aspx.cs">
+      <DependentUpon>StockReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StockReport.aspx.designer.cs">
+      <DependentUpon>StockReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StockStatement.aspx.cs">
+      <DependentUpon>StockStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StockStatement.aspx.designer.cs">
+      <DependentUpon>StockStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StockTransfer.aspx.cs">
+      <DependentUpon>StockTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StockTransfer.aspx.designer.cs">
+      <DependentUpon>StockTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StockTransferGrid.aspx.cs">
+      <DependentUpon>StockTransferGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\StockTransferGrid.aspx.designer.cs">
+      <DependentUpon>StockTransferGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Style.aspx.cs">
+      <DependentUpon>Style.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Style.aspx.designer.cs">
+      <DependentUpon>Style.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SupplierMaster.aspx.cs">
+      <DependentUpon>SupplierMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SupplierMaster.aspx.designer.cs">
+      <DependentUpon>SupplierMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SupplierOrderMasterGrid.aspx.cs">
+      <DependentUpon>SupplierOrderMasterGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SupplierOrderMasterGrid.aspx.designer.cs">
+      <DependentUpon>SupplierOrderMasterGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SwatchSheet.aspx.cs">
+      <DependentUpon>SwatchSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SwatchSheet.aspx.designer.cs">
+      <DependentUpon>SwatchSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\testpage.aspx.cs">
+      <DependentUpon>testpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\testpage.aspx.designer.cs">
+      <DependentUpon>testpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Ticket.aspx.cs">
+      <DependentUpon>Ticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Ticket.aspx.designer.cs">
+      <DependentUpon>Ticket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TicketGrid.aspx.cs">
+      <DependentUpon>TicketGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TicketGrid.aspx.designer.cs">
+      <DependentUpon>TicketGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TicketRaise.aspx.cs">
+      <DependentUpon>TicketRaise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TicketRaise.aspx.designer.cs">
+      <DependentUpon>TicketRaise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TotalFabReport.aspx.cs">
+      <DependentUpon>TotalFabReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TotalFabReport.aspx.designer.cs">
+      <DependentUpon>TotalFabReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TotalSamplingRequirement.aspx.cs">
+      <DependentUpon>TotalSamplingRequirement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TotalSamplingRequirement.aspx.designer.cs">
+      <DependentUpon>TotalSamplingRequirement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Trail.aspx.cs">
+      <DependentUpon>Trail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Trail.aspx.designer.cs">
+      <DependentUpon>Trail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TrailDatewise.aspx.cs">
+      <DependentUpon>TrailDatewise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TrailDatewise.aspx.designer.cs">
+      <DependentUpon>TrailDatewise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Trim.aspx.cs">
+      <DependentUpon>Trim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Trim.aspx.designer.cs">
+      <DependentUpon>Trim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Trimming.aspx.cs">
+      <DependentUpon>Trimming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Trimming.aspx.designer.cs">
+      <DependentUpon>Trimming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TrimmingG.aspx.cs">
+      <DependentUpon>TrimmingG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TrimmingG.aspx.designer.cs">
+      <DependentUpon>TrimmingG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TrimmingGrid.aspx.cs">
+      <DependentUpon>TrimmingGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TrimmingGrid.aspx.designer.cs">
+      <DependentUpon>TrimmingGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TrimmingProcess.aspx.cs">
+      <DependentUpon>TrimmingProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TrimmingProcess.aspx.designer.cs">
+      <DependentUpon>TrimmingProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TrimmingProcessGrid.aspx.cs">
+      <DependentUpon>TrimmingProcessGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\TrimmingProcessGrid.aspx.designer.cs">
+      <DependentUpon>TrimmingProcessGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\UnitMaster.aspx.cs">
+      <DependentUpon>UnitMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\UnitMaster.aspx.designer.cs">
+      <DependentUpon>UnitMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Unpacked.aspx.cs">
+      <DependentUpon>Unpacked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Unpacked.aspx.designer.cs">
+      <DependentUpon>Unpacked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\UnpackedGrid.aspx.cs">
+      <DependentUpon>UnpackedGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\UnpackedGrid.aspx.designer.cs">
+      <DependentUpon>UnpackedGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\UnUsedFab.aspx.cs">
+      <DependentUpon>UnUsedFab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\UnUsedFab.aspx.designer.cs">
+      <DependentUpon>UnUsedFab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Uom.aspx.cs">
+      <DependentUpon>Uom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Uom.aspx.designer.cs">
+      <DependentUpon>Uom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\usercreate.aspx.cs">
+      <DependentUpon>usercreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\usercreate.aspx.designer.cs">
+      <DependentUpon>usercreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\usercreategrid.aspx.cs">
+      <DependentUpon>usercreategrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\usercreategrid.aspx.designer.cs">
+      <DependentUpon>usercreategrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Viewagent.aspx.cs">
+      <DependentUpon>Viewagent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Viewagent.aspx.designer.cs">
+      <DependentUpon>Viewagent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewbrands.aspx.cs">
+      <DependentUpon>viewbrands.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewbrands.aspx.designer.cs">
+      <DependentUpon>viewbrands.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewcheques.aspx.cs">
+      <DependentUpon>viewcheques.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewcheques.aspx.designer.cs">
+      <DependentUpon>viewcheques.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ViewCustomer.aspx.cs">
+      <DependentUpon>ViewCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ViewCustomer.aspx.designer.cs">
+      <DependentUpon>ViewCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewcutting.aspx.cs">
+      <DependentUpon>viewcutting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewcutting.aspx.designer.cs">
+      <DependentUpon>viewcutting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewcuttingBC.aspx.cs">
+      <DependentUpon>viewcuttingBC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewcuttingBC.aspx.designer.cs">
+      <DependentUpon>viewcuttingBC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ViewCuttingMaster.aspx.cs">
+      <DependentUpon>ViewCuttingMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ViewCuttingMaster.aspx.designer.cs">
+      <DependentUpon>ViewCuttingMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ViewJobWork.aspx.cs">
+      <DependentUpon>ViewJobWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ViewJobWork.aspx.designer.cs">
+      <DependentUpon>ViewJobWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewjournals.aspx.cs">
+      <DependentUpon>viewjournals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewjournals.aspx.designer.cs">
+      <DependentUpon>viewjournals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewprocess.aspx.cs">
+      <DependentUpon>viewprocess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewprocess.aspx.designer.cs">
+      <DependentUpon>viewprocess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewreceipts.aspx.cs">
+      <DependentUpon>viewreceipts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\viewreceipts.aspx.designer.cs">
+      <DependentUpon>viewreceipts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ViewSupplier.aspx.cs">
+      <DependentUpon>ViewSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ViewSupplier.aspx.designer.cs">
+      <DependentUpon>ViewSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ViewTicket.aspx.cs">
+      <DependentUpon>ViewTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\ViewTicket.aspx.designer.cs">
+      <DependentUpon>ViewTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Wash.aspx.cs">
+      <DependentUpon>Wash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Wash.aspx.designer.cs">
+      <DependentUpon>Wash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Washing.aspx.cs">
+      <DependentUpon>Washing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Washing.aspx.designer.cs">
+      <DependentUpon>Washing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\WashingG.aspx.cs">
+      <DependentUpon>WashingG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\WashingG.aspx.designer.cs">
+      <DependentUpon>WashingG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\WashingGrid.aspx.cs">
+      <DependentUpon>WashingGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\WashingGrid.aspx.designer.cs">
+      <DependentUpon>WashingGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\WebBrowserDocumentCompletedEventArgs.cs" />
+    <Compile Include="Accountsbootstrap\Width.aspx.cs">
+      <DependentUpon>Width.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\Width.aspx.designer.cs">
+      <DependentUpon>Width.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\XMLWorkerHelper.cs" />
+    <Compile Include="Camera.aspx.cs">
+      <DependentUpon>Camera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Camera.aspx.designer.cs">
+      <DependentUpon>Camera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderMaster\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HeaderMaster\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceEmail.aspx.cs">
+      <DependentUpon>InvoiceEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvoiceEmail.aspx.designer.cs">
+      <DependentUpon>InvoiceEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessStatus.aspx.cs">
+      <DependentUpon>ProcessStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcessStatus.aspx.designer.cs">
+      <DependentUpon>ProcessStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Accountsbootstrap\SampleReportNew.aspx.cs">
+      <DependentUpon>SampleReportNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SampleReportNew.aspx.designer.cs">
+      <DependentUpon>SampleReportNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Backup\" />
+    <Folder Include="Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Accountsbootstrap\Backup\Billing_25_11_2015_11_55_55.bak" />
+    <None Include="Accountsbootstrap\Backup\DocApp_25_11_2015_11_56_08.bak" />
+    <None Include="Accountsbootstrap\Backup\DocApp_25_11_2015_12_11_27.bak" />
+    <None Include="Accountsbootstrap\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Accountsbootstrap\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Accountsbootstrap\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="assets\app\media\img\files\css.svg" />
+    <None Include="assets\app\media\img\files\csv.svg" />
+    <None Include="assets\app\media\img\files\doc.svg" />
+    <None Include="assets\app\media\img\files\html.svg" />
+    <None Include="assets\app\media\img\files\javascript.svg" />
+    <None Include="assets\app\media\img\files\jpg.svg" />
+    <None Include="assets\app\media\img\files\mp4.svg" />
+    <None Include="assets\app\media\img\files\pdf.svg" />
+    <None Include="assets\app\media\img\files\xml.svg" />
+    <None Include="assets\app\media\img\files\zip.svg" />
+    <None Include="assets\app\media\img\icons\exchange.svg" />
+    <None Include="assets\app\media\img\icons\logout.svg" />
+    <None Include="assets\app\media\img\icons\question.svg" />
+    <None Include="assets\app\media\img\icons\warning.svg" />
+    <None Include="assets\vendors\base\fonts\flaticon\Flaticon.eot" />
+    <None Include="assets\vendors\base\fonts\flaticon\Flaticon.svg" />
+    <None Include="assets\vendors\base\fonts\flaticon\Flaticon.ttf" />
+    <None Include="assets\vendors\base\fonts\flaticon\Flaticon.woff" />
+    <None Include="assets\vendors\base\fonts\font-awesome\fontawesome-webfont.eot" />
+    <None Include="assets\vendors\base\fonts\font-awesome\fontawesome-webfont.svg" />
+    <None Include="assets\vendors\base\fonts\font-awesome\fontawesome-webfont.ttf" />
+    <None Include="assets\vendors\base\fonts\font-awesome\fontawesome-webfont.woff" />
+    <None Include="assets\vendors\base\fonts\font-awesome\fontawesome-webfont.woff2" />
+    <None Include="assets\vendors\base\fonts\font-awesome\FontAwesome.otf" />
+    <None Include="assets\vendors\base\fonts\line-awesome\line-awesome.eot" />
+    <None Include="assets\vendors\base\fonts\line-awesome\line-awesome.svg" />
+    <None Include="assets\vendors\base\fonts\line-awesome\line-awesome.ttf" />
+    <None Include="assets\vendors\base\fonts\line-awesome\line-awesome.woff" />
+    <None Include="assets\vendors\base\fonts\line-awesome\line-awesome.woff2" />
+    <None Include="assets\vendors\base\fonts\metronic\Metronic_fda1334c35d0f5fe2afb3afebbb6774a.eot" />
+    <None Include="assets\vendors\base\fonts\metronic\Metronic_fda1334c35d0f5fe2afb3afebbb6774a.svg" />
+    <None Include="assets\vendors\base\fonts\metronic\Metronic_fda1334c35d0f5fe2afb3afebbb6774a.ttf" />
+    <None Include="assets\vendors\base\fonts\metronic\Metronic_fda1334c35d0f5fe2afb3afebbb6774a.woff" />
+    <None Include="assets\vendors\base\fonts\metronic\Metronic_fda1334c35d0f5fe2afb3afebbb6774a.woff2" />
+    <None Include="assets\vendors\base\fonts\socicon\socicon.eot" />
+    <None Include="assets\vendors\base\fonts\socicon\socicon.svg" />
+    <None Include="assets\vendors\base\fonts\socicon\socicon.ttf" />
+    <None Include="assets\vendors\base\fonts\socicon\socicon.woff" />
+    <None Include="assets\vendors\base\fonts\summernote\summernote.eot" />
+    <None Include="assets\vendors\base\fonts\summernote\summernote.ttf" />
+    <None Include="assets\vendors\base\fonts\summernote\summernote.woff" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <None Include="font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <None Include="font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <None Include="font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <None Include="font-awesome-4.1.0\less\bordered-pulled.less" />
+    <None Include="font-awesome-4.1.0\less\core.less" />
+    <None Include="font-awesome-4.1.0\less\fixed-width.less" />
+    <None Include="font-awesome-4.1.0\less\font-awesome.less" />
+    <None Include="font-awesome-4.1.0\less\icons.less" />
+    <None Include="font-awesome-4.1.0\less\larger.less" />
+    <None Include="font-awesome-4.1.0\less\list.less" />
+    <None Include="font-awesome-4.1.0\less\mixins.less" />
+    <None Include="font-awesome-4.1.0\less\path.less" />
+    <None Include="font-awesome-4.1.0\less\rotated-flipped.less" />
+    <None Include="font-awesome-4.1.0\less\spinning.less" />
+    <None Include="font-awesome-4.1.0\less\stacked.less" />
+    <None Include="font-awesome-4.1.0\less\variables.less" />
+    <None Include="font-awesome-4.1.0\scss\font-awesome.scss" />
+    <None Include="font-awesome-4.1.0\scss\_bordered-pulled.scss" />
+    <None Include="font-awesome-4.1.0\scss\_core.scss" />
+    <None Include="font-awesome-4.1.0\scss\_fixed-width.scss" />
+    <None Include="font-awesome-4.1.0\scss\_icons.scss" />
+    <None Include="font-awesome-4.1.0\scss\_larger.scss" />
+    <None Include="font-awesome-4.1.0\scss\_list.scss" />
+    <None Include="font-awesome-4.1.0\scss\_mixins.scss" />
+    <None Include="font-awesome-4.1.0\scss\_path.scss" />
+    <None Include="font-awesome-4.1.0\scss\_rotated-flipped.scss" />
+    <None Include="font-awesome-4.1.0\scss\_spinning.scss" />
+    <None Include="font-awesome-4.1.0\scss\_stacked.scss" />
+    <None Include="font-awesome-4.1.0\scss\_variables.scss" />
+    <None Include="fonts1\fontawesome-webfont.eot" />
+    <None Include="fonts1\fontawesome-webfont.svg" />
+    <None Include="fonts1\fontawesome-webfont.ttf" />
+    <None Include="fonts1\fontawesome-webfont.woff" />
+    <None Include="fonts1\fontawesome-webfont.woff2" />
+    <None Include="fonts1\FontAwesome.otf" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.svg" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\FontAwesome.otf" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.svg" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="jqueryCalendar\images\Thumbs.db" />
+    <None Include="NEW-BOOTS\css\bootstrap-theme.css.map" />
+    <None Include="NEW-BOOTS\css\bootstrap.css.map" />
+    <None Include="NEW-BOOTS\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="NEW-BOOTS\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="NEW-BOOTS\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="NEW-BOOTS\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="NEW-BOOTS\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{4F76E2C1-3EC0-49A8-B37C-35F404BB3E2A}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonLayer\CommonLayer.csproj">
+      <Project>{31F298C9-D9F5-48C8-B6AB-A0E370E987CA}</Project>
+      <Name>CommonLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{68E6AF2D-069E-4EDE-A76A-05B4143A44D1}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52794</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

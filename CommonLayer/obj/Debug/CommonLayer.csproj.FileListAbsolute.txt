@@ -1,0 +1,402 @@
+C:\Users\pratheepkumar\Documents\Visual Studio 2008\Projects\WebSite5\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\pratheepkumar\Documents\Visual Studio 2008\Projects\WebSite5\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\pratheepkumar\Documents\Visual Studio 2008\Projects\WebSite5\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\pratheepkumar\Documents\Visual Studio 2008\Projects\WebSite5\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\pratheepkumar\Documents\Visual Studio 2008\Projects\WebSite5\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Documents and Settings\spradeep\Desktop\DocApp\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Documents and Settings\spradeep\Desktop\DocApp\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Documents and Settings\spradeep\Desktop\DocApp\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\spradeep\Desktop\DocApp\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Documents and Settings\spradeep\Desktop\DocApp\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\DocApp\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\DocApp\CommonLayer\obj\Debug\CommonLayer.dll
+F:\DocApp\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\DocApp\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+F:\DocApp\CommonLayer\bin\Debug\BusinessLayer.dll
+F:\DocApp\CommonLayer\bin\Debug\DataLayer.dll
+F:\DocApp\CommonLayer\bin\Debug\DataLayer.pdb
+F:\DocApp\CommonLayer\bin\Debug\BusinessLayer.pdb
+G:\Pharma\CommonLayer\bin\Debug\CommonLayer.pdb
+G:\Pharma\CommonLayer\bin\Debug\BusinessLayer.dll
+G:\Pharma\CommonLayer\bin\Debug\DataLayer.dll
+G:\Pharma\CommonLayer\bin\Debug\DataLayer.pdb
+G:\Pharma\CommonLayer\bin\Debug\BusinessLayer.pdb
+G:\Pharma\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+G:\Pharma\CommonLayer\obj\Debug\CommonLayer.dll
+G:\Pharma\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\CommonLayer\bin\Debug\DataLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\CommonLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Pharma\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\bin\Debug\DataLayer.pdb
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\USER\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\Billing\CommonLayer\bin\Debug\CommonLayer.dll
+I:\Billing\CommonLayer\bin\Debug\CommonLayer.dll
+I:\Billing\CommonLayer\bin\Debug\CommonLayer.pdb
+I:\Billing\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+I:\Billing\CommonLayer\obj\Debug\CommonLayer.dll
+I:\Billing\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\intel\Documents\Visual Studio 2010\Projects\BillingSingle\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\intel\Documents\Visual Studio 2010\Projects\BillingSingle\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\intel\Documents\Visual Studio 2010\Projects\BillingSingle\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\intel\Documents\Visual Studio 2010\Projects\BillingSingle\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\intel\Documents\Visual Studio 2010\Projects\BillingSingle\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\BillingSingle\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\BillingSingle\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\BillingSingle\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\BillingSingle\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\BillingSingle\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+D:\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+D:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+G:\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+G:\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+G:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+G:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+G:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+G:\Working projects\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+G:\Working projects\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+G:\Working projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+G:\Working projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+G:\Working projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+\\Server\e\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+\\Server\e\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+\\Server\e\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+\\Server\e\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+\\Server\e\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+E:\Projects\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\Projects\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\Projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\Projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\New folder (4)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\New folder (4)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\New folder (4)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\New folder (4)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\New folder (4)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\intel\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\intel\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\intel\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\intel\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\intel\Documents\Visual Studio 2010\Projects\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Account latest\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Account latest\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Account latest\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+F:\Account latest\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Account latest\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\latesst code\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\latesst code\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\latesst code\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\latesst code\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\latesst code\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\New folder (2)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\New folder (2)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\New folder (2)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\New folder (2)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\New folder (2)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\latesst code\New folder\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\latesst code\New folder\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\latesst code\New folder\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\latesst code\New folder\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\latesst code\New folder\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Textile Onora Textile\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Textile Onora Textile\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Textile Onora Textile\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+F:\Textile Onora Textile\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Textile Onora Textile\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Onora Textile\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Onora Textile\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Onora Textile\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Onora Textile\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Suxus\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Suxus\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Suxus\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Suxus\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\suxus\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\suxus\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\suxus\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\suxus\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\suxus\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Suxus\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Suxus\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Suxus\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Suxus\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\kishore Projects\Dillo\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\kishore Projects\Dillo\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\kishore Projects\Dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\kishore Projects\Dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Dillo\new one multiple process\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Dillo\new one multiple process\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Dillo\new one multiple process\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Dillo\new one multiple process\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Projects\DILLO UPDATE\Dillo\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Projects\DILLO UPDATE\Dillo\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Projects\DILLO UPDATE\Dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Projects\DILLO UPDATE\Dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Projects\Dillo\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Projects\Dillo\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Projects\Dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Projects\Dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Dot net\dillo\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Dot net\dillo\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Dot net\dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Dot net\dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Dot net\dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Dillo\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Dillo\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Dillo\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\PROJECTS\Working\DILLO\03-02-2017\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\PROJECTS\Working\DILLO\03-02-2017\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\PROJECTS\Working\DILLO\03-02-2017\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\PROJECTS\Working\DILLO\03-02-2017\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\PROJECTS\Working\DILLO\08-02-2017\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\PROJECTS\Working\DILLO\08-02-2017\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\PROJECTS\Working\DILLO\08-02-2017\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\PROJECTS\Working\DILLO\08-02-2017\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\PROJECTS\Working\DILLO\10-02-2017\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\PROJECTS\Working\DILLO\10-02-2017\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\PROJECTS\Working\DILLO\10-02-2017\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\PROJECTS\Working\DILLO\10-02-2017\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Dillo New\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Dillo New\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Dillo New\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Dillo New\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\vinoth\Dillo New\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\vinoth\Dillo New\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\vinoth\Dillo New\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\vinoth\Dillo New\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\OM Fabrics\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\OM Fabrics\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\OM Fabrics\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\OM Fabrics\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\RAJI\Working\Saravana fabrics\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\RAJI\Working\Saravana fabrics\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\RAJI\Working\Saravana fabrics\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\RAJI\Working\Saravana fabrics\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\RAJI\Working\Saravana(13-07-2017)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\RAJI\Working\Saravana(13-07-2017)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\RAJI\Working\Saravana(13-07-2017)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\RAJI\Working\Saravana(13-07-2017)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\RAJI\Working\Saravana(18-07-2017)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\RAJI\Working\Saravana(18-07-2017)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\RAJI\Working\Saravana(18-07-2017)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\RAJI\Working\Saravana(18-07-2017)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\RAJI\Working\Saravana Fabric(27-07-2017)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\RAJI\Working\Saravana Fabric(27-07-2017)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\RAJI\Working\Saravana Fabric(27-07-2017)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\RAJI\Working\Saravana Fabric(27-07-2017)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Applications\JB Exports\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Applications\JB Exports\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Applications\JB Exports\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Applications\JB Exports\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Applications\JB Exports\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\BIGDBIZ CODE\JP CODE\jp code and ref project\jp code\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\BIGDBIZ CODE\JP CODE\jp code and ref project\jp code\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\BIGDBIZ CODE\JP CODE\jp code and ref project\jp code\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\BIGDBIZ CODE\JP CODE\jp code and ref project\jp code\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\BIGDBIZ CODE\JB PROJECT\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\BIGDBIZ CODE\JB PROJECT\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\BIGDBIZ CODE\JB PROJECT\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\BIGDBIZ CODE\JB PROJECT\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\JP GARMENTS\JB PROJECT\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\JP GARMENTS\JB PROJECT\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\JP GARMENTS\JB PROJECT\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\JP GARMENTS\JB PROJECT\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\JP GARMENTS\JP PROJECT\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\JP GARMENTS\JP PROJECT\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\JP GARMENTS\JP PROJECT\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\JP GARMENTS\JP PROJECT\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Applications\JP\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Applications\JP\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Applications\JP\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Applications\JP\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Applications\JP\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\BIGDBIZ CODE\JP PROJECT\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\BIGDBIZ CODE\JP PROJECT\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\BIGDBIZ CODE\JP PROJECT\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\BIGDBIZ CODE\JP PROJECT\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\JP GARMENTS\JPLATEESSTT\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\JP GARMENTS\JPLATEESSTT\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\JP GARMENTS\JPLATEESSTT\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\JP GARMENTS\JPLATEESSTT\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Priya_Working\JP LATEST CODE\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Priya_Working\JP LATEST CODE\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Priya_Working\JP LATEST CODE\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Priya_Working\JP LATEST CODE\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Priyaworking\JP LATEST CODE\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Priyaworking\JP LATEST CODE\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Priyaworking\JP LATEST CODE\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+F:\Priyaworking\JP LATEST CODE\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Priyaworking\JP LATEST CODE\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\JP GARMENTS\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\JP GARMENTS\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\JP GARMENTS\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\JP GARMENTS\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+F:\JP GARMENTS\RAJA LATEST 10012018\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\JP GARMENTS\RAJA LATEST 10012018\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\JP GARMENTS\RAJA LATEST 10012018\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+F:\JP GARMENTS\RAJA LATEST 10012018\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\JP GARMENTS\RAJA LATEST 10012018\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\BIGDBIZ CODE\backup and reference project\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\BIGDBIZ CODE\backup and reference project\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\BIGDBIZ CODE\backup and reference project\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+F:\BIGDBIZ CODE\backup and reference project\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\BIGDBIZ CODE\backup and reference project\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\BackUp\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\BackUp\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\BackUp\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\BackUp\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+F:\New folder (2)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\New folder (2)\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\New folder (2)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\New folder (2)\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\Raja\JP\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\Raja\JP\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\Raja\JP\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Raja\JP\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\Raja\JP\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\JP GARMENTS\JP\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\JP GARMENTS\JP\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\JP GARMENTS\JP\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\JP GARMENTS\JP\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Flexible Garments\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Flexible Garments\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Flexible Garments\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Flexible Garments\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Flexible Garments\FLEXI\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Flexible Garments\FLEXI\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Flexible Garments\FLEXI\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Flexible Garments\FLEXI\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\Applications\Flxible\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.dll
+E:\Applications\Flxible\DEMO_BillingSingle _stock\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\Applications\Flxible\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.dll
+E:\Applications\Flxible\DEMO_BillingSingle _stock\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\Applications\Affordable\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+E:\Applications\Affordable\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\Applications\Affordable\Affordable\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Applications\Affordable\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+E:\Applications\Affordable\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\Applications\Affordable1\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+E:\Applications\Affordable1\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\Applications\Affordable1\Affordable\CommonLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Applications\Affordable1\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+E:\Applications\Affordable1\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\intel\Downloads\Affortable\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\intel\Downloads\Affortable\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\intel\Downloads\Affortable\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\intel\Downloads\Affortable\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\AFFORABLE_TEXTILE\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+F:\AFFORABLE_TEXTILE\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\AFFORABLE_TEXTILE\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+F:\AFFORABLE_TEXTILE\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\Affordable\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+E:\Affordable\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\Affordable\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+E:\Affordable\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\Bigdbiz\Desktop\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\Bigdbiz\Desktop\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\Bigdbiz\Desktop\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\Bigdbiz\Desktop\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\Applications\AFFO\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+E:\Applications\AFFO\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\Applications\AFFO\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+E:\Applications\AFFO\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\Bigdbiz\Desktop\AF\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\Bigdbiz\Desktop\AF\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\Bigdbiz\Desktop\AF\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\Bigdbiz\Desktop\AF\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\Bigdbiz\Desktop\AEE\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\Bigdbiz\Desktop\AEE\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\Bigdbiz\Desktop\AEE\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\Bigdbiz\Desktop\AEE\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\AFFORABLE_TEXTILE\AE_2003\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+F:\AFFORABLE_TEXTILE\AE_2003\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\AFFORABLE_TEXTILE\AE_2003\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+F:\AFFORABLE_TEXTILE\AE_2003\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\AFFORABLE_TEXTILE\AE_31032021\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+F:\AFFORABLE_TEXTILE\AE_31032021\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\AFFORABLE_TEXTILE\AE_31032021\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+F:\AFFORABLE_TEXTILE\AE_31032021\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+E:\Applications\Affordable\AE1\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+E:\Applications\Affordable\AE1\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+E:\Applications\Affordable\AE1\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+E:\Applications\Affordable\AE1\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Priya_Working\Janarthanan\AE Code_0907 (1)\AE Code_0907\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Priya_Working\Janarthanan\AE Code_0907 (1)\AE Code_0907\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Priya_Working\Janarthanan\AE Code_0907 (1)\AE Code_0907\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Priya_Working\Janarthanan\AE Code_0907 (1)\AE Code_0907\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Priya_Working\Janarthanan\AE_Code with Accounts\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Priya_Working\Janarthanan\AE_Code with Accounts\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Priya_Working\Janarthanan\AE_Code with Accounts\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Priya_Working\Janarthanan\AE_Code with Accounts\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+F:\Priya_Working\Janarthanan\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Priya_Working\Janarthanan\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Priya_Working\Janarthanan\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Priya_Working\Janarthanan\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+D:\Project\AE_Code with Accounts TherminalEnterprises\Affordable\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\CommonLayer\bin\Debug\CommonLayer.dll
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\CommonLayer\bin\Debug\CommonLayer.pdb
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\CommonLayer\bin\Debug\DocumentFormat.OpenXml.dll
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\CommonLayer\bin\Debug\Newtonsoft.Json.dll
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\CommonLayer\bin\Debug\DocumentFormat.OpenXml.xml
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\CommonLayer\bin\Debug\Newtonsoft.Json.xml
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\CommonLayer\obj\Debug\CommonLayer.dll
+F:\Priya_Working\Janarthanan\Terminal - Ramkumar\Affordable\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\obj\Debug\CommonLayer.csproj.AssemblyReference.cache
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\obj\Debug\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\obj\Debug\CommonLayer.csproj.CopyComplete
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\My Computer\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\obj\Debug\CommonLayer.pdb
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\obj\Debug\CommonLayer.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\obj\Debug\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\obj\Debug\CommonLayer.csproj.CopyComplete
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\ADMIN\Source\Repos\BigBakeryPOS\TextileWithAccounts\CommonLayer\obj\Debug\CommonLayer.pdb

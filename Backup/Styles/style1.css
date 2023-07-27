@@ -1,0 +1,431 @@
+﻿.master
+{
+    background-color: #E5E4E2;
+    width: 60%;
+    border: 1px solid #000000;
+}
+.title
+{
+    background-color: #1E90FF;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #000000;
+}
+.item
+{
+    background-color: #E5E4E2;
+    margin-top: 10px;
+    width: 60%;
+}
+.rightarea
+{
+    width: 40%;
+    margin-top: 10px;
+}
+.body
+{
+    background-color: #A0CFEC;
+    background-image: url('../Image/erp1.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.tbl_bg
+{
+    background-color: #E5E4E2;
+}
+
+.LabelText
+{
+    font-family: Arial;
+    font-size: 14px;
+    color: Navy;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.TextBox
+{
+    border: 1px #c7daf7 solid;
+    top: 5px;
+    padding-left: 5px;
+    font-family: Arial;
+    font-size: 11px;
+    width: 160px; /*background-color:#f1f0ef;*/
+    color: #3251aa;
+}
+.Textbox:hover
+{
+    border: 1px #ffc000 solid;
+    top: 5px;
+    padding-left: 5px;
+    font-family: Arial;
+    font-size: 11px;
+    width: 160px; /*background-color:#f1f0ef;*/
+    color: #3251aa;
+}
+.myButton
+{
+    box-shadow: inset 0px 1px 3px 0px #91b8b3;
+    background-color: #768d87;
+    border-radius: 5px;
+    border: 1px solid #566963;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 11px 23px;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px #2b665e;
+}
+.myButton:hover
+{
+    background-color: #6c7c7c;
+}
+.myButton:active
+{
+    position: relative;
+    top: 1px;
+}
+.cal_Theme1 .ajax__calendar_container
+{
+    background-color: #DEF1F4;
+    border: solid 1px #77D5F7;
+}
+
+.cal_Theme1 .ajax__calendar_header
+{
+    background-color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.cal_Theme1 .ajax__calendar_title, .cal_Theme1 .ajax__calendar_next, .cal_Theme1 .ajax__calendar_prev
+{
+    color: #004080;
+    padding-top: 3px;
+}
+
+.cal_Theme1 .ajax__calendar_body
+{
+    background-color: #ffffff;
+    border: solid 1px #77D5F7;
+}
+
+.cal_Theme1 .ajax__calendar_dayname
+{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 2px;
+    color: #004080;
+}
+
+.cal_Theme1 .ajax__calendar_day
+{
+    color: #004080;
+    text-align: center;
+}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_month, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_year, .cal_Theme1 .ajax__calendar_active
+{
+    color: #004080;
+    font-weight: bold;
+    background-color: #DEF1F4;
+}
+
+.cal_Theme1 .ajax__calendar_today
+{
+    font-weight: bold;
+}
+
+.cal_Theme1 .ajax__calendar_other, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_today, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_title
+{
+    color: #bbbbbb;
+}
+
+
+.myGridStylevalue
+{
+    border-collapse: collapse;
+    margin-left: 1px;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+
+.myGridStyle
+{
+    border-collapse: collapse;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+.myGridStylenewgrids
+{
+    border-collapse: collapse;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+
+
+.myGridStyle tr th
+{
+    padding: 8px;
+    color: White;
+    background-color: #336699;
+    border: 1px solid gray;
+    font-family: Arial;
+    font-size: 10pt;
+    text-align: center;
+}
+
+
+
+
+
+.myGridStyle tr:nth-child(even)
+{
+    background-color: #F0F0F0;
+}
+
+
+
+.myGridStyle tr:nth-child(odd)
+{
+    background-color: #D3D3D3;
+}
+
+
+
+.myGridStyle td
+{
+    border: 1px solid gray;
+    padding: 8px;
+}
+
+
+
+.primary_nav_wrap
+{
+    margin-top: 0px;
+}
+
+.primary_nav_wrap ul
+{
+    list-style: none;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.primary_nav_wrap ul a
+{
+    display: block;
+    color: Black;
+    background-color: Black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 15px;
+    font-family: "HelveticaNeue" , "Helvetica Neue" ,Helvetica,Arial,sans-serif;
+}
+
+.primary_nav_wrap ul li
+{
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: Black;
+}
+
+.primary_nav_wrap ul li.current-menu-item
+{
+    background: Black;
+}
+
+.primary_nav_wrap ul li:hover
+{
+    background: #f6f6f6;
+}
+
+.primary_nav_wrap ul ul
+{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    padding: 0;
+}
+
+.primary_nav_wrap ul ul li
+{
+    float: none;
+    width: 200px;
+}
+
+.primary_nav_wrap ul ul a
+{
+    line-height: 70%;
+    padding: 10px 15px;
+}
+
+.primary_nav_wrap ul ul ul
+{
+    top: 0;
+    left: 100%;
+}
+
+.primary_nav_wrap ul li:hover > ul
+{
+    display: block;
+}
+
+
+nav
+{
+    margin: 0px 0;
+    background-color: #A0A0FF;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+/* nav:after {
+	content:"";
+	display:table;
+	clear:both;
+} */
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li
+{
+    margin: 0px;
+    display: inline-block;
+    float: left;
+    background-color: #A0A0FF;
+}
+
+/* Styling the links */
+nav a
+{
+    display: block;
+    text-decoration: none;
+    padding: 3px 20px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+/* Background color change on Hover */
+nav a:hover
+{
+    background-color: White;
+}
+
+nav ul ul
+{
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul
+{
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li
+{
+    min-width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+nav ul ul ul
+{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+}
+
+nav ul ul li:hover > ul
+{
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul ul li
+{
+    min-width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+.myGrid
+{
+    border-collapse: collapse;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+
+.myGrid tr th
+{
+    padding: 5px;
+    color: Black;
+    background-color: #59d3b4;
+    border: 1px solid gray;
+    font-family: Arial;
+    font-size: 10pt;
+    text-align: center;
+}
+
+
+
+
+
+.myGrid tr:nth-child(even)
+{
+    background-color: #F0F0F0;
+}
+
+
+
+.myGrid tr:nth-child(odd)
+{
+    background-color: #D3D3D3;
+}
+
+
+
+.myGrid td
+{
+    border: 1px solid gray;
+    padding: 3px;
+}
+
+
+
+
+
+
