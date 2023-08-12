@@ -257,6 +257,7 @@ namespace Billing.Accountsbootstrap
                                 ViewState["CurrentTable1"] = dtddd;
                                 GVItem.DataSource = dtddd;
                                 GVItem.DataBind();
+
                             }
 
                             DataSet dsCuttingProcessEntrySizes = objBs.GetTransCuttingProcessEntrySizesReceive(Convert.ToInt32(ProcessEntryId));

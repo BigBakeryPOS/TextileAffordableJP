@@ -349,6 +349,19 @@
                                   <div class="col-lg-2">
                                         <div class="form-group">
                                             <label>
+                                                Width :</label>
+                                            <%--<asp:CompareValidator ID="CompareValidator10" runat="server" 
+                                            Text="*" Style="color: Red" InitialValue="0" ControlToValidate="ddlColor" ValueToCompare="Select Color"
+                                            Operator="NotEqual" Type="String" ErrorMessage="Please Select Color.">
+                                        </asp:CompareValidator>--%>
+                                            <asp:DropDownList ID="ddlWidth" runat="server" CssClass="chzn-select" Style="height: 30px"
+                                                Width="100%">
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
+                                  <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label>
                                                 Tax :</label>                                           
                                             <asp:DropDownList ID="ddlTax" runat="server" CssClass="chzn-select" Style="height: 30px"
                                                 Width="100%">
@@ -478,11 +491,13 @@
                                     <asp:HiddenField ID="hdRate" runat="server" Value='<%#Eval("Rate") %>' />
                                     <asp:HiddenField ID="hdAmount" runat="server" Value='<%#Eval("Amount") %>' />
                                     <asp:HiddenField ID="hdRemarks" runat="server" Value='<%#Eval("Remarks") %>' />
+                                    <asp:HiddenField ID="hdWidthId" runat="server" Value='<%#Eval("WidthId") %>' />
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:BoundField DataField="PurchaseForType" HeaderText="Pro.Against" HeaderStyle-Width="12%" />
                             <asp:BoundField DataField="Item" HeaderText="Item" HeaderStyle-Width="25%" />
                             <asp:BoundField DataField="Color" HeaderText="Color" HeaderStyle-Width="10%" />
+                            <asp:BoundField DataField="Width" HeaderText="Width" HeaderStyle-Width="10%" />
                             <asp:BoundField DataField="Qty" HeaderText="Qty" HeaderStyle-HorizontalAlign="Right"
                                 ItemStyle-HorizontalAlign="Right" HeaderStyle-Width="50px" DataFormatString="{0:f2}" />
                             <asp:BoundField DataField="Shrink" HeaderText="Shrink" HeaderStyle-HorizontalAlign="Right"
@@ -538,6 +553,13 @@
             <br />
             <br />
             <div class="col-lg-12">
+                 <div class="col-lg-2">
+                    <div class="form-group">
+                        <label>
+                            Total Qty</label>
+                        <asp:TextBox ID="txtTotQty" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                    </div>
+                </div>
                 <div class="col-lg-2">
                     <div class="form-group">
                         <label>

@@ -37,7 +37,7 @@ namespace Billing.Accountsbootstrap
                 ddlExcNo.CausesValidation = true;
                 ddlBuyerCode.CausesValidation = false;
 
-               // ddlIssueItems.Items.Insert(0, "Select Issue Item");
+                // ddlIssueItems.Items.Insert(0, "Select Issue Item");
 
                 txtOrderDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 txtDeliveryFrom.Text = DateTime.Now.ToString("dd/MM/yyyy");
@@ -92,6 +92,16 @@ namespace Billing.Accountsbootstrap
                     ddlColor.DataBind();
                     ddlColor.Items.Insert(0, "Select Color");
 
+                }
+
+                DataSet dsWidth = objBs.GetWidth();
+                if (dsWidth.Tables[0].Rows.Count > 0)
+                {
+                    ddlWidth.DataSource = dsWidth.Tables[0];
+                    ddlWidth.DataTextField = "Width";
+                    ddlWidth.DataValueField = "WidthId";
+                    ddlWidth.DataBind();
+                    ddlWidth.Items.Insert(0, "Select Width");
                 }
 
                 string POId = Request.QueryString.Get("POId");
@@ -168,7 +178,7 @@ namespace Billing.Accountsbootstrap
                         }
                     }
 
-                    DataSet ds2 = objBs.getTransPurchaseOrder(Convert.ToInt32(POId));
+                    DataSet ds2 = objBs.getTransPurchaseOrderNew(Convert.ToInt32(POId));
                     if (ds2.Tables[0].Rows.Count > 0)
                     {
                         #region
@@ -218,6 +228,11 @@ namespace Billing.Accountsbootstrap
                         dct = new DataColumn("IsReceive");
                         dttt.Columns.Add(dct);
 
+                        dct = new DataColumn("Width");
+                        dttt.Columns.Add(dct);
+                        dct = new DataColumn("WidthId");
+                        dttt.Columns.Add(dct);
+
                         dstd.Tables.Add(dttt);
 
                         foreach (DataRow Dr in ds2.Tables[0].Rows)
@@ -245,7 +260,8 @@ namespace Billing.Accountsbootstrap
                             drNew["Remarks"] = Dr["Remarks"];
                             drNew["IsRequest"] = Dr["Request"];
                             drNew["IsReceive"] = Dr["Receive"];
-
+                            drNew["Width"] = Dr["Width"];
+                            drNew["WidthId"] = Dr["WidthId"];
                             dstd.Tables[0].Rows.Add(drNew);
                             dtddd = dstd.Tables[0];
                         }
@@ -368,7 +384,7 @@ namespace Billing.Accountsbootstrap
                 {
                     ddlExcNo.DataSource = ds.Tables[0];
                     ddlExcNo.DataTextField = "ExcNo";
-                    ddlExcNo.DataValueField = "BuyerOrderId";
+                    ddlExcNo.DataValueField = "BuyerCodeID";
                     ddlExcNo.DataBind();
                     ddlExcNo.Items.Insert(0, "ExcNo");
                 }
@@ -925,7 +941,7 @@ namespace Billing.Accountsbootstrap
 
                     ddlBuyerCode.SelectedValue = (row.FindControl("hdPurchaseForTypeId") as HiddenField).Value;
                 }
-               // ddlIssueItems.SelectedValue = (row.FindControl("hdItemId") as HiddenField).Value;
+                // ddlIssueItems.SelectedValue = (row.FindControl("hdItemId") as HiddenField).Value;
                 string ItemId = (row.FindControl("hdItemId") as HiddenField).Value;
                 DataSet getitemidd = objBs.GetitemProcess_Update(Convert.ToInt32(ItemId));
                 if (getitemidd.Tables[0].Rows.Count > 0)
@@ -937,7 +953,7 @@ namespace Billing.Accountsbootstrap
                 {
 
                 }
-                
+
                 ddlColor.SelectedValue = (row.FindControl("hdColorId") as HiddenField).Value;
                 txtQty.Text = (row.FindControl("hdQty") as HiddenField).Value;
                 txtShrink.Text = (row.FindControl("hdShrink") as HiddenField).Value;
@@ -945,6 +961,7 @@ namespace Billing.Accountsbootstrap
                 txtRate.Text = (row.FindControl("hdRate") as HiddenField).Value;
                 txtAmount.Text = (row.FindControl("hdAmount") as HiddenField).Value;
                 txtRemarks.Text = (row.FindControl("hdRemarks") as HiddenField).Value;
+                ddlWidth.SelectedValue = (row.FindControl("hdWidthId") as HiddenField).Value;
                 //chkReq.Checked = Convert.ToBoolean((row.FindControl("IsRequest") as HiddenField).Value);
                 //chkRec.Checked = Convert.ToBoolean((row.FindControl("IsReceive") as HiddenField).Value);
 
@@ -961,7 +978,7 @@ namespace Billing.Accountsbootstrap
                     txtShrink.Enabled = true;
                     txtTotalQty.Enabled = true;
 
-                    
+
                 }
                 else
                 {
@@ -973,7 +990,7 @@ namespace Billing.Accountsbootstrap
                     txtQty.Enabled = false;
                     txtShrink.Enabled = false;
                     txtTotalQty.Enabled = false;
-                 
+
                 }
                 btnSubmit.Text = "Update";
             }
@@ -1025,8 +1042,10 @@ namespace Billing.Accountsbootstrap
                         HiddenField hdRemarks = (HiddenField)GVItem.Rows[vLoop].FindControl("hdRemarks");
                         HiddenField hdIsRequest = (HiddenField)GVItem.Rows[vLoop].FindControl("hdIsRequest");
                         HiddenField hdIsReceive = (HiddenField)GVItem.Rows[vLoop].FindControl("hdIsReceive");
+                        HiddenField hdWidthId = (HiddenField)GVItem.Rows[vLoop].FindControl("hdWidthId");
 
-                        int TransSamplingCostingId = objBs.InsertTransPurchaseOrder(POId, Convert.ToInt32(hdPurchaseForId.Value), Convert.ToInt32(hdPurchaseForTypeId.Value), Convert.ToInt32(hdItemId.Value), Convert.ToInt32(hdColorId.Value), Convert.ToDouble(hdQty.Value), Convert.ToDouble(hdShrink.Value), Convert.ToDouble(hdTotalQty.Value), Convert.ToDouble(hdRate.Value), Convert.ToDouble(hdAmount.Value), hdRemarks.Value, hdIsRequest.Value, hdIsReceive.Value);
+
+                        int TransSamplingCostingId = objBs.InsertTransPurchaseOrder(POId, Convert.ToInt32(hdPurchaseForId.Value), Convert.ToInt32(hdPurchaseForTypeId.Value), Convert.ToInt32(hdItemId.Value), Convert.ToInt32(hdColorId.Value), Convert.ToDouble(hdQty.Value), Convert.ToDouble(hdShrink.Value), Convert.ToDouble(hdTotalQty.Value), Convert.ToDouble(hdRate.Value), Convert.ToDouble(hdAmount.Value), hdRemarks.Value, hdIsRequest.Value, hdIsReceive.Value,Convert.ToInt32(hdWidthId.Value));
 
 
                     }
@@ -1060,15 +1079,16 @@ namespace Billing.Accountsbootstrap
                     HiddenField hdIsRequest = (HiddenField)GVItem.Rows[vLoop].FindControl("hdIsRequest");
                     HiddenField hdIsReceive = (HiddenField)GVItem.Rows[vLoop].FindControl("hdIsReceive");
                     HiddenField hdRecQty = (HiddenField)GVItem.Rows[vLoop].FindControl("hdRecQty");
+                    HiddenField hdWidthId = (HiddenField)GVItem.Rows[vLoop].FindControl("hdWidthId");
 
                     if (Convert.ToDouble(hdRecQty.Value) <= 0)
                     {
 
-                        int TransSamplingCostingId = objBs.InsertTransPurchaseOrder(Convert.ToInt32(POId), Convert.ToInt32(hdPurchaseForId.Value), Convert.ToInt32(hdPurchaseForTypeId.Value), Convert.ToInt32(hdItemId.Value), Convert.ToInt32(hdColorId.Value), Convert.ToDouble(hdQty.Value), Convert.ToDouble(hdShrink.Value), Convert.ToDouble(hdTotalQty.Value), Convert.ToDouble(hdRate.Value), Convert.ToDouble(hdAmount.Value), hdRemarks.Value, hdIsRequest.Value, hdIsReceive.Value);
+                        int TransSamplingCostingId = objBs.InsertTransPurchaseOrder(Convert.ToInt32(POId), Convert.ToInt32(hdPurchaseForId.Value), Convert.ToInt32(hdPurchaseForTypeId.Value), Convert.ToInt32(hdItemId.Value), Convert.ToInt32(hdColorId.Value), Convert.ToDouble(hdQty.Value), Convert.ToDouble(hdShrink.Value), Convert.ToDouble(hdTotalQty.Value), Convert.ToDouble(hdRate.Value), Convert.ToDouble(hdAmount.Value), hdRemarks.Value, hdIsRequest.Value, hdIsReceive.Value,Convert.ToInt32(hdWidthId.Value));
                     }
                     else
                     {
-                        int TransSamplingCostingId = objBs.UpdateTransPurchaseOrder(Convert.ToInt32(POId), Convert.ToInt32(hdPurchaseForId.Value), Convert.ToInt32(hdPurchaseForTypeId.Value), Convert.ToInt32(hdItemId.Value), Convert.ToInt32(hdColorId.Value), Convert.ToDouble(hdQty.Value), Convert.ToDouble(hdShrink.Value), Convert.ToDouble(hdTotalQty.Value), Convert.ToDouble(hdRate.Value), Convert.ToDouble(hdAmount.Value), hdRemarks.Value, hdIsRequest.Value, hdIsReceive.Value);
+                        int TransSamplingCostingId = objBs.UpdateTransPurchaseOrder(Convert.ToInt32(POId), Convert.ToInt32(hdPurchaseForId.Value), Convert.ToInt32(hdPurchaseForTypeId.Value), Convert.ToInt32(hdItemId.Value), Convert.ToInt32(hdColorId.Value), Convert.ToDouble(hdQty.Value), Convert.ToDouble(hdShrink.Value), Convert.ToDouble(hdTotalQty.Value), Convert.ToDouble(hdRate.Value), Convert.ToDouble(hdAmount.Value), hdRemarks.Value, hdIsRequest.Value, hdIsReceive.Value,Convert.ToInt32(hdWidthId.Value));
                     }
                 }
 
@@ -1084,7 +1104,7 @@ namespace Billing.Accountsbootstrap
 
         protected void btnSubmit_OnClick(object sender, EventArgs e)
         {
-          
+
 
 
             #region Validation
@@ -1100,7 +1120,7 @@ namespace Billing.Accountsbootstrap
                 return;
             }
 
-            if (txtQty.Text == "" || txtQty.Text =="0")
+            if (txtQty.Text == "" || txtQty.Text == "0")
             {
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), Guid.NewGuid().ToString(), "alert('Please Enter Valid Value.')", true);
                 return;
@@ -1142,7 +1162,7 @@ namespace Billing.Accountsbootstrap
                     DataTable dt = (DataTable)ViewState["CurrentTable1"];
                     DataRow drCurrentRow = null;
                     int rowIndex = Convert.ToInt32(hdRowIndex.Value);
-                     recqty = Convert.ToDouble(dt.Rows[rowIndex]["RecQty"]);
+                    recqty = Convert.ToDouble(dt.Rows[rowIndex]["RecQty"]);
                     if (dt.Rows.Count > 1)
                     {
                         dt.Rows.Remove(dt.Rows[rowIndex]);
@@ -1166,7 +1186,7 @@ namespace Billing.Accountsbootstrap
             #region CHECKING SAME ITEM
 
             string[] IssueItems1 = ddlIssueItems.SelectedValue.Split('$');
-            string purchasetypeid1 =string.Empty;
+            string purchasetypeid1 = string.Empty;
             string purchasefor = ddlPurchaseFor.SelectedValue;
             if (purchasefor == "1")
             {
@@ -1176,7 +1196,7 @@ namespace Billing.Accountsbootstrap
             {
                 purchasetypeid1 = ddlBuyerCode.SelectedValue;
             }
-            
+
 
             for (int vLoop = 0; vLoop < GVItem.Rows.Count; vLoop++)
             {
@@ -1186,7 +1206,7 @@ namespace Billing.Accountsbootstrap
                 HiddenField hdPurchaseForId = (HiddenField)GVItem.Rows[vLoop].FindControl("hdPurchaseForId");
 
                 HiddenField PurchaseForTypeId1 = (HiddenField)GVItem.Rows[vLoop].FindControl("hdPurchaseForTypeId");
-               
+
 
                 if (hdItemId.Value == IssueItems1[0] && hdColorId.Value == ddlColor.SelectedValue && hdPurchaseForId.Value == purchasefor && PurchaseForTypeId1.Value == purchasetypeid1)
                 {
@@ -1197,144 +1217,150 @@ namespace Billing.Accountsbootstrap
 
             #endregion
 
-                DataSet dstd = new DataSet();
-                DataTable dtddd = new DataTable();
-                DataRow drNew;
-                DataColumn dct;
-                DataTable dttt = new DataTable();
+            DataSet dstd = new DataSet();
+            DataTable dtddd = new DataTable();
+            DataRow drNew;
+            DataColumn dct;
+            DataTable dttt = new DataTable();
 
-                #region
+            #region
 
-                dct = new DataColumn("PurchaseFor");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("PurchaseForId");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("PurchaseForType");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("PurchaseForTypeId");
-                dttt.Columns.Add(dct);
+            dct = new DataColumn("PurchaseFor");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("PurchaseForId");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("PurchaseForType");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("PurchaseForTypeId");
+            dttt.Columns.Add(dct);
 
-                dct = new DataColumn("Item");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("ItemId");
-                dttt.Columns.Add(dct);
+            dct = new DataColumn("Item");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("ItemId");
+            dttt.Columns.Add(dct);
 
-                dct = new DataColumn("Color");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("ColorId");
-                dttt.Columns.Add(dct);
-
-
-                dct = new DataColumn("Qty");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("Shrink");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("TotalQty");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("RecQty");
-                dttt.Columns.Add(dct);
-
-                dct = new DataColumn("Rate");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("Amount");
-                dttt.Columns.Add(dct);
-
-                dct = new DataColumn("Remarks");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("IsRequest");
-                dttt.Columns.Add(dct);
-                dct = new DataColumn("IsReceive");
-                dttt.Columns.Add(dct);
-
-                dstd.Tables.Add(dttt);
-
-                string PurchaseForType = "";
-                int PurchaseForTypeId = 0;
-
-                if (ddlPurchaseFor.SelectedValue == "1")
-                {
-                    PurchaseForType = ddlExcNo.SelectedItem.Text;
-                    PurchaseForTypeId = Convert.ToInt32(ddlExcNo.SelectedValue);
-                }
-                else
-                {
-                    PurchaseForType = ddlBuyerCode.SelectedItem.Text;
-                    PurchaseForTypeId = Convert.ToInt32(ddlBuyerCode.SelectedValue);
-                }
-
-                string[] IssueItems = ddlIssueItems.SelectedValue.Split('$');
-
-                if (ViewState["CurrentTable1"] != null)
-                {
-                    DataTable dt = (DataTable)ViewState["CurrentTable1"];
-
-                    drNew = dttt.NewRow();
-
-                    drNew["PurchaseFor"] = ddlPurchaseFor.SelectedItem.Text;
-                    drNew["PurchaseForID"] = ddlPurchaseFor.SelectedValue;
-                    drNew["PurchaseForType"] = PurchaseForType;
-                    drNew["PurchaseForTypeId"] = PurchaseForTypeId;
-
-                    drNew["Item"] = ddlIssueItems.SelectedItem.Text;
-                    drNew["ItemId"] = IssueItems[0];
-
-                    drNew["Color"] = ddlColor.SelectedItem.Text;
-                    drNew["ColorId"] = ddlColor.SelectedValue;
-
-                    drNew["Qty"] = txtQty.Text;
-                    drNew["Shrink"] = txtShrink.Text;
-                    drNew["TotalQty"] = txtTotalQty.Text;
-                    drNew["RecQty"] = recqty.ToString();
-                    drNew["Rate"] = txtRate.Text;
-                    drNew["Amount"] = txtAmount.Text;
-
-                    drNew["Remarks"] = txtRemarks.Text;
-                    drNew["IsRequest"] = chkReq.Checked;
-                    drNew["IsReceive"] = chkRec.Checked;
-
-                    dstd.Tables[0].Rows.Add(drNew);
-                    dtddd = dstd.Tables[0];
-                    dtddd.Merge(dt);
-
-                }
-                else
-                {
-
-                    drNew = dttt.NewRow();
-
-                    drNew["PurchaseFor"] = ddlPurchaseFor.SelectedItem.Text;
-                    drNew["PurchaseForID"] = ddlPurchaseFor.SelectedValue;
-                    drNew["PurchaseForType"] = PurchaseForType;
-                    drNew["PurchaseForTypeId"] = PurchaseForTypeId;
-
-                    drNew["Item"] = ddlIssueItems.SelectedItem.Text;
-                    drNew["ItemId"] = IssueItems[0];
-
-                    drNew["Color"] = ddlColor.SelectedItem.Text;
-                    drNew["ColorId"] = ddlColor.SelectedValue;
-
-                    drNew["Qty"] = txtQty.Text;
-                    drNew["Shrink"] = txtShrink.Text;
-                    drNew["TotalQty"] = txtTotalQty.Text;
-                    drNew["RecQty"] = recqty.ToString();
-                    drNew["Rate"] = txtRate.Text;
-                    drNew["Amount"] = txtAmount.Text;
-
-                    drNew["Remarks"] = txtRemarks.Text;
-                    drNew["IsRequest"] = chkReq.Checked;
-                    drNew["IsReceive"] = chkRec.Checked;
-
-                    dstd.Tables[0].Rows.Add(drNew);
-                    dtddd = dstd.Tables[0];
-                }
-
-                #endregion
+            dct = new DataColumn("Color");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("ColorId");
+            dttt.Columns.Add(dct);
 
 
-                ViewState["CurrentTable1"] = dtddd;
-                GVItem.DataSource = dtddd;
-                GVItem.DataBind();
-            
+            dct = new DataColumn("Qty");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("Shrink");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("TotalQty");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("RecQty");
+            dttt.Columns.Add(dct);
+
+            dct = new DataColumn("Rate");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("Amount");
+            dttt.Columns.Add(dct);
+
+            dct = new DataColumn("Remarks");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("IsRequest");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("IsReceive");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("WidthId");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("Width");
+            dttt.Columns.Add(dct);
+
+            dstd.Tables.Add(dttt);
+
+            string PurchaseForType = "";
+            int PurchaseForTypeId = 0;
+
+            if (ddlPurchaseFor.SelectedValue == "1")
+            {
+                PurchaseForType = ddlExcNo.SelectedItem.Text;
+                PurchaseForTypeId = Convert.ToInt32(ddlExcNo.SelectedValue);
+            }
+            else
+            {
+                PurchaseForType = ddlBuyerCode.SelectedItem.Text;
+                PurchaseForTypeId = Convert.ToInt32(ddlBuyerCode.SelectedValue);
+            }
+
+            string[] IssueItems = ddlIssueItems.SelectedValue.Split('$');
+
+            if (ViewState["CurrentTable1"] != null)
+            {
+                DataTable dt = (DataTable)ViewState["CurrentTable1"];
+
+                drNew = dttt.NewRow();
+
+                drNew["PurchaseFor"] = ddlPurchaseFor.SelectedItem.Text;
+                drNew["PurchaseForID"] = ddlPurchaseFor.SelectedValue;
+                drNew["PurchaseForType"] = PurchaseForType;
+                drNew["PurchaseForTypeId"] = PurchaseForTypeId;
+
+                drNew["Item"] = ddlIssueItems.SelectedItem.Text;
+                drNew["ItemId"] = IssueItems[0];
+
+                drNew["Color"] = ddlColor.SelectedItem.Text;
+                drNew["ColorId"] = ddlColor.SelectedValue;
+
+                drNew["Qty"] = txtQty.Text;
+                drNew["Shrink"] = txtShrink.Text;
+                drNew["TotalQty"] = txtTotalQty.Text;
+                drNew["RecQty"] = recqty.ToString();
+                drNew["Rate"] = txtRate.Text;
+                drNew["Amount"] = txtAmount.Text;
+
+                drNew["Remarks"] = txtRemarks.Text;
+                drNew["IsRequest"] = chkReq.Checked;
+                drNew["IsReceive"] = chkRec.Checked;
+                drNew["Width"] = ddlWidth.SelectedItem.Text;
+                drNew["WidthId"] = ddlWidth.SelectedValue;
+                dstd.Tables[0].Rows.Add(drNew);
+                dtddd = dstd.Tables[0];
+                dtddd.Merge(dt);
+
+            }
+            else
+            {
+
+                drNew = dttt.NewRow();
+
+                drNew["PurchaseFor"] = ddlPurchaseFor.SelectedItem.Text;
+                drNew["PurchaseForID"] = ddlPurchaseFor.SelectedValue;
+                drNew["PurchaseForType"] = PurchaseForType;
+                drNew["PurchaseForTypeId"] = PurchaseForTypeId;
+
+                drNew["Item"] = ddlIssueItems.SelectedItem.Text;
+                drNew["ItemId"] = IssueItems[0];
+
+                drNew["Color"] = ddlColor.SelectedItem.Text;
+                drNew["ColorId"] = ddlColor.SelectedValue;
+
+                drNew["Qty"] = txtQty.Text;
+                drNew["Shrink"] = txtShrink.Text;
+                drNew["TotalQty"] = txtTotalQty.Text;
+                drNew["RecQty"] = recqty.ToString();
+                drNew["Rate"] = txtRate.Text;
+                drNew["Amount"] = txtAmount.Text;
+
+                drNew["Remarks"] = txtRemarks.Text;
+                drNew["IsRequest"] = chkReq.Checked;
+                drNew["IsReceive"] = chkRec.Checked;
+                drNew["Width"] = ddlWidth.SelectedItem.Text;
+                drNew["WidthId"] = ddlWidth.SelectedValue;
+                dstd.Tables[0].Rows.Add(drNew);
+                dtddd = dstd.Tables[0];
+            }
+
+            #endregion
+
+
+            ViewState["CurrentTable1"] = dtddd;
+            GVItem.DataSource = dtddd;
+            GVItem.DataBind();
+
 
             Calculations();
 

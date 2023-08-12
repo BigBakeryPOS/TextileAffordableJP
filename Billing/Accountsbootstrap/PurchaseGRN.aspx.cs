@@ -136,6 +136,16 @@ namespace Billing.Accountsbootstrap
                     //ddlcategory.Items.Insert(0, "Select Category");
                 }
 
+                DataSet dsWidth = objBs.GetWidth();
+                if (dsWidth.Tables[0].Rows.Count > 0)
+                {
+                    ddlWidth.DataSource = dsWidth.Tables[0];
+                    ddlWidth.DataTextField = "Width";
+                    ddlWidth.DataValueField = "WidthId";
+                    ddlWidth.DataBind();
+                    ddlWidth.Items.Insert(0, "Select Width");
+                }
+
                 drpPurchaseType_OnSelectedIndexChanged(sender, e);
 
                 string POGRNId = Request.QueryString.Get("POGRNId");
@@ -200,6 +210,7 @@ namespace Billing.Accountsbootstrap
                         txtTotIGST.Text = Convert.ToDouble(dsRecPO.Tables[0].Rows[0]["IGST"]).ToString("f2");
                         txtTotBeforeTAX.Text = Convert.ToDouble(dsRecPO.Tables[0].Rows[0]["BeforeTAXAmount"]).ToString("f2");
                         txtGrandTotal.Text = Convert.ToDouble(dsRecPO.Tables[0].Rows[0]["NetTotal"]).ToString("f2");
+                        txtTotQty.Text = dsRecPO.Tables[0].Rows[0]["TotalQty"].ToString();
                         btnSave.Text = "Update";
                         btnSave.Enabled = true;
                         drpPurchaseType_OnSelectedIndexChanged(sender, e);
@@ -207,7 +218,7 @@ namespace Billing.Accountsbootstrap
                         #endregion
                     }
 
-                    DataSet ds2 = objBs.getTransPurchaseGRN(Convert.ToInt32(POGRNId));
+                    DataSet ds2 = objBs.getTransPurchaseGRNNew(Convert.ToInt32(POGRNId));
                     if (ds2.Tables[0].Rows.Count > 0)
                     {
                         #region
@@ -272,6 +283,11 @@ namespace Billing.Accountsbootstrap
                         dct = new DataColumn("BeforeTAX");
                         dttt.Columns.Add(dct);
 
+                        dct = new DataColumn("Width");
+                        dttt.Columns.Add(dct);
+                        dct = new DataColumn("WidthId");
+                        dttt.Columns.Add(dct);
+
                         dstd.Tables.Add(dttt);
 
                         foreach (DataRow Dr in ds2.Tables[0].Rows)
@@ -309,6 +325,9 @@ namespace Billing.Accountsbootstrap
                             drNew["Tax"] = Dr["Tax"];
                             drNew["TotAmount"] = Dr["NetTotal"];
                             drNew["BeforeTAX"] = Dr["BeforeTAX"];
+
+                            drNew["Width"] = Dr["Width"];
+                            drNew["WidthId"] = Dr["WidthId"];
 
                             dstd.Tables[0].Rows.Add(drNew);
                             dtddd = dstd.Tables[0];
@@ -519,7 +538,7 @@ namespace Billing.Accountsbootstrap
                 }
                 else
                 {
-                   // ddlPartyName.SelectedValue = ddlPartyCode.SelectedValue;
+                    // ddlPartyName.SelectedValue = ddlPartyCode.SelectedValue;
 
                     DataSet dsParty = objBs.GetLedgerDetails(Convert.ToInt32(ddlPartyName.SelectedValue));
                     if (dsParty.Tables[0].Rows.Count > 0)
@@ -607,7 +626,7 @@ namespace Billing.Accountsbootstrap
                     #endregion
                 }
 
-                DataSet ds2 = objBs.getTransPurchaseGRNPO(Convert.ToInt32(ddlPoNo.SelectedValue));
+                DataSet ds2 = objBs.getTransPurchaseGRNPONew(Convert.ToInt32(ddlPoNo.SelectedValue));
                 if (ds2.Tables[0].Rows.Count > 0)
                 {
                     #region
@@ -676,6 +695,11 @@ namespace Billing.Accountsbootstrap
                     dct = new DataColumn("BeforeTAX");
                     dttt.Columns.Add(dct);
 
+                    dct = new DataColumn("Width");
+                    dttt.Columns.Add(dct);
+                    dct = new DataColumn("WidthId");
+                    dttt.Columns.Add(dct);
+
                     dstd.Tables.Add(dttt);
 
                     foreach (DataRow Dr in ds2.Tables[0].Rows)
@@ -715,7 +739,8 @@ namespace Billing.Accountsbootstrap
                         drNew["TotAmount"] = 0;
                         drNew["BeforeTAX"] = 0;
                         drNew["RecQty"] = 0;// Convert.ToDouble(Dr["Qty"]) - Convert.ToDouble(Dr["RecQty"]);
-
+                        drNew["Width"] = Dr["Width"];
+                        drNew["WidthId"] = Dr["WidthId"];
                         dstd.Tables[0].Rows.Add(drNew);
                         dtddd = dstd.Tables[0];
                     }
@@ -746,6 +771,7 @@ namespace Billing.Accountsbootstrap
         {
             double grandtotal = 0;
             double beforetaxtotal = 0;
+            double grandtotalqty = 0;
             double tax = 0;
             double r = 0;
 
@@ -765,6 +791,7 @@ namespace Billing.Accountsbootstrap
                         double total = tx + iNetAmount;
                         txtTotAmount.Text = string.Format("{0:n2}", total);
                         grandtotal = grandtotal + total;
+                        grandtotalqty = grandtotalqty + Convert.ToDouble(txtqty.Text);
                         beforetaxtotal = beforetaxtotal + iNetAmount;
                         tax = tax + tx;
                     }
@@ -777,6 +804,7 @@ namespace Billing.Accountsbootstrap
                         txtTotAmount.Text = string.Format("{0:n2}", total);
                         txtAmount.Text = string.Format("{0:n2}", (iNetAmount - tx));
                         grandtotal = grandtotal + total;
+                        grandtotalqty = grandtotalqty + Convert.ToDouble(txtqty.Text);
                         beforetaxtotal = beforetaxtotal + (iNetAmount - tx);
                         tax = tax + tx;
                     }
@@ -785,6 +813,7 @@ namespace Billing.Accountsbootstrap
 
             txtGrandTotal.Text = string.Format("{0:n2}", (grandtotal));
             txtTotBeforeTAX.Text = string.Format("{0:n2}", (beforetaxtotal));
+            txtTotQty.Text = string.Format("{0:n2}", (grandtotalqty));
 
             if (ddlProvince.SelectedValue == "1")
             {
@@ -1222,7 +1251,10 @@ namespace Billing.Accountsbootstrap
             dttt.Columns.Add(dct);
             //dct = new DataColumn("LotNo");
             //dttt.Columns.Add(dct);
-
+            dct = new DataColumn("WidthId");
+            dttt.Columns.Add(dct);
+            dct = new DataColumn("Width");
+            dttt.Columns.Add(dct);
 
             dstd.Tables.Add(dttt);
 
@@ -1272,7 +1304,8 @@ namespace Billing.Accountsbootstrap
                 drNew["Tax"] = ddlTax.SelectedItem.Text;
                 drNew["TotAmount"] = txtAmount.Text;
                 drNew["BeforeTAX"] = Convert.ToDouble(Convert.ToDouble(txtTotalQty.Text) * Convert.ToDouble(txtRate.Text)).ToString("f2");
-
+                drNew["Width"] = ddlWidth.SelectedItem.Text;
+                drNew["WidthId"] = ddlWidth.SelectedValue;
                 dstd.Tables[0].Rows.Add(drNew);
                 dtddd = dstd.Tables[0];
                 dtddd.Merge(dt);
@@ -1311,13 +1344,15 @@ namespace Billing.Accountsbootstrap
                 drNew["Tax"] = ddlTax.SelectedItem.Text;
                 drNew["TotAmount"] = txtAmount.Text;
                 drNew["BeforeTAX"] = Convert.ToDouble(Convert.ToDouble(txtTotalQty.Text) * Convert.ToDouble(txtRate.Text)).ToString("f2");
+                drNew["Width"] = ddlWidth.SelectedItem.Text;
+                drNew["WidthId"] = ddlWidth.SelectedValue;
                 dstd.Tables[0].Rows.Add(drNew);
                 dtddd = dstd.Tables[0];
             }
 
             ViewState["CurrentTable1"] = dtddd;
             //txtQty_TextChanged(sender, e);
-          
+
             GVItem.DataSource = dtddd;
             GVItem.DataBind();
             Calculations();
@@ -1333,6 +1368,7 @@ namespace Billing.Accountsbootstrap
         public void Calculations()
         {
             double TotalAmount = 0;
+            double TotalQty = 0;
 
             for (int vLoop = 0; vLoop < GVItem.Rows.Count; vLoop++)
             {
@@ -1346,12 +1382,14 @@ namespace Billing.Accountsbootstrap
                 if (txtQty.Text == "")
                     txtQty.Text = "0";
 
+                TotalQty += Convert.ToDouble(txtQty.Text);
                 TotalAmount += Convert.ToDouble(txtRate.Text) * Convert.ToDouble(txtQty.Text);
                 hdAmount.Value = (Convert.ToDouble(txtRate.Text) * Convert.ToDouble(txtQty.Text)).ToString();
-               
+
             }
 
             txtTotalAmount.Text = TotalAmount.ToString();
+            txtTotalQty.Text = TotalQty.ToString();
         }
 
         protected void btnSave_OnClick(object sender, EventArgs e)
@@ -1556,7 +1594,7 @@ namespace Billing.Accountsbootstrap
 
                 DataSet dsset = objBs.getSetting("2", "Purchase AC", sTableName);
                 string ledgerid = dsset.Tables[0].Rows[0]["LedgerID"].ToString();
-                
+
                 DataSet dsPONo = objBs.GetPurchaseRecPONo(YearCode);
                 string PONo = dsPONo.Tables[0].Rows[0]["RecPONo"].ToString().PadLeft(4, '0');
                 txtRecNo.Text = PONo + " / " + YearCode;
@@ -1580,7 +1618,7 @@ namespace Billing.Accountsbootstrap
                         ipono = Convert.ToInt32(ddlPoNo.SelectedValue);
                     }
 
-                    int POGRNId = objBs.InsertPurchaseGRN(Convert.ToInt32(ipono), Convert.ToInt32(ledgerid), Convert.ToString(CreditorID1), Convert.ToInt32(ddlProcessOn.SelectedValue), RecDate, txtDeliveryPlace.Text, dsPONo.Tables[0].Rows[0]["RecPONo"].ToString(), YearCode, txtRecNo.Text, Convert.ToInt32(ddlPartyCode.SelectedValue), Convert.ToInt32(ddlCompany.SelectedValue), Convert.ToDouble(0), txtChallanNo.Text,"tblDayBook_" + sTableName,Convert.ToInt32(ddlProvince.SelectedValue),Convert.ToInt32(drpGSTType.SelectedValue),ddlPayMode.SelectedValue,Convert.ToInt32(Id),txtCheque.Text,Convert.ToDouble(txtRoundoff.Text),Convert.ToDouble(txtTotCGST.Text),Convert.ToDouble(txtTotSGST.Text),Convert.ToDouble(txtTotIGST.Text),Convert.ToDouble(txtGrandTotal.Text),Convert.ToDouble(txtTotBeforeTAX.Text), drpPurchaseType.SelectedValue);
+                    int POGRNId = objBs.InsertPurchaseGRN(Convert.ToInt32(ipono), Convert.ToInt32(ledgerid), Convert.ToString(CreditorID1), Convert.ToInt32(ddlProcessOn.SelectedValue), RecDate, txtDeliveryPlace.Text, dsPONo.Tables[0].Rows[0]["RecPONo"].ToString(), YearCode, txtRecNo.Text, Convert.ToInt32(ddlPartyCode.SelectedValue), Convert.ToInt32(ddlCompany.SelectedValue), Convert.ToDouble(0), txtChallanNo.Text, "tblDayBook_" + sTableName, Convert.ToInt32(ddlProvince.SelectedValue), Convert.ToInt32(drpGSTType.SelectedValue), ddlPayMode.SelectedValue, Convert.ToInt32(Id), txtCheque.Text, Convert.ToDouble(txtRoundoff.Text), Convert.ToDouble(txtTotCGST.Text), Convert.ToDouble(txtTotSGST.Text), Convert.ToDouble(txtTotIGST.Text), Convert.ToDouble(txtGrandTotal.Text), Convert.ToDouble(txtTotBeforeTAX.Text), drpPurchaseType.SelectedValue,Convert.ToDouble(txtTotQty.Text) );
 
                     for (int vLoop = 0; vLoop < GVItem.Rows.Count; vLoop++)
                     {
@@ -1604,14 +1642,14 @@ namespace Billing.Accountsbootstrap
                         Label txtTaxID = (Label)GVItem.Rows[vLoop].FindControl("txtTaxID");
                         Label txtTotAmount = (Label)GVItem.Rows[vLoop].FindControl("txtTotAmount");//nettotal
                         Label txtAmount = (Label)GVItem.Rows[vLoop].FindControl("txtAmount");//beforetax
-
+                        HiddenField hdWidthId = (HiddenField)GVItem.Rows[vLoop].FindControl("hdWidthId");
 
                         if (txtQty.Text == "")
                             txtQty.Text = "0";
 
                         if (Convert.ToDouble(txtQty.Text) > 0)
                         {
-                            int TransSamplingCostingId = objBs.InsertTransPurchaseGRN(POGRNId, Convert.ToInt32(hdTransId.Value), Convert.ToInt32(hdPurchaseForId.Value), Convert.ToInt32(hdPurchaseForTypeId.Value), Convert.ToInt32(hdItemId.Value), Convert.ToInt32(hdColorId.Value), Convert.ToDouble(hdQty.Value), Convert.ToDouble(hdShrink.Value), Convert.ToDouble(hdTotalQty.Value), Convert.ToDouble(txtRate.Text), Convert.ToDouble(hdAmount.Value), Convert.ToDouble(txtQty.Text), txtRemarks.Text, Convert.ToInt32(ddlCompany.SelectedValue),Convert.ToInt32(txtTaxID.Text),txtTax.Text,Convert.ToDouble(txtTotAmount.Text),Convert.ToDouble(txtAmount.Text));                            
+                            int TransSamplingCostingId = objBs.InsertTransPurchaseGRN(POGRNId, Convert.ToInt32(hdTransId.Value), Convert.ToInt32(hdPurchaseForId.Value), Convert.ToInt32(hdPurchaseForTypeId.Value), Convert.ToInt32(hdItemId.Value), Convert.ToInt32(hdColorId.Value), Convert.ToDouble(hdQty.Value), Convert.ToDouble(hdShrink.Value), Convert.ToDouble(hdTotalQty.Value), Convert.ToDouble(txtRate.Text), Convert.ToDouble(hdAmount.Value), Convert.ToDouble(txtQty.Text), txtRemarks.Text, Convert.ToInt32(ddlCompany.SelectedValue), Convert.ToInt32(txtTaxID.Text), txtTax.Text, Convert.ToDouble(txtTotAmount.Text), Convert.ToDouble(txtAmount.Text), Convert.ToInt32(hdWidthId.Value));
                         }
                     }
                 }
@@ -1693,7 +1731,7 @@ namespace Billing.Accountsbootstrap
                 }
 
 
-                int UPDPOID = objBs.UpdatePurchaseGRN(Convert.ToInt32(POGRNId), Convert.ToInt32(ledgerid), Convert.ToString(CreditorID1), Convert.ToInt32(ddlProcessOn.SelectedValue), RecDate, txtDeliveryPlace.Text, "", YearCode, ipono.ToString(), Convert.ToInt32(ddlPartyCode.SelectedValue), Convert.ToInt32(ddlCompany.SelectedValue), Convert.ToDouble(0), txtChallanNo.Text, POGRNId, "tblDayBook_" + sTableName, Convert.ToInt32(ddlProvince.SelectedValue), Convert.ToInt32(drpGSTType.SelectedValue), ddlPayMode.SelectedValue, Convert.ToInt32(Id), txtCheque.Text, daybookid, Convert.ToDouble(txtRoundoff.Text), Convert.ToDouble(txtTotCGST.Text), Convert.ToDouble(txtTotSGST.Text), Convert.ToDouble(txtTotIGST.Text), Convert.ToDouble(txtGrandTotal.Text), Convert.ToDouble(txtTotBeforeTAX.Text));
+                int UPDPOID = objBs.UpdatePurchaseGRN(Convert.ToInt32(POGRNId), Convert.ToInt32(ledgerid), Convert.ToString(CreditorID1), Convert.ToInt32(ddlProcessOn.SelectedValue), RecDate, txtDeliveryPlace.Text, "", YearCode, ipono.ToString(), Convert.ToInt32(ddlPartyCode.SelectedValue), Convert.ToInt32(ddlCompany.SelectedValue), Convert.ToDouble(0), txtChallanNo.Text, POGRNId, "tblDayBook_" + sTableName, Convert.ToInt32(ddlProvince.SelectedValue), Convert.ToInt32(drpGSTType.SelectedValue), ddlPayMode.SelectedValue, Convert.ToInt32(Id), txtCheque.Text, daybookid, Convert.ToDouble(txtRoundoff.Text), Convert.ToDouble(txtTotCGST.Text), Convert.ToDouble(txtTotSGST.Text), Convert.ToDouble(txtTotIGST.Text), Convert.ToDouble(txtGrandTotal.Text), Convert.ToDouble(txtTotBeforeTAX.Text),Convert.ToDouble(txtTotQty.Text));
 
                 for (int vLoop = 0; vLoop < GVItem.Rows.Count; vLoop++)
                 {
@@ -1718,13 +1756,14 @@ namespace Billing.Accountsbootstrap
                     Label txtTaxID = (Label)GVItem.Rows[vLoop].FindControl("txtTaxID");
                     Label txtTotAmount = (Label)GVItem.Rows[vLoop].FindControl("txtTotAmount");//nettotal
                     Label txtAmount = (Label)GVItem.Rows[vLoop].FindControl("txtAmount");//beforetax
+                    HiddenField hdWidthId = (HiddenField)GVItem.Rows[vLoop].FindControl("hdWidthId");
 
                     if (txtQty.Text == "")
                         txtQty.Text = "0";
 
                     if (Convert.ToDouble(txtQty.Text) > 0)
                     {
-                        int TransSamplingCostingId = objBs.UpdateTransPurchaseGRN(Convert.ToInt32(POGRNId), Convert.ToInt32(hdTransId.Value), Convert.ToInt32(hdPurchaseForId.Value), Convert.ToInt32(hdPurchaseForTypeId.Value), Convert.ToInt32(hdItemId.Value), Convert.ToInt32(hdColorId.Value), Convert.ToDouble(hdQty.Value), Convert.ToDouble(hdShrink.Value), Convert.ToDouble(hdTotalQty.Value), Convert.ToDouble(txtRate.Text), Convert.ToDouble(hdAmount.Value), Convert.ToDouble(txtQty.Text), txtRemarks.Text, Convert.ToInt32(ddlCompany.SelectedValue), Convert.ToInt32(txtTaxID.Text), txtTax.Text, Convert.ToDouble(txtTotAmount.Text), Convert.ToDouble(txtAmount.Text));
+                        int TransSamplingCostingId = objBs.UpdateTransPurchaseGRN(Convert.ToInt32(POGRNId), Convert.ToInt32(hdTransId.Value), Convert.ToInt32(hdPurchaseForId.Value), Convert.ToInt32(hdPurchaseForTypeId.Value), Convert.ToInt32(hdItemId.Value), Convert.ToInt32(hdColorId.Value), Convert.ToDouble(hdQty.Value), Convert.ToDouble(hdShrink.Value), Convert.ToDouble(hdTotalQty.Value), Convert.ToDouble(txtRate.Text), Convert.ToDouble(hdAmount.Value), Convert.ToDouble(txtQty.Text), txtRemarks.Text, Convert.ToInt32(ddlCompany.SelectedValue), Convert.ToInt32(txtTaxID.Text), txtTax.Text, Convert.ToDouble(txtTotAmount.Text), Convert.ToDouble(txtAmount.Text), Convert.ToInt32(hdWidthId.Value));
                     }
                 }
             }

@@ -460,3 +460,15 @@ C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug
 C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\intel\source\repos\BigBakeryPOS\TextileWithAccounts\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\intel\Source\Repos\BigBakeryPOS\TextileAffordableJP\DataLayer\obj\Debug\DataLayer.pdb

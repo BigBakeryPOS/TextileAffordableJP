@@ -10,6 +10,7 @@ using System.Text;
 using CommonLayer;
 using System.IO;
 using System.Globalization;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace Billing.Accountsbootstrap
 {
@@ -48,7 +49,7 @@ namespace Billing.Accountsbootstrap
             empid = Session["Empid"].ToString();
             if (!IsPostBack)
             {
-               
+
                 string super = Session["IsSuperAdmin"].ToString();
 
                 if (super == "1")
@@ -63,7 +64,7 @@ namespace Billing.Accountsbootstrap
                         drpbranch.DataTextField = "CompanyName";
                         drpbranch.DataValueField = "Comapanyid";
                         drpbranch.DataBind();
-                        drpbranch.Items.Insert(0, "Select Branch");
+                        //drpbranch.Items.Insert(0, "Select Branch");
                     }
                 }
                 else
@@ -79,10 +80,12 @@ namespace Billing.Accountsbootstrap
                         drpbranch.DataTextField = "CompanyName";
                         drpbranch.DataValueField = "Comapanyid";
                         drpbranch.DataBind();
-                        drpbranch.SelectedValue = Session["cmpyid"].ToString();
-                        drpbranch_OnSelectedIndexChanged(sender, e);
-                        company_SelectedIndexChnaged(sender, e);
+                        //drpbranch.SelectedValue = Session["cmpyid"].ToString();
+                        //drpbranch_OnSelectedIndexChanged(sender, e);
+                        //company_SelectedIndexChnaged(sender, e);
                     }
+                    drpbranch_OnSelectedIndexChanged(sender, e);
+                    //company_SelectedIndexChnaged(sender, e);
                 }
 
                 DataSet dbitem = objBs.griditem();
@@ -94,6 +97,30 @@ namespace Billing.Accountsbootstrap
                     drpitemtype.DataBind();
                     drpitemtype.Items.Insert(0, "Select Item");
                 }
+
+
+                DataSet dsEmp = objBs.GetEmployeeDetails(lblEmployee.Text);
+                if (dsEmp.Tables[0].Rows.Count > 0)
+                {
+                    drpcutting.DataSource = dsEmp.Tables[0];
+                    drpcutting.DataTextField = "Name";
+                    drpcutting.DataValueField = "Employee_Id";
+                    drpcutting.DataBind();
+                }
+
+
+                DataSet ds = objBs.gridProcess();
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    grdmaster.DataSource = ds;
+                    grdmaster.DataBind();
+                }
+                else
+                {
+                    grdmaster.DataSource = null;
+                    grdmaster.DataBind();
+                }
+
                 // if (CmpyId == "4")
                 {
                     //////DataSet dbbc = objBs.GetCompanyDetforboth(drpbranch.SelectedValue);
@@ -118,6 +145,7 @@ namespace Billing.Accountsbootstrap
                 //    ddlBottilot.Items.Insert(0, "Select LotNo");
                 //    ddlBottilot.SelectedIndex = 0;
                 //}
+
 
 
 
@@ -405,14 +433,14 @@ namespace Billing.Accountsbootstrap
                 }
 
 
-                DataSet dsrefno = objBs.getnewsupplierforcut(drpwidth.SelectedValue);
+                DataSet dsrefno = objBs.getnewsupplierforcutNEW(drpwidth.SelectedValue);
                 if (dsrefno != null)
                 {
                     if (dsrefno.Tables[0].Rows.Count > 0)
                     {
                         chkinvno.DataSource = dsrefno.Tables[0];
-                        chkinvno.DataTextField = "fabno";
-                        chkinvno.DataValueField = "fabid";
+                        chkinvno.DataTextField = "invoiceno";
+                        chkinvno.DataValueField = "pogrnid";
                         chkinvno.DataBind();
                         //  drpwidth.Items.Insert(0, "Select Width");
                     }
@@ -528,15 +556,15 @@ namespace Billing.Accountsbootstrap
                                 }
                             }
 
-                            DataSet getfabricdetails = objBs.getprecuttingfabricDetailsTab1(iid,"B");
+                            DataSet getfabricdetails = objBs.getprecuttingfabricDetailsTab1(iid, "B");
 
                             if (getfabricdetails.Tables[0].Rows.Count > 0)
                             {
 
                                 for (int i = 0; i <= getfabricdetails.Tables[0].Rows.Count - 1; i++)
                                 {
-                                        //Find the checkbox list items using FindByValue and select it.
-                                        chkinvno.Items.FindByValue(getfabricdetails.Tables[0].Rows[i]["fabid"].ToString()).Selected = true;
+                                    //Find the checkbox list items using FindByValue and select it.
+                                    chkinvno.Items.FindByValue(getfabricdetails.Tables[0].Rows[i]["fabid"].ToString()).Selected = true;
                                 }
                             }
 
@@ -553,10 +581,10 @@ namespace Billing.Accountsbootstrap
 
                             if (chkinvno.SelectedIndex >= 0)
                             {
-                                 if (radcuttype.SelectedValue == "2")
+                                if (radcuttype.SelectedValue == "2")
                                 {
 
-                                    foreach (ListItem listItem in chkinvno.Items)
+                                    foreach (System.Web.UI.WebControls.ListItem listItem in chkinvno.Items)
                                     {
                                         if (listItem.Text != "All")
                                         {
@@ -590,7 +618,7 @@ namespace Billing.Accountsbootstrap
 
                                     reqchanged(sender, e);
 
-                                    foreach (ListItem item in chkinvno.Items)
+                                    foreach (System.Web.UI.WebControls.ListItem item in chkinvno.Items)
                                     {
                                         //check if item selected
                                         if (item.Selected)
@@ -636,10 +664,10 @@ namespace Billing.Accountsbootstrap
 
                                     for (int vLoop1 = 0; vLoop1 < newgridfablist.Rows.Count; vLoop1++)
                                     {
-                                        CheckBox chkitemchecked = (CheckBox)newgridfablist.Rows[vLoop1].FindControl("chkitemchecked");
+                                        System.Web.UI.WebControls.CheckBox chkitemchecked = (System.Web.UI.WebControls.CheckBox)newgridfablist.Rows[vLoop1].FindControl("chkitemchecked");
 
                                         Label newfabid = (Label)newgridfablist.Rows[vLoop1].FindControl("newfabid");
-                                        DataSet getfabricdetailss = objBs.getprecuttingfabricDetailsTab1(iid,"B");
+                                        DataSet getfabricdetailss = objBs.getprecuttingfabricDetailsTab1(iid, "B");
 
                                         if (getfabricdetailss.Tables[0].Rows.Count > 0)
                                         {
@@ -652,7 +680,7 @@ namespace Billing.Accountsbootstrap
                                                     chkitemchecked.Checked = true;
                                                     Label newfabcode = (Label)newgridfablist.Rows[vLoop1].FindControl("newfabcode");
                                                     TextBox reqqmeter = (TextBox)newgridfablist.Rows[vLoop1].FindControl("newtxtreqmeter");
-                                                    CheckBox dckitem = (CheckBox)newgridfablist.Rows[vLoop1].FindControl("chkitemchecked");
+                                                    System.Web.UI.WebControls.CheckBox dckitem = (System.Web.UI.WebControls.CheckBox)newgridfablist.Rows[vLoop1].FindControl("chkitemchecked");
 
                                                     reqqmeter.Text = gettotalmeter;
                                                 }
@@ -661,7 +689,7 @@ namespace Billing.Accountsbootstrap
                                     }
 
                                 }
-                                
+
                             }
                             else
                             {
@@ -735,44 +763,44 @@ namespace Billing.Accountsbootstrap
                             //if (dgetprocessratio.Tables[0].Rows.Count > 0)
                             //{
                             //    // Want to Process Ratio Fabric List
-                                newfabclick(sender, e);
+                            newfabclick(sender, e);
 
                             // GETTING CONTRAST LIST
-                                DataSet getcontrastlist = objBs.getprecuttingfabricDetailsTab4forcontrast(iid, "C");
-                                if (getcontrastlist.Tables[0].Rows.Count > 0)
+                            DataSet getcontrastlist = objBs.getprecuttingfabricDetailsTab4forcontrast(iid, "C");
+                            if (getcontrastlist.Tables[0].Rows.Count > 0)
+                            {
+
+                                contrastgridfab.DataSource = getcontrastlist.Tables[0];
+                                contrastgridfab.DataBind();
+
+                                for (int i = 0; i < getcontrastlist.Tables[0].Rows.Count; i++)
                                 {
+                                    string transfabid = getcontrastlist.Tables[0].Rows[i]["id"].ToString();
+                                    string Designno = getcontrastlist.Tables[0].Rows[i]["design"].ToString();
+                                    string shirttype = getcontrastlist.Tables[0].Rows[i]["type"].ToString();
+                                    string Avaliablemeter = getcontrastlist.Tables[0].Rows[i]["Avaliablemeter"].ToString();
+                                    string Reqmeter = getcontrastlist.Tables[0].Rows[i]["Reqmeter"].ToString();
+                                    string AvgMeter = getcontrastlist.Tables[0].Rows[i]["AvgMeter"].ToString();
 
-                                    contrastgridfab.DataSource = getcontrastlist.Tables[0];
-                                    contrastgridfab.DataBind();
 
-                                    for (int i = 0; i < getcontrastlist.Tables[0].Rows.Count; i++)
+
+                                    for (int vLoop1 = 0; vLoop1 < contrastgridfab.Rows.Count; vLoop1++)
                                     {
-                                        string transfabid = getcontrastlist.Tables[0].Rows[i]["id"].ToString();
-                                        string Designno = getcontrastlist.Tables[0].Rows[i]["design"].ToString();
-                                        string shirttype = getcontrastlist.Tables[0].Rows[i]["type"].ToString();
-                                        string Avaliablemeter = getcontrastlist.Tables[0].Rows[i]["Avaliablemeter"].ToString();
-                                        string Reqmeter = getcontrastlist.Tables[0].Rows[i]["Reqmeter"].ToString();
-                                        string AvgMeter = getcontrastlist.Tables[0].Rows[i]["AvgMeter"].ToString();
+                                        Label newfabid = (Label)contrastgridfab.Rows[vLoop1].FindControl("newfabid");
 
+                                        TextBox reqqmeter = (TextBox)contrastgridfab.Rows[vLoop1].FindControl("newtxtreqmeter");
+                                        TextBox avgmeter = (TextBox)contrastgridfab.Rows[vLoop1].FindControl("txtavgmetercontast");
 
-
-                                        for (int vLoop1 = 0; vLoop1 < contrastgridfab.Rows.Count; vLoop1++)
+                                        if (newfabid.Text == transfabid)
                                         {
-                                            Label newfabid = (Label)contrastgridfab.Rows[vLoop1].FindControl("newfabid");
-                                            
-                                            TextBox reqqmeter = (TextBox)contrastgridfab.Rows[vLoop1].FindControl("newtxtreqmeter");
-                                            TextBox avgmeter = (TextBox)contrastgridfab.Rows[vLoop1].FindControl("txtavgmetercontast");
 
-                                            if (newfabid.Text == transfabid)
-                                            {
-
-                                                reqqmeter.Text = Reqmeter;
-                                                avgmeter.Text = AvgMeter;
-                                            }
-
+                                            reqqmeter.Text = Reqmeter;
+                                            avgmeter.Text = AvgMeter;
                                         }
+
                                     }
                                 }
+                            }
                             //}
 
 
@@ -980,7 +1008,7 @@ namespace Billing.Accountsbootstrap
             else
             {
 
-               
+
 
 
                 if (drpcutting.SelectedValue != "")
@@ -1864,7 +1892,7 @@ namespace Billing.Accountsbootstrap
                 DataSet ds1 = new DataSet();
                 DataSet dsmer = new DataSet();
 
-                foreach (ListItem item in ddlBottilot.Items)
+                foreach (System.Web.UI.WebControls.ListItem item in ddlBottilot.Items)
                 {
 
                     if (item.Selected)
@@ -2004,7 +2032,7 @@ namespace Billing.Accountsbootstrap
                 Label newfabcode = (Label)newgridfablist.Rows[vLoop].FindControl("newfabcode");
                 Label lblinvdate = (Label)newgridfablist.Rows[vLoop].FindControl("lblinvdate");
 
-               // DateTime lblinvdatee = DateTime.ParseExact(lblinvdate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                // DateTime lblinvdatee = DateTime.ParseExact(lblinvdate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
                 if (Convert.ToDateTime(lblinvdate.Text) > (deliverydate))
                 {
@@ -2024,7 +2052,7 @@ namespace Billing.Accountsbootstrap
                 Label newfabcode = (Label)contrastgridfab.Rows[vLoop].FindControl("newfabcode");
                 Label lblinvdate = (Label)contrastgridfab.Rows[vLoop].FindControl("lblinvdate");
 
-                
+
 
                 if (Convert.ToDateTime(lblinvdate.Text) > deliverydate)
                 {
@@ -2076,7 +2104,7 @@ namespace Billing.Accountsbootstrap
 
 
 
-                        foreach (ListItem item in ddlBottilot.Items)
+                        foreach (System.Web.UI.WebControls.ListItem item in ddlBottilot.Items)
                         {
 
 
@@ -2122,7 +2150,7 @@ namespace Billing.Accountsbootstrap
                     }
 
 
-                    iStatus = objBs.insertcutnewonenew(txtLotNo.Text, deliverydate, drpwidth.SelectedValue, drpcutting.SelectedValue, txtprod.Text, "0", "0", radbtn.SelectedValue, txtadjmeter.Text, lblmin.Text, lblmax.Text, radcuttype.SelectedValue, ddlbrand.SelectedValue, "0", deldate, drpnewtype.SelectedValue, empid, lblcompany.Text, txtcompanylot.Text, drpbranch.SelectedValue, BCLot, 0, "1", txtrolltaka.Text, txtcompanysublot.Text, ddlsample.SelectedItem.Text, txtcontrasts.Text, txtavgmeter.Text, ddlcompletestitching.SelectedValue, Convert.ToInt32(rdncore.SelectedValue), BCValadd, txtnarration.Text, drpnewsleevetype.SelectedValue, drpnewlabeltype.SelectedValue, drpitemtype.SelectedValue, lblitemlotcode.Text, txtitemlotno.Text,txtitemnarration.Text);
+                    iStatus = objBs.insertcutnewonenew(txtLotNo.Text, deliverydate, drpwidth.SelectedValue, drpcutting.SelectedValue, txtprod.Text, "0", "0", radbtn.SelectedValue, txtadjmeter.Text, lblmin.Text, lblmax.Text, radcuttype.SelectedValue, ddlbrand.SelectedValue, "0", deldate, drpnewtype.SelectedValue, empid, lblcompany.Text, txtcompanylot.Text, drpbranch.SelectedValue, BCLot, 0, "1", txtrolltaka.Text, txtcompanysublot.Text, ddlsample.SelectedItem.Text, txtcontrasts.Text, txtavgmeter.Text, ddlcompletestitching.SelectedValue, Convert.ToInt32(rdncore.SelectedValue), BCValadd, txtnarration.Text, drpnewsleevetype.SelectedValue, drpnewlabeltype.SelectedValue, drpitemtype.SelectedValue, lblitemlotcode.Text, txtitemlotno.Text, txtitemnarration.Text);
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -2265,7 +2293,7 @@ namespace Billing.Accountsbootstrap
                                 //}
                             }
 
-                            foreach (ListItem listItem in chkinvno.Items)
+                            foreach (System.Web.UI.WebControls.ListItem listItem in chkinvno.Items)
                             {
                                 if (listItem.Text != "All")
                                 {
@@ -2554,7 +2582,7 @@ namespace Billing.Accountsbootstrap
                     //    int istas = objBs.updatesizesettingg(drpwidth.SelectedItem.Text, txtsharp.Text, txtexec.Text, "");
 
 
-                    
+
                     DataSet dstt = new DataSet();
 
                     int iStatus = 0;
@@ -2572,7 +2600,7 @@ namespace Billing.Accountsbootstrap
 
 
 
-                        foreach (ListItem item in ddlBottilot.Items)
+                        foreach (System.Web.UI.WebControls.ListItem item in ddlBottilot.Items)
                         {
 
 
@@ -2623,7 +2651,7 @@ namespace Billing.Accountsbootstrap
                         }
                     }
 
-                    iStatus = objBs.insertcutnewonenew(txtLotNo.Text, deliverydate, drpwidth.SelectedValue, drpcutting.SelectedValue, txtprod.Text, "0", "0", radbtn.SelectedValue, txtadjmeter.Text, lblmin.Text, lblmax.Text, radcuttype.SelectedValue, ddlbrand.SelectedValue, drpNchkfit.SelectedValue, deldate, drpnewtype.SelectedValue, empid, lblcompany.Text, txtcompanylot.Text, drpbranch.SelectedValue, BCLot, 0, "1", txtrolltaka.Text, txtcompanysublot.Text, ddlsample.SelectedItem.Text, txtcontrasts.Text, txtavgmeter.Text, ddlcompletestitching.SelectedValue, Convert.ToInt32(rdncore.SelectedValue), BCValadd, txtnarration.Text, drpnewsleevetype.SelectedValue, drpnewlabeltype.SelectedValue, drpitemtype.SelectedValue, lblitemlotcode.Text, txtitemlotno.Text,txtitemnarration.Text);
+                    iStatus = objBs.insertcutnewonenew(txtLotNo.Text, deliverydate, drpwidth.SelectedValue, drpcutting.SelectedValue, txtprod.Text, "0", "0", radbtn.SelectedValue, txtadjmeter.Text, lblmin.Text, lblmax.Text, radcuttype.SelectedValue, ddlbrand.SelectedValue, drpNchkfit.SelectedValue, deldate, drpnewtype.SelectedValue, empid, lblcompany.Text, txtcompanylot.Text, drpbranch.SelectedValue, BCLot, 0, "1", txtrolltaka.Text, txtcompanysublot.Text, ddlsample.SelectedItem.Text, txtcontrasts.Text, txtavgmeter.Text, ddlcompletestitching.SelectedValue, Convert.ToInt32(rdncore.SelectedValue), BCValadd, txtnarration.Text, drpnewsleevetype.SelectedValue, drpnewlabeltype.SelectedValue, drpitemtype.SelectedValue, lblitemlotcode.Text, txtitemlotno.Text, txtitemnarration.Text);
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -2763,7 +2791,7 @@ namespace Billing.Accountsbootstrap
                                 //}
                             }
 
-                            foreach (ListItem listItem in chkinvno.Items)
+                            foreach (System.Web.UI.WebControls.ListItem listItem in chkinvno.Items)
                             {
                                 if (listItem.Text != "All")
                                 {
@@ -2844,12 +2872,12 @@ namespace Billing.Accountsbootstrap
                     //if (ddlAgainst.SelectedValue != "0" && txtchequedd.Text != "" && txtAgainstAmount.Text != "0")
                     for (int vLoop1 = 0; vLoop1 < newgridfablist.Rows.Count; vLoop1++)
                     {
-                        CheckBox chkitemchecked = (CheckBox)newgridfablist.Rows[vLoop1].FindControl("chkitemchecked");
+                        System.Web.UI.WebControls.CheckBox chkitemchecked = (System.Web.UI.WebControls.CheckBox)newgridfablist.Rows[vLoop1].FindControl("chkitemchecked");
 
                         Label newfabid = (Label)newgridfablist.Rows[vLoop1].FindControl("newfabid");
                         Label newfabcode = (Label)newgridfablist.Rows[vLoop1].FindControl("newfabcode");
                         TextBox reqqmeter = (TextBox)newgridfablist.Rows[vLoop1].FindControl("newtxtreqmeter");
-                        CheckBox dckitem = (CheckBox)newgridfablist.Rows[vLoop1].FindControl("chkitemchecked");
+                        System.Web.UI.WebControls.CheckBox dckitem = (System.Web.UI.WebControls.CheckBox)newgridfablist.Rows[vLoop1].FindControl("chkitemchecked");
                         if (dckitem.Checked == true)
                         {
                             if (reqqmeter.Text != "0")
@@ -3629,14 +3657,14 @@ namespace Billing.Accountsbootstrap
             //DataSet dteo = new DataSet();
             if (ddlBottilot.SelectedValue == "Select LotNo" || ddlBottilot.SelectedValue == "LotNo" || ddlBottilot.SelectedValue == "")
             {
-                DataSet dsrefno = objBs.getnewsupplierforcut(drpwidth.SelectedValue);
+                DataSet dsrefno = objBs.getnewsupplierforcutNEW(drpwidth.SelectedValue);
                 if (dsrefno != null)
                 {
                     if (dsrefno.Tables[0].Rows.Count > 0)
                     {
                         chkinvno.DataSource = dsrefno.Tables[0];
-                        chkinvno.DataTextField = "fabno";
-                        chkinvno.DataValueField = "fabid";
+                        chkinvno.DataTextField = "invoiceno";
+                        chkinvno.DataValueField = "pogrnid";
                         chkinvno.DataBind();
                         //  drpwidth.Items.Insert(0, "Select Width");
                     }
@@ -3653,7 +3681,7 @@ namespace Billing.Accountsbootstrap
             }
             else
             {
-                DataSet dsrefno = objBs.getnewsupplierforcutbc(drpwidth.SelectedValue, ddlBottilot.SelectedValue,drpbranch.SelectedValue);
+                DataSet dsrefno = objBs.getnewsupplierforcutbc(drpwidth.SelectedValue, ddlBottilot.SelectedValue, drpbranch.SelectedValue);
                 if (dsrefno != null)
                 {
                     if (dsrefno.Tables[0].Rows.Count > 0)
@@ -3674,8 +3702,8 @@ namespace Billing.Accountsbootstrap
                         chkinvno.Items.Clear();
                     }
                 }
-
             }
+
             //DataSet dcheckwidth = objBs.getwidthnewprocess(drpwidth.SelectedItem.Text);
             //if (dcheckwidth.Tables[0].Rows.Count > 0)
             //{
@@ -3802,22 +3830,22 @@ namespace Billing.Accountsbootstrap
             //DataSet dssmer = new DataSet();
             //DataSet dteo = new DataSet();
 
-            DataSet dsrefno = objBs.getnewsupplierforcut(drpwidth.SelectedValue);
+            DataSet dsrefno = objBs.getnewsupplierforcutNEW(drpwidth.SelectedValue);
             if (dsrefno != null)
             {
                 if (dsrefno.Tables[0].Rows.Count > 0)
                 {
                     chkinvno.DataSource = dsrefno.Tables[0];
-                    chkinvno.DataTextField = "fabno";
-                    chkinvno.DataValueField = "fabid";
+                    chkinvno.DataTextField = "invoiceno";
+                    chkinvno.DataValueField = "pogrnid";
                     chkinvno.DataBind();
                     //  drpwidth.Items.Insert(0, "Select Width");
                 }
                 else
                 {
                     chkinvno.DataSource = null;
-                    chkinvno.DataTextField = "fabno";
-                    chkinvno.DataValueField = "fabid";
+                    chkinvno.DataTextField = "invoiceno";
+                    chkinvno.DataValueField = "pogrnid";
                     chkinvno.DataBind();
                     chkinvno.ClearSelection();
                     chkinvno.Items.Clear();
@@ -4247,6 +4275,42 @@ namespace Billing.Accountsbootstrap
                 {
                     r = Math.Floor(Convert.ToDouble(roundoff));
                 }
+
+                string cond1 = "";
+
+                foreach (System.Web.UI.WebControls.ListItem listItem in chkinvno.Items)
+                {
+                    if (listItem.Text != "All")
+                    {
+                        if (listItem.Selected)
+                        {
+                            cond1 += " pogrnid='" + listItem.Value + "' ,";
+                        }
+                    }
+                }
+                cond1 = cond1.TrimEnd(',');
+                cond1 = cond1.Replace(",", "or");
+
+                if (cond1 != "")
+                {
+                    DataSet dminmax1 = objBs.getcutlistdesignforminandmaxadditionNEW(cond1, drpwidth.SelectedValue);
+                    if (dminmax1.Tables[0].Rows.Count > 0)
+                    {
+                        txtAvailableMtr.Text = Convert.ToDouble(dminmax1.Tables[0].Rows[0]["tot"]).ToString("N");
+                        // txtReqMtr.Text = Convert.ToDouble(dminmax1.Tables[0].Rows[0]["tot"]).ToString("N");
+                        //Ntxtremmeter.Text = Convert.ToDouble(dminmax1.Tables[0].Rows[0]["tot"]).ToString("N");
+                        //  txtavamet1.Text = Convert.ToDouble(dminmax1.Tables[0].Rows[0]["tot"]).ToString("N");
+                    }
+                }
+                else
+                {
+                    txtAvailableMtr.Text = "0";
+                    // txtReqMtr.Text = "0";
+                    txtavamet1.Text = "0";
+                    // Ntxtremmeter.Text = "0";
+                }
+
+
                 if (txtAvailableMtr.Text == "")
                     txtAvailableMtr.Text = "0";
 
@@ -4483,7 +4547,7 @@ namespace Billing.Accountsbootstrap
 
                 int lop = 0;
                 //Loop through each item of checkboxlist
-                foreach (ListItem item in chkSizes.Items)
+                foreach (System.Web.UI.WebControls.ListItem item in chkSizes.Items)
                 {
                     //check if item selected
 
@@ -4809,6 +4873,12 @@ namespace Billing.Accountsbootstrap
             dct = new DataColumn("EndBit");
             dttt.Columns.Add(dct);
 
+            dct = new DataColumn("TotalshirtSize");
+            dttt.Columns.Add(dct);
+
+            dct = new DataColumn("RowId");
+            dttt.Columns.Add(dct);
+
             dstd.Tables.Add(dttt);
 
 
@@ -4817,17 +4887,11 @@ namespace Billing.Accountsbootstrap
             {
                 Label Nlblitemname = (Label)NewSizeRatioGrid.Rows[vLoop].FindControl("Nlblitemname");
                 Label Nlbltransid = (Label)NewSizeRatioGrid.Rows[vLoop].FindControl("Nlbltransid");
-
                 Label Nlblfitname = (Label)NewSizeRatioGrid.Rows[vLoop].FindControl("Nlblfitname");
                 Label Nlblfitid = (Label)NewSizeRatioGrid.Rows[vLoop].FindControl("Nlblfitid");
-
                 Label Nlblrequiredmeter = (Label)NewSizeRatioGrid.Rows[vLoop].FindControl("Nlblrequiredmeter");
-
                 Label Nlblavgmeter = (Label)NewSizeRatioGrid.Rows[vLoop].FindControl("Nlblavgmeter");
-
                 Label Nlbltotalshirt = (Label)NewSizeRatioGrid.Rows[vLoop].FindControl("Nlbltotalshirt");
-
-
                 TextBox txt30fs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt30fs");
                 TextBox txt32fs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt32fs");
                 TextBox txt34fs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt34fs");
@@ -4840,8 +4904,6 @@ namespace Billing.Accountsbootstrap
                 TextBox txtxxlfs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxtxxlfs");
                 TextBox txt3xlfs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt3xlfs");
                 TextBox txt4xlfs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt4xlfs");
-
-
                 TextBox txt30hs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt30hs");
                 TextBox txt32hs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt32hs");
                 TextBox txt34hs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt34hs");
@@ -4854,13 +4916,14 @@ namespace Billing.Accountsbootstrap
                 TextBox txtxxlhs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxtxxlhs");
                 TextBox txt3xlhs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt3xlhs");
                 TextBox txt4xlhs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt4xlhs");
-
                 TextBox txtcontra = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("txtcontra");
-
                 Label lblEndBit = (Label)NewSizeRatioGrid.Rows[vLoop].FindControl("lblEndBit");
+                Label NlblSizeshirt = (Label)NewSizeRatioGrid.Rows[vLoop].FindControl("NlblSizeshirt");
+                HiddenField hdRowId = (HiddenField)NewSizeRatioGrid.Rows[vLoop].FindControl("hdRowId");
+
 
                 double ratio = Convert.ToDouble(txt30fs.Text) + Convert.ToDouble(txt32fs.Text) + Convert.ToDouble(txt34fs.Text) + Convert.ToDouble(txt36fs.Text) + Convert.ToDouble(txtxsfs.Text) + Convert.ToDouble(txtsfs.Text) + Convert.ToDouble(txtmfs.Text) + Convert.ToDouble(txtlfs.Text) + Convert.ToDouble(txtxlfs.Text) + Convert.ToDouble(txtxxlfs.Text) + Convert.ToDouble(txt3xlfs.Text) + Convert.ToDouble(txt4xlfs.Text) +
-                    Convert.ToDouble(txt30hs.Text) + Convert.ToDouble(txt32hs.Text) + Convert.ToDouble(txt34hs.Text) + Convert.ToDouble(txt36hs.Text) + Convert.ToDouble(txtxshs.Text) + Convert.ToDouble(txtshs.Text) + Convert.ToDouble(txtmhs.Text) + Convert.ToDouble(txtlhs.Text) + Convert.ToDouble(txtxlhs.Text) + Convert.ToDouble(txtxxlhs.Text) + Convert.ToDouble(txt3xlhs.Text) + Convert.ToDouble(txt4xlhs.Text);
+                    Convert.ToDouble(txt30hs.Text) + Convert.ToDouble(txt32hs.Text) + Convert.ToDouble(txt34hs.Text) + Convert.ToDouble(txt36hs.Text) + Convert.ToDouble(txtxshs.Text) + Convert.ToDouble(txtshs.Text) + Convert.ToDouble(txtmhs.Text) + Convert.ToDouble(txtlhs.Text) + Convert.ToDouble(txtxlhs.Text) + Convert.ToDouble(txtxxlhs.Text) + Convert.ToDouble(txt3xlhs.Text) + Convert.ToDouble(txt4xlhs.Text) + Convert.ToDouble(NlblSizeshirt.Text);
 
                 #region FS PROCESS
                 // FS
@@ -5222,9 +5285,23 @@ namespace Billing.Accountsbootstrap
 
                 #endregion
 
+                double ostotsizeshirts = 0;
+                if (NlblSizeshirt.Text != "0")
+                {
+                    double stotsizeshirts = (Convert.ToDouble(Nlbltotalshirt.Text) / ratio) * Convert.ToDouble(NlblSizeshirt.Text);
+                    if (stotsizeshirts > 0.5)
+                    {
+                        ostotsizeshirts = Math.Round(Convert.ToDouble(stotsizeshirts), MidpointRounding.AwayFromZero);
+                    }
+                    else
+                    {
+                        ostotsizeshirts = Math.Floor(Convert.ToDouble(stotsizeshirts));
+                    }
+                }
+
 
                 double totalshirts = os30fs + os32fs + os34fs + os36fs + osXSfs + ossfs + osmfs + oslfs + osxlfs + osxxlfs + os3xlfs + os4xlfs +
-                    os30hs + os32hs + os34hs + os36hs + osXShs + osshs + osmhs + oslhs + osxlhs + osxxlhs + os3xlhs + os4xlhs;
+                    os30hs + os32hs + os34hs + os36hs + osXShs + osshs + osmhs + oslhs + osxlhs + osxxlhs + os3xlhs + os4xlhs + ostotsizeshirts;
 
 
                 NdrNew11 = dttt.NewRow();
@@ -5265,10 +5342,10 @@ namespace Billing.Accountsbootstrap
                 NdrNew11["SXXLHS"] = Convert.ToInt32(osxxlhs).ToString();
                 NdrNew11["S3XLHS"] = Convert.ToInt32(os3xlhs).ToString();
                 NdrNew11["S4XLHS"] = Convert.ToInt32(os4xlhs).ToString();
-
+                NdrNew11["TotalshirtSize"] = Convert.ToInt32(ostotsizeshirts).ToString();
 
                 NdrNew11["EndBit"] = (Convert.ToDouble(Nlblrequiredmeter.Text) - (Convert.ToDouble(Nlbltotalshirt.Text) * Convert.ToDouble(Nlblavgmeter.Text))).ToString("f2");
-
+                NdrNew11["RowId"] = hdRowId.Value;
                 dstd.Tables[0].Rows.Add(NdrNew11);
 
                 //////RatioShirtProcess.DataSource = dstd;
@@ -5322,7 +5399,7 @@ namespace Billing.Accountsbootstrap
 
                 int lop = 0;
                 //Loop through each item of checkboxlist
-                foreach (ListItem item in chkSizes.Items)
+                foreach (System.Web.UI.WebControls.ListItem item in chkSizes.Items)
                 {
                     //check if item selected
 
@@ -5442,13 +5519,7 @@ namespace Billing.Accountsbootstrap
                             {
                                 RatioShirtProcess.Columns[27].Visible = true;
                             }
-
-
-
-
-
                             lop++;
-
                         }
                     }
                 }
@@ -5505,7 +5576,7 @@ namespace Billing.Accountsbootstrap
             //////RatioShirtProcess.DataSource = dsttlcal;
             //////RatioShirtProcess.DataBind();
             UpdatePanel6.Update();
-            
+
         }
 
         protected void RatioShirtProcess_OnDataBound(object sender, GridViewRowEventArgs e)
@@ -5652,10 +5723,11 @@ namespace Billing.Accountsbootstrap
                 TextBox txtxxlhs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxtxxlhs");
                 TextBox txt3xlhs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt3xlhs");
                 TextBox txt4xlhs = (TextBox)NewSizeRatioGrid.Rows[vLoop].FindControl("Ntxt4xlhs");
+                Label NlblSizeshirt = (Label)NewSizeRatioGrid.Rows[vLoop].FindControl("NlblSizeshirt");
 
 
                 double ratio = Convert.ToDouble(txt30fs.Text) + Convert.ToDouble(txt32fs.Text) + Convert.ToDouble(txt34fs.Text) + Convert.ToDouble(txt36fs.Text) + Convert.ToDouble(txtxsfs.Text) + Convert.ToDouble(txtsfs.Text) + Convert.ToDouble(txtmfs.Text) + Convert.ToDouble(txtlfs.Text) + Convert.ToDouble(txtxlfs.Text) + Convert.ToDouble(txtxxlfs.Text) + Convert.ToDouble(txt3xlfs.Text) + Convert.ToDouble(txt4xlfs.Text) +
-                    Convert.ToDouble(txt30hs.Text) + Convert.ToDouble(txt32hs.Text) + Convert.ToDouble(txt34hs.Text) + Convert.ToDouble(txt36hs.Text) + Convert.ToDouble(txtxshs.Text) + Convert.ToDouble(txtshs.Text) + Convert.ToDouble(txtmhs.Text) + Convert.ToDouble(txtlhs.Text) + Convert.ToDouble(txtxlhs.Text) + Convert.ToDouble(txtxxlhs.Text) + Convert.ToDouble(txt3xlhs.Text) + Convert.ToDouble(txt4xlhs.Text);
+                    Convert.ToDouble(txt30hs.Text) + Convert.ToDouble(txt32hs.Text) + Convert.ToDouble(txt34hs.Text) + Convert.ToDouble(txt36hs.Text) + Convert.ToDouble(txtxshs.Text) + Convert.ToDouble(txtshs.Text) + Convert.ToDouble(txtmhs.Text) + Convert.ToDouble(txtlhs.Text) + Convert.ToDouble(txtxlhs.Text) + Convert.ToDouble(txtxxlhs.Text) + Convert.ToDouble(txt3xlhs.Text) + Convert.ToDouble(txt4xlhs.Text) + Convert.ToDouble(NlblSizeshirt.Text);
 
                 #region FS PROCESS
                 // FS
@@ -6017,9 +6089,22 @@ namespace Billing.Accountsbootstrap
 
                 #endregion
 
+                double ostotsizeshirts = 0;
+                if (NlblSizeshirt.Text != "0")
+                {
+                    double stotsizeshirts = (Convert.ToDouble(Nlbltotalshirt.Text) / ratio) * Convert.ToDouble(NlblSizeshirt.Text);
+                    if (stotsizeshirts > 0.5)
+                    {
+                        ostotsizeshirts = Math.Round(Convert.ToDouble(stotsizeshirts), MidpointRounding.AwayFromZero);
+                    }
+                    else
+                    {
+                        ostotsizeshirts = Math.Floor(Convert.ToDouble(stotsizeshirts));
+                    }
+                }
 
                 double totalshirts = os30fs + os32fs + os34fs + os36fs + osXSfs + ossfs + osmfs + oslfs + osxlfs + osxxlfs + os3xlfs + os4xlfs +
-                    os30hs + os32hs + os34hs + os36hs + osXShs + osshs + osmhs + oslhs + osxlhs + osxxlhs + os3xlhs + os4xlhs;
+                    os30hs + os32hs + os34hs + os36hs + osXShs + osshs + osmhs + oslhs + osxlhs + osxxlhs + os3xlhs + os4xlhs + ostotsizeshirts;
 
                 Nlblprocessshirt.Text = Convert.ToInt32(totalshirts).ToString();
                 Nlblprocessmeterratio.Text = (Convert.ToDouble(Nlblrequiredmeter.Text) / totalshirts).ToString("0.00");
@@ -6029,10 +6114,6 @@ namespace Billing.Accountsbootstrap
         }
         protected void Ratio_processall(object sender, EventArgs e)
         {
-
-
-
-
             for (int vLoop = 0; vLoop < NewSizeRatioGrid.Rows.Count; vLoop++)
             {
 
@@ -6108,8 +6189,6 @@ namespace Billing.Accountsbootstrap
                     txt3xlfs.Text = Ntxt3xlfs.Text;
                     txt4xlfs.Text = Ntxt4xlfs.Text;
 
-
-
                     txt30hs.Text = Ntxt30hs.Text;
                     txt32hs.Text = Ntxt32hs.Text;
                     txt34hs.Text = Ntxt34hs.Text;
@@ -6122,18 +6201,7 @@ namespace Billing.Accountsbootstrap
                     txtxxlhs.Text = Ntxtxxlhs.Text;
                     txt3xlhs.Text = Ntxt3xlhs.Text;
                     txt4xlhs.Text = Ntxt4xlhs.Text;
-
-
-
-
                 }
-
-
-
-
-
-
-
             }
 
         }
@@ -6169,7 +6237,6 @@ namespace Billing.Accountsbootstrap
             dct = new DataColumn("Fitname");
             dttt.Columns.Add(dct);
 
-
             dct = new DataColumn("Fitid");
             dttt.Columns.Add(dct);
 
@@ -6182,9 +6249,35 @@ namespace Billing.Accountsbootstrap
             dct = new DataColumn("Totalshirt");
             dttt.Columns.Add(dct);
 
+            dct = new DataColumn("RowId");
+            dttt.Columns.Add(dct);
 
+            dct = new DataColumn("TotalshirtSize");
+            dttt.Columns.Add(dct);
 
             dstd.Tables.Add(dttt);
+
+
+            DataSet dstd1 = new DataSet();
+            DataTable dtddd1 = new DataTable();
+            DataRow drNew1;
+            DataColumn dct1;
+            DataTable dttt1 = new DataTable();
+
+            dct1 = new DataColumn("RowId");
+            dttt1.Columns.Add(dct1);
+
+            dct1 = new DataColumn("Size");
+            dttt1.Columns.Add(dct1);
+
+            dct1 = new DataColumn("SizeId");
+            dttt1.Columns.Add(dct1);
+
+            dct1 = new DataColumn("Qty");
+            dttt1.Columns.Add(dct1);
+
+            dstd1.Tables.Add(dttt1);
+
 
             if (ddlbrand.SelectedValue == "Select Brand Name")
             {
@@ -6232,7 +6325,7 @@ namespace Billing.Accountsbootstrap
 
                 Label lblinvdate = (Label)newgridfablist.Rows[vLoop].FindControl("lblinvdate");
 
-                CheckBox dckitem = (CheckBox)newgridfablist.Rows[vLoop].FindControl("chkitemchecked");
+                System.Web.UI.WebControls.CheckBox dckitem = (System.Web.UI.WebControls.CheckBox)newgridfablist.Rows[vLoop].FindControl("chkitemchecked");
                 if (dckitem.Checked == true)
                 {
                     DateTime deliverydate = DateTime.ParseExact(txtdate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
@@ -6279,12 +6372,6 @@ namespace Billing.Accountsbootstrap
                         }
                     }
 
-
-
-
-
-
-
                     drNew = dttt.NewRow();
                     drNew["ItemName"] = newfabcode.Text;
                     drNew["Itemid"] = fabid.Text;
@@ -6292,7 +6379,8 @@ namespace Billing.Accountsbootstrap
                     drNew["Fitid"] = drpNchkfit.SelectedValue;
                     drNew["Givenmeter"] = reqmeter.Text;
                     drNew["Avgmeter"] = txtavgmeter.Text;
-
+                    drNew["RowId"] = vLoop + 1;
+                    drNew["TotalshirtSize"] = "0";
                     double wid = Convert.ToDouble(txtavgmeter.Text);
                     double roundoff = Convert.ToDouble(reqmeter.Text) / wid;
                     if (roundoff > 0.5)
@@ -6308,11 +6396,24 @@ namespace Billing.Accountsbootstrap
 
 
                     dstd.Tables[0].Rows.Add(drNew);
+
+                    DataSet dsBrandSize = objBs.selectallSize_BrandID(ddlbrand.SelectedValue);
+
+                    //int vLoop1 = 0;
+                    foreach (DataRow Dr in dsBrandSize.Tables[0].Rows)
+                    {
+                        drNew1 = dttt1.NewRow();
+
+                        drNew1["RowId"] = vLoop + 1;
+                        drNew1["Size"] = Dr["Size"].ToString();// RowsGVSizeQty[i]["Size"].ToString();
+                        drNew1["SizeId"] = Dr["SizeId"].ToString();// RowsGVSizeQty[i]["SizeId"].ToString();
+                        drNew1["Qty"] = "";// RowsGVSizeQty[i]["Qty"].ToString();          
+
+                        dstd1.Tables[0].Rows.Add(drNew1);
+                        dtddd1 = dstd1.Tables[0];
+
+                    }
                 }
-
-
-
-
             }
 
             ViewState["NewSizeRatioGrid"] = dttt;
@@ -6320,6 +6421,45 @@ namespace Billing.Accountsbootstrap
             NewSizeRatioGrid.DataSource = dstd;
             NewSizeRatioGrid.DataBind();
 
+            //DataSet dstd1 = new DataSet();
+            //DataTable dtddd1 = new DataTable();
+            //DataRow drNew1;
+            //DataColumn dct1;
+            //DataTable dttt1 = new DataTable();
+
+            //dct1 = new DataColumn("RowId");
+            //dttt1.Columns.Add(dct1);
+
+            //dct1 = new DataColumn("Size");
+            //dttt1.Columns.Add(dct1);
+
+            //dct1 = new DataColumn("SizeId");
+            //dttt1.Columns.Add(dct1);
+
+            //dct1 = new DataColumn("Qty");
+            //dttt1.Columns.Add(dct1);
+
+            //dstd1.Tables.Add(dttt1);
+
+            //DataSet dsBrandSize = objBs.selectallSize_BrandID(ddlbrand.SelectedValue);
+
+            //int vLoop1 = 0;
+            //foreach (DataRow Dr in dsBrandSize.Tables[0].Rows)
+            //{
+            //    drNew1 = dttt1.NewRow();
+
+            //    drNew1["RowId"] = vLoop1 + 1;
+            //    drNew1["Size"] = Dr["Size"].ToString();// RowsGVSizeQty[i]["Size"].ToString();
+            //    drNew1["SizeId"] = Dr["SizeId"].ToString();// RowsGVSizeQty[i]["SizeId"].ToString();
+            //    drNew1["Qty"] = "";// RowsGVSizeQty[i]["Qty"].ToString();          
+
+            //    dstd1.Tables[0].Rows.Add(drNew1);
+            //    dtddd1 = dstd1.Tables[0];
+            //    vLoop1++;
+
+            //}
+
+            ViewState["CurrentTable2"] = dtddd1;
 
             if (iid != null)
             {
@@ -6339,7 +6479,7 @@ namespace Billing.Accountsbootstrap
                         Label Nlblavgmeter = (Label)NewSizeRatioGrid.Rows[Loop1].FindControl("Nlblavgmeter");
 
 
-                       // TextBox txtcontrast = (TextBox)NewSizeRatioGrid.Rows[Loop1].FindControl("txtcontrast");
+                        // TextBox txtcontrast = (TextBox)NewSizeRatioGrid.Rows[Loop1].FindControl("txtcontrast");
 
 
                         TextBox Ntxt30fs = (TextBox)NewSizeRatioGrid.Rows[Loop1].FindControl("Ntxt30fs");
@@ -6430,7 +6570,7 @@ namespace Billing.Accountsbootstrap
                             string S4XLHS = dgetprocessratio.Tables[0].Rows[j]["4XLHS"].ToString();
                             string ProcessShirtt = dgetprocessratio.Tables[0].Rows[j]["ProcessShirt"].ToString();
                             string ProcessMeter = dgetprocessratio.Tables[0].Rows[j]["ProcessMeter"].ToString();
-                            
+
                             if (Nlbltransid.Text == invrefno)
                             {
 
@@ -6444,46 +6584,46 @@ namespace Billing.Accountsbootstrap
                                 Nlblprocessshirt.Text = ProcessShirtt;
                                 Nlblprocessmeterratio.Text = ProcessMeter;
 
-                                Ntxt30fs.Text =S30FS;
-                                Ntxt32fs.Text  =S32FS;
-                                
-                                
+                                Ntxt30fs.Text = S30FS;
+                                Ntxt32fs.Text = S32FS;
+
+
                                 Ntxt34fs.Text = S34FS;
                                 Ntxt36fs.Text = S36FS;
-                                
-                                
+
+
                                 Ntxtxsfs.Text = SXSFS;
-                                Ntxtsfs.Text =SSFS;
-                                
-                                
-                                Ntxtmfs.Text =SMFS;
-                                Ntxtlfs.Text =SLFS;
-                                
-                                
-                                Ntxtxlfs.Text =SXLFS;
-                                Ntxtxxlfs.Text =SXXLFS;
-                                
-                                
-                                Ntxt3xlfs.Text =S3XLFS;
-                                Ntxt4xlfs.Text =S4XLFS;
-                                
-                                
+                                Ntxtsfs.Text = SSFS;
+
+
+                                Ntxtmfs.Text = SMFS;
+                                Ntxtlfs.Text = SLFS;
+
+
+                                Ntxtxlfs.Text = SXLFS;
+                                Ntxtxxlfs.Text = SXXLFS;
+
+
+                                Ntxt3xlfs.Text = S3XLFS;
+                                Ntxt4xlfs.Text = S4XLFS;
+
+
                                 Ntxt30hs.Text = S30HS;
                                 Ntxt32hs.Text = S32HS;
-                                
+
                                 Ntxt34hs.Text = S34HS;
                                 Ntxt36hs.Text = S36HS;
-                                
+
                                 Ntxtxshs.Text = SXSHS;
-                                Ntxtshs.Text =SSHS;
-                                
-                                Ntxtmhs.Text =SMHS;
-                                Ntxtlhs.Text =SXLHS;
-                                
+                                Ntxtshs.Text = SSHS;
+
+                                Ntxtmhs.Text = SMHS;
+                                Ntxtlhs.Text = SXLHS;
+
                                 Ntxtxlhs.Text = SXLHS;
-                                Ntxtxxlhs.Text =SXXLHS;
-                                
-                                Ntxt3xlhs.Text =S3XLHS;
+                                Ntxtxxlhs.Text = SXXLHS;
+
+                                Ntxt3xlhs.Text = S3XLHS;
                                 Ntxt4xlhs.Text = S4XLHS;
                             }
                         }
@@ -6492,7 +6632,7 @@ namespace Billing.Accountsbootstrap
                     }
                     ProcessShirt(sender, e);
                 }
-                
+
             }
 
             //double r =0;
@@ -6584,7 +6724,7 @@ namespace Billing.Accountsbootstrap
 
                 int lop = 0;
                 //Loop through each item of checkboxlist
-                foreach (ListItem item in chkSizes.Items)
+                foreach (System.Web.UI.WebControls.ListItem item in chkSizes.Items)
                 {
                     //check if item selected
 
@@ -6769,7 +6909,7 @@ namespace Billing.Accountsbootstrap
         {
             bool exists = false;
             //Loop through each item in selected participant checkboxlist
-            foreach (ListItem item in contrastwidth.Items)
+            foreach (System.Web.UI.WebControls.ListItem item in contrastwidth.Items)
             {
                 //Check if item selected already exists in the selected participant checboxlist or not
                 if (item.Value == val)
@@ -6793,7 +6933,7 @@ namespace Billing.Accountsbootstrap
             if (contrastwidth.SelectedIndex >= 0)
             {
 
-                foreach (ListItem item in contrastwidth.Items)
+                foreach (System.Web.UI.WebControls.ListItem item in contrastwidth.Items)
                 {
                     //check if item selected
                     if (item.Selected)
@@ -6811,7 +6951,7 @@ namespace Billing.Accountsbootstrap
                             }
                             else
                             {
-                                dcur = objBs.getnewsupplierforcutbc(item.Value, ddlBottilot.SelectedValue,drpbranch.SelectedValue);
+                                dcur = objBs.getnewsupplierforcutbc(item.Value, ddlBottilot.SelectedValue, drpbranch.SelectedValue);
                             }
 
                             if (dcur != null)
@@ -6893,7 +7033,7 @@ namespace Billing.Accountsbootstrap
             if (contrastwidth.SelectedIndex >= 0)
             {
 
-                foreach (ListItem item in contrastwidth.Items)
+                foreach (System.Web.UI.WebControls.ListItem item in contrastwidth.Items)
                 {
                     //check if item selected
                     if (item.Selected)
@@ -6984,7 +7124,7 @@ namespace Billing.Accountsbootstrap
 
             if (chkitem.SelectedIndex >= 0)
             {
-                foreach (ListItem listItem in contrastwidth.Items)
+                foreach (System.Web.UI.WebControls.ListItem listItem in contrastwidth.Items)
                 {
                     if (listItem.Text != "All")
                     {
@@ -6997,7 +7137,7 @@ namespace Billing.Accountsbootstrap
                 cond1 = cond1.TrimEnd(',');
                 cond1 = cond1.Replace(",", "or");
 
-                foreach (ListItem item in chkitem.Items)
+                foreach (System.Web.UI.WebControls.ListItem item in chkitem.Items)
                 {
                     //check if item selected
                     if (item.Selected)
@@ -7073,7 +7213,7 @@ namespace Billing.Accountsbootstrap
 
             if (chkitem.SelectedIndex >= 0)
             {
-                foreach (ListItem listItem in contrastwidth.Items)
+                foreach (System.Web.UI.WebControls.ListItem listItem in contrastwidth.Items)
                 {
                     if (listItem.Text != "All")
                     {
@@ -7086,7 +7226,7 @@ namespace Billing.Accountsbootstrap
                 cond1 = cond1.TrimEnd(',');
                 cond1 = cond1.Replace(",", "or");
 
-                foreach (ListItem item in chkitem.Items)
+                foreach (System.Web.UI.WebControls.ListItem item in chkitem.Items)
                 {
                     //check if item selected
                     if (item.Selected)
@@ -7097,9 +7237,9 @@ namespace Billing.Accountsbootstrap
                             {
                                 dteo = objBs.getcutlistdesignfablistNew(item.Value, radbtnshirttype.SelectedValue);
                             }
-                          //  else
+                            //  else
                             {
-                               // dteo = objBs.getcutlistdesignfablistNewbc(item.Value, radbtnshirttype.SelectedValue, ddlBottilot.SelectedValue);
+                                // dteo = objBs.getcutlistdesignfablistNewbc(item.Value, radbtnshirttype.SelectedValue, ddlBottilot.SelectedValue);
                             }
 
                             if (dteo != null)
@@ -7156,7 +7296,7 @@ namespace Billing.Accountsbootstrap
                 Label lblinvdate = (Label)contrastgridfab.Rows[vLoop].FindControl("lblinvdate");
 
                 DateTime date = DateTime.ParseExact(txtdate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-               // DateTime invdate = DateTime.ParseExact(lblinvdate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                // DateTime invdate = DateTime.ParseExact(lblinvdate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
                 if (Convert.ToDateTime(lblinvdate.Text) > Convert.ToDateTime(date))
                 {
@@ -7182,7 +7322,7 @@ namespace Billing.Accountsbootstrap
                 if (contrastfabric.SelectedIndex >= 0)
                 {
 
-                    foreach (ListItem listItem in contrastwidth.Items)
+                    foreach (System.Web.UI.WebControls.ListItem listItem in contrastwidth.Items)
                     {
                         if (listItem.Text != "All")
                         {
@@ -7196,7 +7336,7 @@ namespace Billing.Accountsbootstrap
                     cond1 = cond1.Replace(",", "or");
 
 
-                    foreach (ListItem item in contrastfabric.Items)
+                    foreach (System.Web.UI.WebControls.ListItem item in contrastfabric.Items)
                     {
 
 
@@ -7289,7 +7429,7 @@ namespace Billing.Accountsbootstrap
                 if (contrastfabric.SelectedIndex >= 0)
                 {
 
-                    foreach (ListItem listItem in contrastwidth.Items)
+                    foreach (System.Web.UI.WebControls.ListItem listItem in contrastwidth.Items)
                     {
                         if (listItem.Text != "All")
                         {
@@ -7303,7 +7443,7 @@ namespace Billing.Accountsbootstrap
                     cond1 = cond1.Replace(",", "or");
 
 
-                    foreach (ListItem item in contrastfabric.Items)
+                    foreach (System.Web.UI.WebControls.ListItem item in contrastfabric.Items)
                     {
 
 
@@ -7372,10 +7512,10 @@ namespace Billing.Accountsbootstrap
                     chkitem.ClearSelection();
                     chkitem.Items.Clear();
                 }
-
             }
-
         }
+
+
         protected void chkinvnochanged(object sender, EventArgs e)
         {
 
@@ -7393,7 +7533,7 @@ namespace Billing.Accountsbootstrap
                 {
                     // CheckBoxList2.Enabled = true;
                     //Loop through each item of checkboxlist
-                    foreach (ListItem item in chkinvno.Items)
+                    foreach (System.Web.UI.WebControls.ListItem item in chkinvno.Items)
                     {
                         //check if item selected
                         if (item.Selected)
@@ -7461,13 +7601,13 @@ namespace Billing.Accountsbootstrap
                 else if (radcuttype.SelectedValue == "2")
                 {
 
-                    foreach (ListItem listItem in chkinvno.Items)
+                    foreach (System.Web.UI.WebControls.ListItem listItem in chkinvno.Items)
                     {
                         if (listItem.Text != "All")
                         {
                             if (listItem.Selected)
                             {
-                                cond1 += " Fabid='" + listItem.Value + "' ,";
+                                cond1 += " pogrnid='" + listItem.Value + "' ,";
                             }
                         }
                     }
@@ -7476,7 +7616,7 @@ namespace Billing.Accountsbootstrap
 
                     if (cond1 != "")
                     {
-                        DataSet dminmax1 = objBs.getcutlistdesignforminandmaxaddition(cond1, drpwidth.SelectedValue);
+                        DataSet dminmax1 = objBs.getcutlistdesignforminandmaxadditionNEW(cond1, drpwidth.SelectedValue);
                         if (dminmax1.Tables[0].Rows.Count > 0)
                         {
                             txtAvailableMtr.Text = Convert.ToDouble(dminmax1.Tables[0].Rows[0]["tot"]).ToString("N");
@@ -7493,9 +7633,9 @@ namespace Billing.Accountsbootstrap
                         Ntxtremmeter.Text = "0";
                     }
 
-                    reqchanged(sender, e);
+                    //reqchanged(sender, e);
 
-                    foreach (ListItem item in chkinvno.Items)
+                    foreach (System.Web.UI.WebControls.ListItem item in chkinvno.Items)
                     {
                         //check if item selected
                         if (item.Selected)
@@ -7507,7 +7647,7 @@ namespace Billing.Accountsbootstrap
                             //}
                             //else
                             {
-                                dteo = objBs.getcutlistdesign(item.Value, drpwidth.SelectedValue);
+                                dteo = objBs.getcutlistdesignNEW(item.Value, drpwidth.SelectedValue);
                                 if (dteo != null)
                                 {
                                     if (dteo.Tables[0].Rows.Count > 0)
@@ -7597,13 +7737,15 @@ namespace Billing.Accountsbootstrap
             lblmin.Text = "0.00";
             lblmax.Text = "0.00";
             //}
+
+            UpdatePanel1.Update();
         }
 
         private bool IsParticipantExists(string val)
         {
             bool exists = false;
             //Loop through each item in selected participant checkboxlist
-            foreach (ListItem item in drpNchkfit.Items)
+            foreach (System.Web.UI.WebControls.ListItem item in drpNchkfit.Items)
             {
                 //Check if item selected already exists in the selected participant checboxlist or not
                 if (item.Value == val)
@@ -7625,7 +7767,7 @@ namespace Billing.Accountsbootstrap
 
                 int lop = 0;
                 //Loop through each item of checkboxlist
-                foreach (ListItem item in chkcust.Items)
+                foreach (System.Web.UI.WebControls.ListItem item in chkcust.Items)
                 {
                     //check if item selected
 
@@ -7801,7 +7943,7 @@ namespace Billing.Accountsbootstrap
                 {
                     // CheckBoxList2.Enabled = true;
                     //Loop through each item of checkboxlist
-                    foreach (ListItem item in drpNchkfit.Items)
+                    foreach (System.Web.UI.WebControls.ListItem item in drpNchkfit.Items)
                     {
                         //check if item selected
                         if (item.Selected)
@@ -7827,7 +7969,222 @@ namespace Billing.Accountsbootstrap
                         }
                     }
                     int numSelected = 0;
-                    foreach (ListItem item1 in drpNchkfit.Items)
+                    foreach (System.Web.UI.WebControls.ListItem item1 in drpNchkfit.Items)
+                    {
+                        //check if item selected
+                        if (item1.Selected)
+                        {
+
+                            numSelected = numSelected + 1;
+
+                            // Add participant to the selected list if not alreay added
+                            if (!IsParticipantExists(item1.Value))
+                            {
+
+                            }
+                            else
+                            {
+                                //getavgmeter = objBs.getwidthnewprocessprecutting(drpwidth.SelectedItem.Text, item1.Value);
+                                getavgmeter = objBs.getwidthnewprocessprecuttingNEW(drpwidth.SelectedValue, item1.Value);
+                                if (getavgmeter.Tables[0].Rows.Count > 0)
+                                {
+                                    avgtot = avgtot + Convert.ToDouble(getavgmeter.Tables[0].Rows[0]["w"]);
+                                }
+                            }
+                        }
+                    }
+
+                    txtavgmeter.Text = (avgtot / Convert.ToDouble(numSelected)).ToString("0.00");
+
+                    if (dssmer != null)
+                    {
+                        if (dssmer.Tables[0].Rows.Count > 0)
+                        {
+                            //CheckBoxList2.DataSource = dssmer;
+                            //CheckBoxList2.DataTextField = "Design";
+                            //CheckBoxList2.DataValueField = "id";
+                            //CheckBoxList2.DataBind();
+
+                            drpFit.DataSource = dssmer;
+                            drpFit.DataTextField = "Fit";
+                            drpFit.DataValueField = "FitID";
+                            drpFit.DataBind();
+                            drpFit.Items.Insert(0, "Select Fit");
+                            ViewState["MyDataSet"] = dssmer;
+                        }
+                        else
+                        {
+                            drpFit.DataSource = null;
+                            drpFit.DataBind();
+                            drpFit.ClearSelection();
+                            // dddldesign.Items.Insert(0, "Select Design");
+
+                        }
+
+                    }
+                    else
+                    {
+                        drpFit.DataSource = null;
+                        drpFit.DataBind();
+                        drpFit.ClearSelection();
+
+                    }
+                }
+            }
+
+
+            //if (radcuttype.SelectedValue == "1")
+            //{
+            //    if (radbtn.SelectedValue == "1")
+            //    {
+            //        if (Sddrrpfit.SelectedValue == "Select Fit")
+            //        {
+            //            ScriptManager.RegisterStartupScript(this, this.GetType(), "myscript", "alert('Please Select Fit Label');", true);
+            //            return;
+            //        }
+            //        else
+            //        {
+
+            //        }
+
+            //        DataSet dsFit = objBs.GetFitforsingle(Sddrrpfit.SelectedValue);
+            //        if (dsFit != null)
+            //        {
+            //            if (dsFit.Tables[0].Rows.Count > 0)
+            //            {
+
+            //                drpFit.DataSource = dsFit.Tables[0];
+            //                drpFit.DataTextField = "Fit";
+            //                drpFit.DataValueField = "FitID";
+            //                drpFit.DataBind();
+
+            //            }
+            //        }
+
+            //    }
+            //}
+            //else if (radcuttype.SelectedValue == "2")
+            //{
+            //    double r = 0.00;
+            //    double rr = 0.00;
+            //    double rb = 0.00;
+            //    double rr1 = 0.00;
+            //    double rb1 = 0.00;
+            //    string width = string.Empty;
+            //    double wid = 0;
+            //    DataSet dsFit = objBs.GetFitforsingle(Sddrrpfit.SelectedValue);
+            //    if (dsFit != null)
+            //    {
+            //        if (dsFit.Tables[0].Rows.Count > 0)
+            //        {
+
+            //            drpFit.DataSource = dsFit.Tables[0];
+            //            drpFit.DataTextField = "Fit";
+            //            drpFit.DataValueField = "FitID";
+            //            drpFit.DataBind();
+
+            //        }
+            //    }
+            //    if (drpFit.SelectedValue == "3")
+            //    {
+            //        wid = Convert.ToDouble(txtsharp.Text);
+            //    }
+            //    else
+            //    {
+            //        wid = Convert.ToDouble(txtexec.Text);
+            //    }
+
+            //    double roundoff = Convert.ToDouble(txtAvailableMtr.Text) / wid;
+            //    if (roundoff > 0.5)
+            //    {
+            //        r = Math.Round(Convert.ToDouble(roundoff), MidpointRounding.AwayFromZero);
+            //    }
+            //    else
+            //    {
+            //        r = Math.Floor(Convert.ToDouble(roundoff));
+            //    }
+
+
+            //    txtNoofShirts.Text = r.ToString();
+            //    txtReqNoShirts.Text = r.ToString();
+
+
+
+            //    rr = ((r * 15) / 100);
+            //    if (rr > 0.5)
+            //    {
+            //        rb = Math.Round(Convert.ToDouble(rr), MidpointRounding.AwayFromZero);
+            //    }
+            //    else
+            //    {
+            //        rb = Math.Floor(Convert.ToDouble(rr));
+            //    }
+            //    txtextrashirt.Text = rb.ToString();
+
+            //    rr1 = ((r * 2) / 100);
+            //    if (rr1 > 0.5)
+            //    {
+            //        rb1 = Math.Round(Convert.ToDouble(rr1), MidpointRounding.AwayFromZero);
+            //    }
+            //    else
+            //    {
+            //        rb1 = Math.Floor(Convert.ToDouble(rr1));
+            //    }
+            //    txtminshirt.Text = rb1.ToString();
+
+
+
+
+            //}
+
+        }
+
+        protected void Sfitchaged1(object sender, EventArgs e)
+        {
+
+            DataSet dssmer = new DataSet();
+            DataSet dteo = new DataSet();
+            string cond = "";
+            string cond1 = "";
+            DataSet getavgmeter = new DataSet();
+            double avgtot = 0;
+            //  dteo = objBs.getjobcardlistdesign(CheckBoxList1.SelectedValue);
+
+
+
+            if (drpNchkfit.SelectedIndex >= 0)
+            {
+                if (radcuttype.SelectedValue == "2")
+                {
+                    // CheckBoxList2.Enabled = true;
+                    //Loop through each item of checkboxlist
+                    foreach (System.Web.UI.WebControls.ListItem item in drpNchkfit.Items)
+                    {
+                        //check if item selected
+                        if (item.Selected)
+                        {
+                            // Add participant to the selected list if not alreay added
+                            if (!IsParticipantExists(item.Value))
+                            {
+
+                            }
+                            else
+                            {
+                                dteo = objBs.GetFitforsingle(item.Value);
+                                if (dteo != null)
+                                {
+                                    if (dteo.Tables[0].Rows.Count > 0)
+                                    {
+                                        dssmer.Merge(dteo);
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+                    int numSelected = 0;
+                    foreach (System.Web.UI.WebControls.ListItem item1 in drpNchkfit.Items)
                     {
                         //check if item selected
                         if (item1.Selected)
@@ -7857,7 +8214,7 @@ namespace Billing.Accountsbootstrap
                         }
                     }
 
-                   // txtavgmeter.Text = (avgtot / Convert.ToDouble(numSelected)).ToString("0.000");
+                    // txtavgmeter.Text = (avgtot / Convert.ToDouble(numSelected)).ToString("0.000");
 
                     if (dssmer != null)
                     {
@@ -8046,7 +8403,156 @@ namespace Billing.Accountsbootstrap
 
             }
         }
+
         protected void brandindexchnaged(object sender, EventArgs e)
+        {
+            if (ddlbrand.SelectedValue == "Select Brand Name" || ddlbrand.SelectedValue == "0" || ddlbrand.SelectedValue == "")
+            {
+                drpNchkfit.ClearSelection();
+            }
+            else
+            {
+                DataSet dsFit = objBs.GetBrandFit(Convert.ToInt32(ddlbrand.SelectedValue));
+                if (dsFit.Tables[0].Rows.Count > 0)
+                {
+                    drpNchkfit.SelectedValue = dsFit.Tables[0].Rows[0]["FitID"].ToString();
+                    Sfitchaged(sender, e);
+                }
+                else
+                {
+                    drpNchkfit.ClearSelection();
+                }
+            }
+            //DataSet dsFit = objBs.GetFit();
+            //if (dsFit != null)
+            //{
+            //    if (dsFit.Tables[0].Rows.Count > 0)
+            //    {
+
+            //        drpFit.DataSource = dsFit.Tables[0];
+            //        drpFit.DataTextField = "Fit";
+            //        drpFit.DataValueField = "FitID";
+            //        drpFit.DataBind();
+            //        drpFit.Items.Insert(0, "Select Fit");
+
+            //        Sddrrpfit.DataSource = dsFit.Tables[0];
+            //        Sddrrpfit.DataTextField = "Fit";
+            //        Sddrrpfit.DataValueField = "FitID";
+            //        Sddrrpfit.DataBind();
+            //        Sddrrpfit.Items.Insert(0, "Select Fit");
+
+            //    }
+            //}
+
+
+
+
+            //if (radbtn.SelectedValue == "1")
+            //{
+            //    if (ddlbrand.SelectedValue == "Select Brand Name")
+            //    {
+            //        ScriptManager.RegisterStartupScript(this, this.GetType(), "myscript", "alert('Please Select Brand Name');", true);
+            //        return;
+            //    }
+            //    else
+            //    {
+
+            //    }
+
+            //    DataSet dbrandcheck = objBs.getbrandnameforcuttprocessnew1(ddlbrand.SelectedValue, "1");
+            //    DataSet branchd = objBs.getbrandnameforcuttprocessnewww(ddlbrand.SelectedValue, "1");
+
+            //    if (branchd.Tables[0].Rows.Count > 0)
+            //    {
+            //        //ddlbrand.DataSource = branchd.Tables[0];
+            //        //ddlbrand.DataTextField = "BrandName";
+            //        //ddlbrand.DataValueField = "BrandID";
+            //        //ddlbrand.DataBind();
+            //        // drpCustomer.Items.Insert(0, "Select Party Name");
+            //        Sddrrpfit.SelectedValue = branchd.Tables[0].Rows[0]["fitid"].ToString();
+            //        drpFit.SelectedValue = branchd.Tables[0].Rows[0]["fitid"].ToString();
+            //        ddlbrand.SelectedValue = branchd.Tables[0].Rows[0]["BrandID"].ToString();
+            //    }
+            //    if (dbrandcheck.Tables[0].Rows.Count > 0)
+            //    {
+
+            //        string fidit = dbrandcheck.Tables[0].Rows[0]["fitid"].ToString();
+
+            //        DataSet dsize = objBs.Getsizetypenew(fidit);
+            //        if (dsize != null)
+            //        {
+            //            if (dsize.Tables[0].Rows.Count > 0)
+            //            {
+            //                chkSizes.DataSource = dsize.Tables[0];
+            //                chkSizes.DataTextField = "Size";
+            //                chkSizes.DataValueField = "Sizeid";
+            //                chkSizes.DataBind();
+
+            //            }
+            //        }
+
+
+
+
+
+
+
+            //        if ((dsize.Tables[0].Rows.Count > 0))
+            //        {
+            //            //Select the checkboxlist items those values are true in database
+            //            //Loop through the DataTable
+            //            for (int i = 0; i <= dbrandcheck.Tables[0].Rows.Count - 1; i++)
+            //            {
+            //                //You need to change this as per your DB Design
+            //                string size = dbrandcheck.Tables[0].Rows[i]["Sizeid2"].ToString();
+
+            //                {
+            //                    //Find the checkbox list items using FindByValue and select it.
+            //                    chkSizes.Items.FindByValue(dbrandcheck.Tables[0].Rows[i]["Sizeid2"].ToString()).Selected = true;
+            //                }
+
+            //            }
+
+            //        }
+            //        //Formal
+            //        if (Sddrrpfit.SelectedValue == "3")
+            //        {
+            //            tr1.Visible = true;
+            //            ckhsize_index(sender, e);
+            //            Tr2.Visible = false;
+            //            //  Tr3.Visible = false;
+            //        }
+            //        else if (Sddrrpfit.SelectedValue == "4")
+            //        {
+            //            //  Tr3.Visible = true;
+            //            tr1.Visible = false;
+            //            Tr2.Visible = false;
+            //            //  ckhsize_indexforboys(sender, e);
+
+            //        }
+
+            //    }
+            //    else
+            //    {
+            //        ddlbrand.SelectedValue = "Select Brand Name";
+            //        Sddrrpfit.SelectedValue = "Select Fit";
+            //        drpFit.SelectedValue = "Select Fit";
+            //        ScriptManager.RegisterStartupScript(this, this.GetType(), "myscript", "alert('Please Select Size for that Particular Brand.Thank You!!!.');", true);
+            //        ddlbrand.Focus();
+            //        return;
+
+            //    }
+
+
+
+            //}
+            //Sfitchaged(sender, e);
+            UpdatePanel1.Update();
+            //upitem.Update();
+        }
+
+
+        protected void brandindexchnaged1(object sender, EventArgs e)
         {
             //DataSet dsFit = objBs.GetFit();
             //if (dsFit != null)
@@ -8085,20 +8591,20 @@ namespace Billing.Accountsbootstrap
             //    }
 
             //    DataSet dbrandcheck = objBs.getbrandnameforcuttprocessnew1(ddlbrand.SelectedValue, "1");
-               DataSet branchd = objBs.getbrandnameforcuttprocessnewww(ddlbrand.SelectedValue, "1");
+            DataSet branchd = objBs.getbrandnameforcuttprocessnewww(ddlbrand.SelectedValue, "1");
 
-               if (branchd.Tables[0].Rows.Count > 0)
-               {
-                   //ddlbrand.DataSource = branchd.Tables[0];
-                   //ddlbrand.DataTextField = "BrandName";
-                   //ddlbrand.DataValueField = "BrandID";
-                   //ddlbrand.DataBind();
-                   // drpCustomer.Items.Insert(0, "Select Party Name");
+            if (branchd.Tables[0].Rows.Count > 0)
+            {
+                //ddlbrand.DataSource = branchd.Tables[0];
+                //ddlbrand.DataTextField = "BrandName";
+                //ddlbrand.DataValueField = "BrandID";
+                //ddlbrand.DataBind();
+                // drpCustomer.Items.Insert(0, "Select Party Name");
                 //   Sddrrpfit.SelectedValue = branchd.Tables[0].Rows[0]["fitid"].ToString();
-                   drpNchkfit.SelectedValue = branchd.Tables[0].Rows[0]["fitid"].ToString();
-                   Sfitchaged(sender, e);
-                 //  ddlbrand.SelectedValue = branchd.Tables[0].Rows[0]["BrandID"].ToString();
-               }
+                drpNchkfit.SelectedValue = branchd.Tables[0].Rows[0]["fitid"].ToString();
+                Sfitchaged(sender, e);
+                //  ddlbrand.SelectedValue = branchd.Tables[0].Rows[0]["BrandID"].ToString();
+            }
             //    if (dbrandcheck.Tables[0].Rows.Count > 0)
             //    {
 
@@ -8422,7 +8928,7 @@ namespace Billing.Accountsbootstrap
             dtt.Columns.Add(new DataColumn("avgsize", typeof(string)));
             dtt.Columns.Add(new DataColumn("Reqmeter", typeof(string)));
             dtt.Columns.Add(new DataColumn("Shirt", typeof(string)));
-
+            dtt.Columns.Add(new DataColumn("Rowid", typeof(string)));
 
             dr = dtt.NewRow();
             dr["Partyname"] = string.Empty;
@@ -8443,7 +8949,7 @@ namespace Billing.Accountsbootstrap
             dr["avgsize"] = string.Empty;
             dr["Reqmeter"] = string.Empty;
             dr["Shirt"] = string.Empty;
-
+            dr["Rowid"] = string.Empty;
 
             dtt.Rows.Add(dr);
 
@@ -8512,7 +9018,8 @@ namespace Billing.Accountsbootstrap
             dct = new DataColumn("Shirt");
             dttt.Columns.Add(dct);
 
-
+            dct = new DataColumn("Rowid");
+            dttt.Columns.Add(dct);
 
 
 
@@ -8538,7 +9045,7 @@ namespace Billing.Accountsbootstrap
             drNew["avgsize"] = 0;
             drNew["Reqmeter"] = 0;
             drNew["Shirt"] = 0;
-
+            drNew["Rowid"] = "";
 
 
             dstd.Tables[0].Rows.Add(drNew);
@@ -8703,7 +9210,7 @@ namespace Billing.Accountsbootstrap
 
                     int lop = 0;
 
-                    foreach (ListItem item in chkcust.Items)
+                    foreach (System.Web.UI.WebControls.ListItem item in chkcust.Items)
                     {
                         if (item.Selected)
                         {
@@ -8922,10 +9429,7 @@ namespace Billing.Accountsbootstrap
                         TextBox txtshirt =
                           (TextBox)gridsize.Rows[rowIndex].Cells[4].FindControl("dtxtshirt");
 
-
-
-
-
+                        HiddenField hdRowId = (HiddenField)gridsize.Rows[rowIndex].Cells[4].FindControl("hdRowId");
 
                         ddrpparty.Items.Clear();
                         DataSet dst = new DataSet();
@@ -8968,7 +9472,7 @@ namespace Billing.Accountsbootstrap
 
                                 int lop = 0;
 
-                                foreach (ListItem item in chkcust.Items)
+                                foreach (System.Web.UI.WebControls.ListItem item in chkcust.Items)
                                 {
                                     if (item.Selected)
                                     {
@@ -9041,7 +9545,7 @@ namespace Billing.Accountsbootstrap
 
                         txtreqmeter.Text = dt.Rows[i]["Reqmeter"].ToString();
                         txtshirt.Text = dt.Rows[i]["Shirt"].ToString();
-
+                        hdRowId.Value = dt.Rows[i]["hdRowId"].ToString();
 
                         rowIndex++;
 
@@ -9119,6 +9623,8 @@ namespace Billing.Accountsbootstrap
                         TextBox txtshirt =
                           (TextBox)gridsize.Rows[rowIndex].Cells[4].FindControl("dtxtshirt");
 
+                        HiddenField hdRowId = (HiddenField)gridsize.Rows[rowIndex].Cells[4].FindControl("hdRowId");
+
 
 
                         drCurrentRow = dtCurrentTable.NewRow();
@@ -9139,7 +9645,7 @@ namespace Billing.Accountsbootstrap
                         dtCurrentTable.Rows[i - 1]["WSP"] = txtwsp.Text;
                         dtCurrentTable.Rows[i - 1]["Reqmeter"] = txtreqmeter.Text;
                         dtCurrentTable.Rows[i - 1]["Shirt"] = txtshirt.Text;
-
+                        dtCurrentTable.Rows[i - 1]["hdRowId"] = hdRowId.Value;
 
 
                         rowIndex++;
@@ -9591,7 +10097,7 @@ namespace Billing.Accountsbootstrap
 
                         int lop = 0;
                         //Loop through each item of checkboxlist
-                        foreach (ListItem item in chkcust.Items)
+                        foreach (System.Web.UI.WebControls.ListItem item in chkcust.Items)
                         {
                             //check if item selected
 
@@ -9731,7 +10237,7 @@ namespace Billing.Accountsbootstrap
 
                         int lop = 0;
                         //Loop through each item of checkboxlist
-                        foreach (ListItem item in chkcust.Items)
+                        foreach (System.Web.UI.WebControls.ListItem item in chkcust.Items)
                         {
                             //check if item selected
 
@@ -11833,7 +12339,7 @@ namespace Billing.Accountsbootstrap
 
                     TextBox txtcontra = (TextBox)RatioShirtProcess.Rows[vLoop].FindControl("txtcontra");
 
-                   
+
 
                     if (NlblActmeter.Text != "NaN")
                     {
@@ -12262,7 +12768,7 @@ namespace Billing.Accountsbootstrap
 
                 int lop = 0;
                 //Loop through each item of checkboxlist
-                foreach (ListItem item in chkSizes.Items)
+                foreach (System.Web.UI.WebControls.ListItem item in chkSizes.Items)
                 {
                     //check if item selected
 
@@ -15530,6 +16036,555 @@ namespace Billing.Accountsbootstrap
             System.Threading.Thread.Sleep(30);
         }
 
+        protected void NewSizeRatioGrid_OnRowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Modify")
+            {
+                //GVSizesView.DataSource = null;
+                //GVSizesView.DataBind();
+
+                if (e.CommandArgument.ToString() != "")
+                {
+                    #region
+
+                    DataTable DTGVSizeDetails = (DataTable)ViewState["NewSizeRatioGrid"];
+                    DataRow[] RowsGVSizeDetails = DTGVSizeDetails.Select("RowId='" + e.CommandArgument.ToString() + "'");
+
+                    RowId.Text = e.CommandArgument.ToString();
+                    ItemName.Text = RowsGVSizeDetails[0]["ItemName"].ToString();
+                    Itemid.Text = RowsGVSizeDetails[0]["Itemid"].ToString();
+                    Fitname.Text = RowsGVSizeDetails[0]["Fitname"].ToString();
+                    Fitid.Text = RowsGVSizeDetails[0]["Fitid"].ToString();
+                    Givenmeter.Text = RowsGVSizeDetails[0]["Givenmeter"].ToString();
+                    Avgmeter.Text = RowsGVSizeDetails[0]["Avgmeter"].ToString();
+                    Totalshirt.Text = RowsGVSizeDetails[0]["Totalshirt"].ToString();
+                    //StyleNo.Text = RowsGVSizeDetails[0]["StyleNo"].ToString();
+                    //StyleNoId.Text = RowsGVSizeDetails[0]["StyleNoId"].ToString();
+                    //Description.Text = RowsGVSizeDetails[0]["Description"].ToString();
+                    //Color.Text = RowsGVSizeDetails[0]["Color"].ToString();
+                    //ColorId.Text = RowsGVSizeDetails[0]["ColorId"].ToString();
+
+                    //Sizes.Text = RowsGVSizeDetails[0]["Size"].ToString();
+                    //RangeId.Text = RowsGVSizeDetails[0]["RangeId"].ToString();
+
+                    //Rate.Text = RowsGVSizeDetails[0]["Rate"].ToString();
+                    //txtrate.Text = Rate.Text;
+                    //Qty.Text = RowsGVSizeDetails[0]["Qty"].ToString();
+
+                    //IssueQty.Text = RowsGVSizeDetails[0]["IssueQty"].ToString();
+                    //ReceiveQty.Text = RowsGVSizeDetails[0]["ReceiveQty"].ToString();
+                    //DamageQty.Text = RowsGVSizeDetails[0]["DamageQty"].ToString();
+
+                    DataSet dstd1 = new DataSet();
+                    DataTable dtddd1 = new DataTable();
+                    DataRow drNew1;
+                    DataColumn dct1;
+                    DataTable dttt1 = new DataTable();
+
+                    dct1 = new DataColumn("RowId");
+                    dttt1.Columns.Add(dct1);
+
+                    dct1 = new DataColumn("Size");
+                    dttt1.Columns.Add(dct1);
+
+                    dct1 = new DataColumn("SizeId");
+                    dttt1.Columns.Add(dct1);
+
+                    dct1 = new DataColumn("Qty");
+                    dttt1.Columns.Add(dct1);
+
+
+
+                    dstd1.Tables.Add(dttt1);
+
+                    DataTable DTGVSizeQty = (DataTable)ViewState["CurrentTable2"];
+                    DataRow[] RowsGVSizeQty = DTGVSizeQty.Select("RowId='" + e.CommandArgument.ToString() + "'");
+
+                    for (int i = 0; i < RowsGVSizeQty.Length; i++)
+                    {
+                        //DataSet dsBrandSize = objBs.selectallSize_BrandID(ddlbrand.SelectedValue);
+                        //if (dsBrandSize.Tables[0].Rows.Count > 0)
+                        //{
+                        //    for (int m = 0; m <= dsBrandSize.Tables[0].Rows.Count - 1; m++)
+                        //    {
+                        drNew1 = dttt1.NewRow();
+                        //drNew1["RowId"] = RowsGVSizeQty[i]["RowId"].ToString();
+                        //drNew1["Size"] = dsBrandSize.Tables[0].Rows[m]["Size"].ToString();// RowsGVSizeQty[i]["Size"].ToString();
+                        //drNew1["SizeId"] = dsBrandSize.Tables[0].Rows[m]["SizeId"].ToString();// RowsGVSizeQty[i]["SizeId"].ToString();
+                        //drNew1["Qty"] = "";// RowsGVSizeQty[i]["Qty"].ToString();                    
+
+                        drNew1["RowId"] = RowsGVSizeQty[i]["RowId"].ToString();
+                        drNew1["Size"] = RowsGVSizeQty[i]["Size"].ToString();// RowsGVSizeQty[i]["Size"].ToString();
+                        drNew1["SizeId"] = RowsGVSizeQty[i]["SizeId"].ToString();// RowsGVSizeQty[i]["SizeId"].ToString();
+                        drNew1["Qty"] = RowsGVSizeQty[i]["Qty"].ToString();
+
+                        dstd1.Tables[0].Rows.Add(drNew1);
+                        dtddd1 = dstd1.Tables[0];
+                        //}
+                        //}
+                    }
+
+                    GVSizes.DataSource = dstd1;
+                    GVSizes.DataBind();
+
+                    #endregion
+                }
+            }
+            else if (e.CommandName == "View")
+            {
+                if (e.CommandArgument.ToString() != "")
+                {
+                    #region
+
+                    DataSet dstd1 = new DataSet();
+                    DataTable dtddd1 = new DataTable();
+
+                    DataRow drNew1;
+                    DataColumn dct1;
+
+                    DataTable dttt1 = new DataTable();
+
+
+                    dct1 = new DataColumn("RowId");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("Size");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("SizeId");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("Qty");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("IssueQty");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("ReceiveQty");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("DamageQty");
+                    dttt1.Columns.Add(dct1);
+
+                    dstd1.Tables.Add(dttt1);
+
+                    DataTable DTGVSizeQty = (DataTable)ViewState["CurrentTable2"];
+                    DataRow[] RowsGVSizeQty = DTGVSizeQty.Select("RowId='" + e.CommandArgument.ToString() + "'");
+
+                    for (int i = 0; i < RowsGVSizeQty.Length; i++)
+                    {
+                        drNew1 = dttt1.NewRow();
+
+                        drNew1["RowId"] = RowsGVSizeQty[i]["RowId"].ToString();
+                        drNew1["Size"] = RowsGVSizeQty[i]["Size"].ToString();
+                        drNew1["SizeId"] = RowsGVSizeQty[i]["SizeId"].ToString();
+                        drNew1["Qty"] = RowsGVSizeQty[i]["Qty"].ToString();
+                        drNew1["IssueQty"] = RowsGVSizeQty[i]["IssueQty"].ToString();
+                        drNew1["ReceiveQty"] = RowsGVSizeQty[i]["ReceiveQty"].ToString();
+                        drNew1["DamageQty"] = RowsGVSizeQty[i]["DamageQty"].ToString();
+
+                        dstd1.Tables[0].Rows.Add(drNew1);
+                        dtddd1 = dstd1.Tables[0];
+
+                    }
+
+                    //GVSizesView.DataSource = dstd1;
+                    //GVSizesView.DataBind();
+
+
+                    #endregion
+                }
+            }
+
+        }
+
+        protected void RatioShirtProcess_OnRowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Modify")
+            {
+                //GVSizesView.DataSource = null;
+                //GVSizesView.DataBind();
+
+                if (e.CommandArgument.ToString() != "")
+                {
+                    #region
+
+                    DataTable DTGVSizeDetails = (DataTable)ViewState["NewSizeRatioGrid"];
+                    DataRow[] RowsGVSizeDetails = DTGVSizeDetails.Select("RowId='" + e.CommandArgument.ToString() + "'");
+
+                    RowIdSize.Text = e.CommandArgument.ToString();
+                    ItemNameSize.Text = RowsGVSizeDetails[0]["ItemName"].ToString();
+                    ItemidSize.Text = RowsGVSizeDetails[0]["Itemid"].ToString();
+                    FitnameSize.Text = RowsGVSizeDetails[0]["Fitname"].ToString();
+                    FitidSize.Text = RowsGVSizeDetails[0]["Fitid"].ToString();
+                    GivenmeterSize.Text = RowsGVSizeDetails[0]["Givenmeter"].ToString();
+                    AvgmeterSize.Text = RowsGVSizeDetails[0]["Avgmeter"].ToString();
+                    TotalshirtSize.Text = RowsGVSizeDetails[0]["Totalshirt"].ToString();
+                    //StyleNo.Text = RowsGVSizeDetails[0]["StyleNo"].ToString();
+                    //StyleNoId.Text = RowsGVSizeDetails[0]["StyleNoId"].ToString();
+                    //Description.Text = RowsGVSizeDetails[0]["Description"].ToString();
+                    //Color.Text = RowsGVSizeDetails[0]["Color"].ToString();
+                    //ColorId.Text = RowsGVSizeDetails[0]["ColorId"].ToString();
+
+                    //Sizes.Text = RowsGVSizeDetails[0]["Size"].ToString();
+                    //RangeId.Text = RowsGVSizeDetails[0]["RangeId"].ToString();
+
+                    //Rate.Text = RowsGVSizeDetails[0]["Rate"].ToString();
+                    //txtrate.Text = Rate.Text;
+                    //Qty.Text = RowsGVSizeDetails[0]["Qty"].ToString();
+
+                    //IssueQty.Text = RowsGVSizeDetails[0]["IssueQty"].ToString();
+                    //ReceiveQty.Text = RowsGVSizeDetails[0]["ReceiveQty"].ToString();
+                    //DamageQty.Text = RowsGVSizeDetails[0]["DamageQty"].ToString();
+
+                    DataSet dstd1 = new DataSet();
+                    DataTable dtddd1 = new DataTable();
+                    DataRow drNew1;
+                    DataColumn dct1;
+                    DataTable dttt1 = new DataTable();
+
+                    dct1 = new DataColumn("RowId");
+                    dttt1.Columns.Add(dct1);
+
+                    dct1 = new DataColumn("Size");
+                    dttt1.Columns.Add(dct1);
+
+                    dct1 = new DataColumn("SizeId");
+                    dttt1.Columns.Add(dct1);
+
+                    dct1 = new DataColumn("Qty");
+                    dttt1.Columns.Add(dct1);
+
+
+
+                    dstd1.Tables.Add(dttt1);
+
+                    DataTable DTGVSizeQty = (DataTable)ViewState["CurrentTable2"];
+                    DataRow[] RowsGVSizeQty = DTGVSizeQty.Select("RowId='" + e.CommandArgument.ToString() + "'");
+
+                    for (int i = 0; i < RowsGVSizeQty.Length; i++)
+                    {
+                        //DataSet dsBrandSize = objBs.selectallSize_BrandID(ddlbrand.SelectedValue);
+                        //if (dsBrandSize.Tables[0].Rows.Count > 0)
+                        //{
+                        //    for (int m = 0; m <= dsBrandSize.Tables[0].Rows.Count - 1; m++)
+                        //    {
+                        drNew1 = dttt1.NewRow();
+                        //drNew1["RowId"] = RowsGVSizeQty[i]["RowId"].ToString();
+                        //drNew1["Size"] = dsBrandSize.Tables[0].Rows[m]["Size"].ToString();// RowsGVSizeQty[i]["Size"].ToString();
+                        //drNew1["SizeId"] = dsBrandSize.Tables[0].Rows[m]["SizeId"].ToString();// RowsGVSizeQty[i]["SizeId"].ToString();
+                        //drNew1["Qty"] = "";// RowsGVSizeQty[i]["Qty"].ToString();                    
+
+                        drNew1["RowId"] = RowsGVSizeQty[i]["RowId"].ToString();
+                        drNew1["Size"] = RowsGVSizeQty[i]["Size"].ToString();// RowsGVSizeQty[i]["Size"].ToString();
+                        drNew1["SizeId"] = RowsGVSizeQty[i]["SizeId"].ToString();// RowsGVSizeQty[i]["SizeId"].ToString();
+                        drNew1["Qty"] = RowsGVSizeQty[i]["Qty"].ToString();
+
+                        dstd1.Tables[0].Rows.Add(drNew1);
+                        dtddd1 = dstd1.Tables[0];
+                        //}
+                        //}
+                    }
+
+                    RatioShirtProcessSizes.DataSource = dstd1;
+                    RatioShirtProcessSizes.DataBind();
+
+                    #endregion
+                }
+            }
+            else if (e.CommandName == "View")
+            {
+                if (e.CommandArgument.ToString() != "")
+                {
+                    #region
+
+                    DataSet dstd1 = new DataSet();
+                    DataTable dtddd1 = new DataTable();
+
+                    DataRow drNew1;
+                    DataColumn dct1;
+
+                    DataTable dttt1 = new DataTable();
+
+
+                    dct1 = new DataColumn("RowId");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("Size");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("SizeId");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("Qty");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("IssueQty");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("ReceiveQty");
+                    dttt1.Columns.Add(dct1);
+                    dct1 = new DataColumn("DamageQty");
+                    dttt1.Columns.Add(dct1);
+
+                    dstd1.Tables.Add(dttt1);
+
+                    DataTable DTGVSizeQty = (DataTable)ViewState["CurrentTable2"];
+                    DataRow[] RowsGVSizeQty = DTGVSizeQty.Select("RowId='" + e.CommandArgument.ToString() + "'");
+
+                    for (int i = 0; i < RowsGVSizeQty.Length; i++)
+                    {
+                        drNew1 = dttt1.NewRow();
+
+                        drNew1["RowId"] = RowsGVSizeQty[i]["RowId"].ToString();
+                        drNew1["Size"] = RowsGVSizeQty[i]["Size"].ToString();
+                        drNew1["SizeId"] = RowsGVSizeQty[i]["SizeId"].ToString();
+                        drNew1["Qty"] = RowsGVSizeQty[i]["Qty"].ToString();
+                        drNew1["IssueQty"] = RowsGVSizeQty[i]["IssueQty"].ToString();
+                        drNew1["ReceiveQty"] = RowsGVSizeQty[i]["ReceiveQty"].ToString();
+                        drNew1["DamageQty"] = RowsGVSizeQty[i]["DamageQty"].ToString();
+
+                        dstd1.Tables[0].Rows.Add(drNew1);
+                        dtddd1 = dstd1.Tables[0];
+
+                    }
+
+                    //GVSizesView.DataSource = dstd1;
+                    //GVSizesView.DataBind();
+
+
+                    #endregion
+                }
+            }
+            UpdatePanel8.Update();
+
+        }
+
+
+        protected void btnSubmitQty_OnClick1(object sender, EventArgs e)
+        {
+            if (GVSizes.Rows.Count > 0)
+            {
+                double IssueQty = 0;
+                for (int vLoop = 0; vLoop < GVSizes.Rows.Count; vLoop++)
+                {
+                    TextBox txtIssueQty = (TextBox)GVSizes.Rows[vLoop].FindControl("txtIssueQty");
+                    if (txtIssueQty.Text == "")
+                        txtIssueQty.Text = "0";
+
+                    IssueQty += Convert.ToDouble(txtIssueQty.Text);
+                }
+            }
+        }
+
+        protected void btnSubmitQty_OnClick(object sender, EventArgs e)
+        {
+            if (GVSizes.Rows.Count > 0)
+            {
+                double IssueQty = 0;
+                for (int vLoop = 0; vLoop < GVSizes.Rows.Count; vLoop++)
+                {
+                    TextBox txtIssueQty = (TextBox)GVSizes.Rows[vLoop].FindControl("txtIssueQty");
+
+                    if (txtIssueQty.Text == "")
+                        txtIssueQty.Text = "0";
+
+                    IssueQty += Convert.ToDouble(txtIssueQty.Text);
+
+                }
+
+                #region CurrentTable Removed
+
+                DataTable DTGVSizeDetails = (DataTable)ViewState["NewSizeRatioGrid"];
+
+                DataRow[] DRItem = DTGVSizeDetails.Select("RowId='" + RowId.Text + "'");
+                for (int i = 0; i < DRItem.Length; i++)
+                    DRItem[i].Delete();
+                DTGVSizeDetails.AcceptChanges();
+
+                ViewState["NewSizeRatioGrid"] = DTGVSizeDetails;
+
+                DataTable DTGVSizeQty = (DataTable)ViewState["CurrentTable2"];
+
+                DataRow[] DRSize = DTGVSizeQty.Select("RowId='" + RowId.Text + "'");
+                for (int i = 0; i < DRSize.Length; i++)
+                    DRSize[i].Delete();
+                DTGVSizeQty.AcceptChanges();
+
+                ViewState["CurrentTable2"] = DTGVSizeQty;
+
+                #endregion
+
+
+                // string HttpCookieValue = "";
+
+                DataSet dstd = new DataSet();
+                DataTable dtddd = new DataTable();
+                DataRow drNew;
+                DataColumn dct;
+                DataTable dttt = new DataTable();
+
+                #region
+
+                dct = new DataColumn("ItemName");
+                dttt.Columns.Add(dct);
+
+                dct = new DataColumn("Itemid");
+                dttt.Columns.Add(dct);
+
+                dct = new DataColumn("Fitname");
+                dttt.Columns.Add(dct);
+
+                dct = new DataColumn("Fitid");
+                dttt.Columns.Add(dct);
+
+                dct = new DataColumn("Givenmeter");
+                dttt.Columns.Add(dct);
+
+                dct = new DataColumn("Avgmeter");
+                dttt.Columns.Add(dct);
+
+                dct = new DataColumn("Totalshirt");
+                dttt.Columns.Add(dct);
+
+                dct = new DataColumn("RowId");
+                dttt.Columns.Add(dct);
+
+                dct = new DataColumn("TotalshirtSize");
+                dttt.Columns.Add(dct);
+
+                dstd.Tables.Add(dttt);
+
+                if (ViewState["NewSizeRatioGrid"] != null)
+                {
+                    DataTable dt = (DataTable)ViewState["NewSizeRatioGrid"];
+
+                    drNew = dttt.NewRow();
+
+                    drNew["RowId"] = RowId.Text;// nameCookie != null ? nameCookie.Value.Split('=')[1] : "undefined";
+                    drNew["ItemName"] = ItemName.Text;
+                    drNew["Itemid"] = Itemid.Text;
+                    drNew["Fitname"] = Fitname.Text;
+                    drNew["Fitid"] = Fitid.Text;
+                    drNew["Givenmeter"] = Givenmeter.Text;
+                    drNew["Avgmeter"] = Avgmeter.Text;
+                    drNew["Totalshirt"] = Totalshirt.Text;
+                    drNew["TotalshirtSize"] = IssueQty;
+                    dstd.Tables[0].Rows.Add(drNew);
+                    dtddd = dstd.Tables[0];
+                    dtddd.Merge(dt);
+
+                }
+                else
+                {
+                    drNew = dttt.NewRow();
+
+                    drNew["RowId"] = RowId.Text;// nameCookie != null ? nameCookie.Value.Split('=')[1] : "undefined";
+                    drNew["ItemName"] = ItemName.Text;
+                    drNew["Itemid"] = Itemid.Text;
+                    drNew["Fitname"] = Fitname.Text;
+                    drNew["Fitid"] = Fitid.Text;
+                    drNew["Givenmeter"] = Givenmeter.Text;
+                    drNew["Avgmeter"] = Avgmeter.Text;
+                    drNew["Totalshirt"] = Totalshirt.Text;
+                    drNew["TotalshirtSize"] = IssueQty;
+                    //drNew["IssueQty"] = IssueQty;
+                    //drNew["ReceiveQty"] = ReceiveQty;
+                    //drNew["DamageQty"] = DamageQty;
+
+                    dstd.Tables[0].Rows.Add(drNew);
+                    dtddd = dstd.Tables[0];
+                }
+
+                #endregion
+
+                ViewState["NewSizeRatioGrid"] = dtddd;
+                NewSizeRatioGrid.DataSource = dtddd;
+                NewSizeRatioGrid.DataBind();
+
+                DataSet dstd1 = new DataSet();
+                DataTable dtddd1 = new DataTable();
+                DataRow drNew1;
+                DataColumn dct1;
+                DataTable dttt1 = new DataTable();
+
+                #region
+
+                dct1 = new DataColumn("RowId");
+                dttt1.Columns.Add(dct1);
+
+                dct1 = new DataColumn("Size");
+                dttt1.Columns.Add(dct1);
+
+                dct1 = new DataColumn("SizeId");
+                dttt1.Columns.Add(dct1);
+
+                dct1 = new DataColumn("Qty");
+                dttt1.Columns.Add(dct1);
+
+                dstd1.Tables.Add(dttt1);
+
+
+                if (ViewState["CurrentTable2"] != null)
+                {
+                    HttpCookie nameCookie = Request.Cookies["Name"];
+
+                    DataTable dt1 = (DataTable)ViewState["CurrentTable2"];
+
+                    for (int vLoop = 0; vLoop < GVSizes.Rows.Count; vLoop++)
+                    {
+                        HiddenField hdSize = (HiddenField)GVSizes.Rows[vLoop].FindControl("hdSize");
+                        Label lblSize = (Label)GVSizes.Rows[vLoop].FindControl("lblSize");
+                        TextBox txtIssueQty = (TextBox)GVSizes.Rows[vLoop].FindControl("txtIssueQty");
+
+                        if (txtIssueQty.Text == "")
+                            txtIssueQty.Text = "0";
+
+                        drNew1 = dttt1.NewRow();
+
+                        drNew1["RowId"] = RowId.Text;// HttpCookieValue;
+                        drNew1["Size"] = lblSize.Text;
+                        drNew1["SizeId"] = hdSize.Value;
+                        drNew1["Qty"] = txtIssueQty.Text;
+
+                        dstd1.Tables[0].Rows.Add(drNew1);
+                        dtddd1 = dstd1.Tables[0];
+
+                    }
+                    dtddd1.Merge(dt1);
+                }
+                else
+                {
+                    HttpCookie nameCookie = Request.Cookies["Name"];
+
+                    for (int vLoop = 0; vLoop < GVSizes.Rows.Count; vLoop++)
+                    {
+                        HiddenField hdSize = (HiddenField)GVSizes.Rows[vLoop].FindControl("hdSize");
+                        Label lblSize = (Label)GVSizes.Rows[vLoop].FindControl("lblSize");
+                        TextBox txtIssueQty = (TextBox)GVSizes.Rows[vLoop].FindControl("txtIssueQty");
+
+                        if (txtIssueQty.Text == "")
+                            txtIssueQty.Text = "0";
+
+                        drNew1 = dttt1.NewRow();
+
+                        drNew1["RowId"] = RowId.Text;// HttpCookieValue;
+
+                        drNew1["Size"] = lblSize.Text;
+                        drNew1["SizeId"] = hdSize.Value;
+                        drNew1["Qty"] = txtIssueQty.Text;
+
+                        dstd1.Tables[0].Rows.Add(drNew1);
+                        dtddd1 = dstd1.Tables[0];
+
+                    }
+                }
+
+                #endregion
+
+                ViewState["CurrentTable2"] = dtddd1;
+
+
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), Guid.NewGuid().ToString(), "alert('No Records Found.')", true);
+                return;
+            }
+
+            GVSizes.DataSource = null;
+            GVSizes.DataBind();
+        }
+
 
         protected void NSchange36fs(object sender, EventArgs e)
         {
@@ -17276,7 +18331,7 @@ namespace Billing.Accountsbootstrap
             }
 
 
-           //HALF
+            //HALF
             else if (S30hs.Visible == true)
             {
                 Btxt30hs.Focus();

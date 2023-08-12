@@ -148,7 +148,6 @@
                                                         FilterType="Custom,Numbers" ValidChars="." TargetControlID="txtff" />
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-
                                              <asp:TemplateField ItemStyle-HorizontalAlign="Center" HeaderText="56">
                                                 <ItemTemplate>
                                                     <asp:TextBox ID="txtfs"  runat="server" Text='<%# Bind("[56Width]") %>' MaxLength="10" Width="50px">0</asp:TextBox>
@@ -163,7 +162,6 @@
                                                         FilterType="Custom,Numbers" ValidChars="." TargetControlID="txtff" />
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-
                                              <asp:TemplateField ItemStyle-HorizontalAlign="Center" HeaderText="58">
                                                 <ItemTemplate>
                                                     <asp:TextBox ID="txtfei"  runat="server" Text='<%# Bind("[58Width]") %>' MaxLength="10" Width="50px">0</asp:TextBox>
@@ -171,7 +169,6 @@
                                                         FilterType="Custom,Numbers" ValidChars="." TargetControlID="txtff" />
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-
                                              <asp:TemplateField ItemStyle-HorizontalAlign="Center" HeaderText="54">
                                                 <ItemTemplate>
                                                     <asp:TextBox ID="txt54"  runat="server" Text='<%# Bind("[54Width]") %>' MaxLength="10" Width="50px">0</asp:TextBox>

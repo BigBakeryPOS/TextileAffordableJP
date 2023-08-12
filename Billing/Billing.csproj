@@ -447,6 +447,7 @@
     <Content Include="Accountsbootstrap\Setting.aspx" />
     <Content Include="Accountsbootstrap\Sheet.aspx" />
     <Content Include="Accountsbootstrap\SheetDatewise.aspx" />
+    <Content Include="Accountsbootstrap\SizeSettingNew.aspx" />
     <Content Include="Accountsbootstrap\Statement.aspx" />
     <Content Include="Accountsbootstrap\SupplierOrderMaster.aspx" />
     <Content Include="Accountsbootstrap\SampleReport.aspx" />
@@ -3063,6 +3064,13 @@
     </Compile>
     <Compile Include="Accountsbootstrap\SheetDatewise.aspx.designer.cs">
       <DependentUpon>SheetDatewise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SizeSettingNew.aspx.cs">
+      <DependentUpon>SizeSettingNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accountsbootstrap\SizeSettingNew.aspx.designer.cs">
+      <DependentUpon>SizeSettingNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="Accountsbootstrap\Statement.aspx.cs">
       <DependentUpon>Statement.aspx</DependentUpon>

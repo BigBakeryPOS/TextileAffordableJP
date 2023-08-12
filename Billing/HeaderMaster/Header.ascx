@@ -32,15 +32,14 @@
                 </td>
                 <td style="width: 27%">
                     <asp:Label runat="server" ID="lblUserID" Style="font-size: small; color: White; text-align: center"
-                        CssClass="label" Visible="false "> </asp:Label>
+                        CssClass="label" Visible="false "></asp:Label>
                     <asp:Label runat="server" ID="lblUser" Style="font-size: small; color: White; text-align: right; color: #a7afc3; text-transform: uppercase;"
-                        CssClass="label" Visible="true"> 
-                    </asp:Label>
+                        CssClass="label" Visible="true"></asp:Label>
                     <asp:Label ID="Label1" Style="font-size: small; color: White; text-align: right; color: #a7afc3; text-transform: capitalize;"
                         runat="server" CssClass="label"></asp:Label>
                     <br />
                     <asp:Label runat="server" ID="Label2" Style="font-size: small; color: White; text-align: center"
-                        Text="Customer Support: +91 72009 28169" CssClass="label" Visible="true "> </asp:Label>
+                        Text="Customer Support: +91 72009 28169" CssClass="label" Visible="true "></asp:Label>
                 </td>
             </tr>
         </table>
@@ -71,7 +70,6 @@
 
                     <li runat="server" visible="false" id="partytype"><a href='#'>Contact Master</a>
                         <ul>
-
                             <li runat="server" visible="true"><a href="../Accountsbootstrap/PartyType.aspx">PartyType</a></li>
                             <li runat="server" id="partymaster" visible="false"><a href="../Accountsbootstrap/PartyMasterGrid.aspx">Party Master</a></li>
 
@@ -82,6 +80,17 @@
                             <li runat="server" visible="true" id="machine"><a href="../Accountsbootstrap/mechineNoMaster.aspx">Machine Master</a></li>
                             <li runat="server" visible="false" id="Li20"><a href="../Accountsbootstrap/BarCodeGrid.aspx">Barcode Master</a></li>
                             <li runat="server" visible="true" id="CompanyMaster"><a href="../Accountsbootstrap/CompanyGrid.aspx">Company Master</a></li>
+
+                        </ul>
+                    </li>
+                    <li runat="server" id="Li22"><a href='#'>JP Master</a>
+                        <ul>
+                            <li runat="server" visible="true"><a href="../Accountsbootstrap/Fit.aspx">Fit Master</a></li>
+                            <li runat="server" visible="true"><a href="../Accountsbootstrap/ViewBrands.aspx">Brand Master</a></li>
+                            <li runat="server" visible="true"><a href="../Accountsbootstrap/Width.aspx">Width Master</a></li>
+                            <li runat="server" visible="true"><a href="../Accountsbootstrap/SizeSettingnew.aspx">SizeSettingnew Master</a></li>
+                            <li runat="server" visible="true"><a href="../Accountsbootstrap/RatioWisePrecut.aspx">Pre Cutting</a></li>
+
 
                         </ul>
                     </li>
